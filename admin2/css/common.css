@@ -49,12 +49,15 @@ a.no_underline:hover{text-decoration:none;}
 .page .colum .colum_btn li a.news{background-position:-270px 0;}
 .page .colum .colum_btn li a.about{background-position:-360px 0;}
 .page .colum .colum_btn li a.contact{background-position:-450px 0;}
+.page .colum .colum_btn li a.fudaoyuan{background-position:-450px 0;}
+
 .page .colum .colum_btn li a:hover{background-position:0 -26px;}
 .page .colum .colum_btn li a.clss_center:hover{background-position:-90px -26px;}
 .page .colum .colum_btn li a.why_system:hover{background-position:-180px -26px;}
 .page .colum .colum_btn li a.news:hover{background-position:-270px -26px;}
 .page .colum .colum_btn li a.about:hover{background-position:-360px -26px;}
 .page .colum .colum_btn li a.contact:hover{background-position:-450px -26px;}
+.page .colum .colum_btn li a.fudaoyuan:hover{background-position:-450px -26px;}
 
 .page .colum .colum_btn li.select  a{background-position:0 -52px;}
 .page .colum .colum_btn li.select  a.clss_center,.page .colum .colum_btn li.select  a.clss_center:hover{background-position:-90px -52px;}
@@ -62,6 +65,7 @@ a.no_underline:hover{text-decoration:none;}
 .page .colum .colum_btn li.select  a.news,.page .colum .colum_btn li.select  a.news:hover{background-position:-270px -52px;}
 .page .colum .colum_btn li.select  a.about,.page .colum .colum_btn li.select  a.about:hover{background-position:-360px -52px;}
 .page .colum .colum_btn li.select  a.contact,.page .colum .colum_btn li.select  a.contact:hover{background-position:-450px -52px;}
+.page .colum .colum_btn li.select  a.fudaoyuan,.page .colum .colum_btn li.select  a.fudaoyuan:hover{background-position:-450px -52px;}
 
 .page .colum_btn_wrap .know{}
 .page .colum_btn_wrap .know li{margin-left:8px;}
