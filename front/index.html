@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slide_img.js"></script>
+<script type="text/javascript">
+	(function (jQuery){
+		jQuery(function ($){
+			//实例化轮播
+			var slide=new SlideImg({
+				"btnPre":$("#slide_img_wrap .left_btn").eq(0),
+				"btnNext":$("#slide_img_wrap .right_btn").eq(0),
+				"iconBtn":$("#slide_img_wrap .btn").eq(0),
+				"imgContainer":$("#slide_img_ul"),
+				"hoverClass":"select",
+				"t":4000
+			});
+			slide.start();
+			
+			//课程的hover事件
+			$(".page .colum .content_inner .kuang").hover(
+				function (){
+					$(this).css("border","1px solid  #298da7");
+				},
+				function (){
+					$(this).css("border","1px solid  #ccc");
+				}
+			);
+		});
+	})(jQuery);
+	
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="inner_top clearfix">
+				<div class="fl inner_left">
+					嗨，欢迎来到海风教育学员中心！请<a href="login.html" class="font_bold">登录</a>或<a href="registration.html" class="font_bold">免费注册</a>
+				</div>
+				<ul class="fr clearfix inner_right" >
+					<li class="fl "><a href="my_course.html" class=" debte_png">我的课程</a></li>
+					<li class="fl"><a href="#" class=" debte_png">我的收藏</a></li>
+					<li class="fl last"><a href="#" class="debte_png ">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="index.html" class="out_text">海风教育</a></h1>
+				<p>学员热线：<strong>（021）5588-5955</strong>    （09:00~22:00）</p>
+			</div>
+			<div class="search fr">
+					<form action="" method="post">
+						<input type="text" class="text common_bg" name="" value="尝试在此键入你感兴趣的课程直接搜索...."/>
+						<input type="submit" class="btn common_bg out_text" name="" value=""/>
+					</form>
+					<div class="fl clearfix hot_search">
+						<strong class="fl">热门搜索：</strong>
+						<ul class="fl clearfix">
+							<li class="fl "><a href="#" class="">自主招生</a></li>
+							<li class="fl"><a href="#" class="hot">复旦千分考</a></li>
+							<li class="fl "><a href="#" class=" ">交大自招</a></li>
+							<li class="fl "><a href="#" class=" ">杨浦教学点</a></li>
+							<li class="fl "><a href="#" class=" ">更多…</a></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl select"><a href="index.html" class=""></a></li><!--首页-->
+					<li class="fl"><a href="my_course.html" class="my_course"></a></li><!--学员中心-->
+					<li class="fl"><a href="course_center.html" class="clss_center"></a></li><!--课程中心-->
+					<li class="fl"><a href="answer.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl"><a href="news.html" class="news"></a></li><!--最新活动-->
+					<li class="fl"><a href="about_us.html" class="about"></a></li><!--关于海风-->
+					<li class="fl"><a href="contact_us.html" class="contact"></a></li><!--联系我们-->
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl "><strong>关注海风：</strong></li>
+					<li class="fl"><a href="#" class="sina common_bg">新浪微博</a></li>
+					<li class="fl"><a href="#" class="renren common_bg">人人主页</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner">
+					<div class="slide_img_wrap" id="slide_img_wrap">
+						<ul id="slide_img_ul">
+							<li>
+								<img src="images/banner1.jpg" width="980" height="390" alt="海风教育" usemap="#Map"/>
+								<map name="Map" id="Map">
+								  <area shape="rect" coords="741,215,892,257" href="#" />
+								  <area shape="rect" coords="806,265,894,283" href="#" />
+								</map>
+							</li>
+							<li>
+								<img src="images/banner1.jpg" width="980" height="390" alt="海风教育" usemap="#Map"/>
+								<map name="Map" id="Map">
+								  <area shape="rect" coords="741,215,892,257" href="#" />
+								  <area shape="rect" coords="806,265,894,283" href="#" />
+								</map>
+							</li>
+							<li>
+								<img src="images/banner1.jpg" width="980" height="390" alt="海风教育" usemap="#Map"/>
+								<map name="Map" id="Map">
+								  <area shape="rect" coords="741,215,892,257" href="#" />
+								  <area shape="rect" coords="806,265,894,283" href="#" />
+								</map>
+							</li>
+							<li>
+								<img src="images/banner1.jpg" width="980" height="390" alt="海风教育" usemap="#Map"/>
+								<map name="Map" id="Map">
+								  <area shape="rect" coords="741,215,892,257" href="#" />
+								  <area shape="rect" coords="806,265,894,283" href="#" />
+								</map>
+							</li>
+							<li>
+								<img src="images/banner1.jpg" width="980" height="390" alt="海风教育" usemap="#Map"/>
+								<map name="Map" id="Map">
+								  <area shape="rect" coords="741,215,892,257" href="#" />
+								  <area shape="rect" coords="806,265,894,283" href="#" />
+								</map>
+							</li>
+						</ul>
+						<ul class="btn clearfix" >
+							<li class="select common_bg fl"></li>
+							<li class=" common_bg fl"></li>
+							<li class=" common_bg fl"></li>
+							<li class=" common_bg fl"></li>
+							<li class=" common_bg fl"></li>
+						</ul>
+						<div class="left_btn common_bg"></div>
+						<div class="right_btn common_bg"></div>
+					</div>
+					<div class="classs clearfix">
+						<div class="fl kuang">
+							<h2 class="font_bold common_bg">复旦面试课程/<span class="small">课程编号：HKC-001</span></h2>
+							<p class="text">小班化授课：充分体现课程互动性，使每一名学员得到充足学习机会；</p>
+							<p class="text">一对一咨询、答疑：根据学生学科强弱情况特点和千分考学科难度分布特点，为你量身打造最高效的复习建议与指导。提供课后答疑以及固定时间的个性化答疑服务。拥有强大的在线真题答疑系统解答你的疑惑。</p>
+							<p class="btn"><a href="course_center.html">>>点击查看课程详细介绍</a></p>
+							<table width="451" border="0" cellpadding="0" cellspacing="0">
+							  <tr>
+							    <th scope="col" height="25">上课地点</th>
+							    <th scope="col">上课时间 </th>
+							    <th scope="col">报名/开课人数</th>
+							    <th scope="col" class="no_border">&nbsp;</th>
+							  </tr>
+							  <tr class="">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong class="status_red">报满</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							  <tr class="double">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong  class="status_green">名额紧张</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							   <tr class="">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong  class="status_blue">报名中</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							  <tr class="double">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong class="status_red">报满</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+
+							</table>
+						</div>
+						<div class="fr kuang">
+							<h2 class="font_bold common_bg">复旦面试课程/<span class="small">课程编号：HKC-001</span></h2>
+							<p class="text">小班化授课：充分体现课程互动性，使每一名学员得到充足学习机会；</p>
+							<p class="text">一对一咨询、答疑：根据学生学科强弱情况特点和千分考学科难度分布特点，为你量身打造最高效的复习建议与指导。提供课后答疑以及固定时间的个性化答疑服务。拥有强大的在线真题答疑系统解答你的疑惑。</p>
+							<p class="btn"><a href="#">>>点击查看课程详细介绍</a></p>
+							<table width="451" border="0" cellpadding="0" cellspacing="0">
+							  <tr>
+							    <th scope="col" height="25">上课地点</th>
+							    <th scope="col">上课时间 </th>
+							    <th scope="col">报名/开课人数</th>
+							    <th scope="col" class="no_border">&nbsp;</th>
+							  </tr>
+							  <tr class="">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong class="status_red">报满</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							  <tr class="double">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong  class="status_green">名额紧张</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							   <tr class="">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong  class="status_blue">报名中</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							  <tr class="double">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong class="status_red">报满</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+
+							</table>
+						</div>
+					</div>
+					<div class="classs clearfix">
+						<div class="fl kuang">
+							<h2 class="font_bold common_bg">复旦面试课程/<span class="small">课程编号：HKC-001</span></h2>
+							<p class="text">小班化授课：充分体现课程互动性，使每一名学员得到充足学习机会；</p>
+							<p class="text">一对一咨询、答疑：根据学生学科强弱情况特点和千分考学科难度分布特点，为你量身打造最高效的复习建议与指导。提供课后答疑以及固定时间的个性化答疑服务。拥有强大的在线真题答疑系统解答你的疑惑。</p>
+							<p class="btn"><a href="#">>>点击查看课程详细介绍</a></p>
+							<table width="451" border="0" cellpadding="0" cellspacing="0">
+							  <tr>
+							    <th scope="col" height="25">上课地点</th>
+							    <th scope="col">上课时间 </th>
+							    <th scope="col">报名/开课人数</th>
+							    <th scope="col" class="no_border">&nbsp;</th>
+							  </tr>
+							  <tr class="">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong class="status_red">报满</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							  <tr class="double">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong  class="status_green">名额紧张</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							   <tr class="">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong  class="status_blue">报名中</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							  <tr class="double">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong class="status_red">报满</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+
+							</table>
+						</div>
+						<div class="fr kuang">
+							<h2 class="font_bold common_bg">复旦面试课程/<span class="small">课程编号：HKC-001</span></h2>
+							<p class="text">小班化授课：充分体现课程互动性，使每一名学员得到充足学习机会；</p>
+							<p class="text">一对一咨询、答疑：根据学生学科强弱情况特点和千分考学科难度分布特点，为你量身打造最高效的复习建议与指导。提供课后答疑以及固定时间的个性化答疑服务。拥有强大的在线真题答疑系统解答你的疑惑。</p>
+							<p class="btn"><a href="#">>>点击查看课程详细介绍</a></p>
+							<table width="451" border="0" cellpadding="0" cellspacing="0">
+							  <tr>
+							    <th scope="col" height="25">上课地点</th>
+							    <th scope="col">上课时间 </th>
+							    <th scope="col">报名/开课人数</th>
+							    <th scope="col" class="no_border">&nbsp;</th>
+							  </tr>
+							  <tr class="">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong class="status_red">报满</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							  <tr class="double">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong  class="status_green">名额紧张</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							   <tr class="">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong  class="status_blue">报名中</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+							  <tr class="double">
+							    <td height="25">杨浦教学点 </td>
+							    <td>2013.1.1-1.31</td>
+							    <td><strong class="status_red">报满</strong></td>
+							    <td class="no_border"><a href="#">报名</a></td>
+							  </tr>
+
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btm_nav clearfix">
+				<ul class="fl">
+					<li class=""><strong>关于海风教育</strong></li>
+					<li class=""><a href="#">关于我们</a></li>
+					<li class=""><a href="#">联系我们</a></li>
+					<li class=""><a href="#">隐私声明</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>新手指南</strong></li>
+					<li class=""><a href="#">注册登录</a></li>
+					<li class=""><a href="#">身份验证</a></li>
+					<li class=""><a href="#">在线购买</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>帮助中心</strong></li>
+					<li class=""><a href="#">常见问题</a></li>
+					<li class=""><a href="#">找回密码</a></li>
+					<li class=""><a href="#">其他问题</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>支付方式</strong></li>
+					<li class=""><a href="#">支付方式</a></li>
+					<li class=""><a href="#">关于发票</a></li>
+					<li class=""><a href="#">支付常见问题</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿[
+	{id: "gaoyi", text: "高一课程", expanded: false,
+		children: [
+			{id: "ajax", text: "复旦笔试课程"},
+			{id: "json", text: "复旦笔试课程"},
+			{id: "date", text: "复旦笔试课程"},
+			{id: "control", text: "复旦笔试课程"},
+			{id: "messagebox", text: "复旦笔试课程"},
+			{id: "window", text: "复旦笔试课程"}
+		]
+	},
+	{id: "gaoer", text: "高二课程", expanded: false,
+		children: [
+			{id: "ajax2", text: "复旦笔试课程"},
+			{id: "json2", text: "复旦笔试课程"},
+			{id: "date2", text: "复旦笔试课程"},
+			{id: "control2", text: "复旦笔试课程"},
+			{id: "messagebox2", text: "复旦笔试课程"},
+			{id: "window2", text: "复旦笔试课程"}
+		]
+	},
+	{id: "gaosan", text: "高三课程", expanded: false,
+		children: [
+			{id: "ajax3", text: "复旦笔试课程"},
+			{id: "json3", text: "复旦笔试课程"},
+			{id: "date3", text: "复旦笔试课程"},
+			{id: "control3", text: "复旦笔试课程"},
+			{id: "messagebox3", text: "复旦笔试课程"},
+			{id: "window3", text: "复旦笔试课程"}
+		]
+	}
+	
+	
+]

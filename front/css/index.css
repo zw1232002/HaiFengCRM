@@ -1,0 +1,18 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+.page .colum .colum_content .slide_img_wrap{width:980px;height:390px;overflow:hidden;margin:37px 0 21px 0;position:relative;}
+.page .colum .colum_content .slide_img_wrap ul{width:20000px;height:390px;position:absolute;top:0;left:0;}
+.page .colum .colum_content .slide_img_wrap ul li{width:980px;float:left;}
+.page .colum .colum_content .slide_img_wrap .left_btn,.page .colum .colum_content .slide_img_wrap .right_btn{width:40px;height:44px;background-position:-0px -52px;position:absolute;top:212px;left:2px;cursor:pointer;}
+.page .colum .colum_content .slide_img_wrap .right_btn{background-position:-169px -52px;left:auto;right:2px;}
+
+.page .colum .colum_content .slide_img_wrap ul.btn{height:17px;position:absolute;top:350px;left:408px;cursor:pointer;}
+.page .colum .colum_content .slide_img_wrap ul.btn li{width:17px;height:17px;background-position:-783px -231px;margin-right:20px;}
+.page .colum .colum_content .slide_img_wrap ul.btn li.select{background-position:-783px -205px;}
+
+
+
+
+

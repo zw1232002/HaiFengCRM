@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育-课程中心</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/inner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dialog.js"></script>
+<script type="text/javascript">
+		jQuery(function ($){
+			//tab切换js
+			$(".page .tab_btn_ul").each(function (){
+				var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+				$(this).find("li a").each(function (i){
+					$(this).click(function (e){
+						e.preventDefault();
+						$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+						contents.find(">.tab_content").removeClass("show");
+						contents.find(">.tab_content").eq(i).addClass("show");
+					});
+				});
+			});
+			
+			//课程点击展开效果
+//			$(".page .colum .colum_content .registration .news_content .course_text").hide();
+//			$(".page .colum .colum_content .registration .news_content h3.news_h3 a").click(function (e){
+//				e.preventDefault();
+//				$(this).parents("h3.news_h3").next(".course_text").toggle();
+//			});
+		});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="inner_top clearfix">
+				<div class="fl inner_left">
+					嗨，欢迎来到海风教育学员中心！请<a href="login.html" class="font_bold">登录</a>或<a href="registration.html" class="font_bold">免费注册</a>
+				</div>
+				<ul class="fr clearfix inner_right" >
+					<li class="fl "><a href="#" class=" debte_png">我的课程</a></li>
+					<li class="fl"><a href="#" class=" debte_png">我的收藏</a></li>
+					<li class="fl last"><a href="#" class="debte_png ">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="#" class="out_text">海风教育</a></h1>
+				<p>学员热线：<strong>（021）5588-5955</strong>    （09:00~22:00）</p>
+			</div>
+			<div class="search fr">
+					<form action="" method="post">
+						<input type="text" class="text common_bg" name="" value="尝试在此键入你感兴趣的课程直接搜索...."/>
+						<input type="submit" class="btn common_bg out_text" name="" value=""/>
+					</form>
+					<div class="fl clearfix hot_search">
+						<strong class="fl">热门搜索：</strong>
+						<ul class="fl clearfix">
+							<li class="fl "><a href="#" class="">自主招生</a></li>
+							<li class="fl"><a href="#" class="hot">复旦千分考</a></li>
+							<li class="fl "><a href="#" class=" ">交大自招</a></li>
+							<li class="fl "><a href="#" class=" ">杨浦教学点</a></li>
+							<li class="fl "><a href="#" class=" ">更多…</a></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl"><a href="index.html" class=""></a></li><!--首页-->
+					<li class="fl"><a href="my_course.html" class="my_course"></a></li><!--学员中心-->
+					<li class="fl select"><a href="course_center.html" class="clss_center"></a></li><!--课程中心-->
+					<li class="fl"><a href="answer.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl"><a href="news.html" class="news"></a></li><!--最新活动-->
+					<li class="fl"><a href="about_us.html" class="about"></a></li><!--关于海风-->
+					<li class="fl"><a href="contact_us.html" class="contact"></a></li><!--联系我们-->
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl "><strong>关注海风：</strong></li>
+					<li class="fl"><a href="#" class="sina common_bg">新浪微博</a></li>
+					<li class="fl"><a href="#" class="renren common_bg">人人主页</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner registration">
+					<div class="news_content">
+						<h3 class="news_h3">准高三：复旦水平测试基础精品班（复旦暑期班）</h3>
+						<div class="course_text">
+							<dl class="choose_teacher clearfix">
+								<dd class="fl detail">
+									<p class="clearfix">
+										<strong class="mr10 pm fl">上课时间：</strong>
+										<span class="">7月班： 2012年7月13日至2012年8月1日  8:30—17:00 （具体日期安排见下）<br/>8月班： 2012年8月1 日至2012年8月20日  8:30—17:00（具体日期安排见下）</span>
+									</p>
+									<p class="clearfix">
+										<strong class="mr10 pm fl">上课地点：</strong>
+										<span class="">杨浦班：上海市杨浦区松花江路251弄（白玉兰环保广场南楼）3号楼303室（近地铁8号线延吉中路站，以及公交118、145、大桥五线等）<br/>徐汇班：上海市徐汇区宜山路515号环线广场一号楼13楼A座（近地铁3、4、9号线宜山路站，以及公交171路，205路等）</span>
+									</p>
+									<p><strong class="mr10">推荐人群：</strong><span class="">欲参加复旦大学自主招生水平测试的高三学生</span></p>
+								</dd>
+							</dl>
+							<h4 class="news_h4 common_bg">授课内容</h4>
+							<table class="confirm course_table" border="0" cellspadding="0" cellspacing="0" width="980">
+								<tr>
+									<th width="325">7月班</th>
+									<th width="325">8月班</th>
+									<th>主要内容</th>
+								</tr>
+								<tr>
+									<td>Ⅰ班（杨浦）：7月13号、15号、17号、19号、 21号、23号、25号、27号、29号、31号</td>
+									<td>Ⅲ班（杨浦）：8月1号、3号、5号、7号、9号、 11号、13号、15号、17号、19号 </td>
+									<td rowspan="2">
+										<ul>
+											<li>复旦自招政策、考试介绍、综合性笔试技巧</li>
+											<li>全真适应性测试及讲评，长远复习规划</li>
+											<li>十科基础知识概述与扫盲</li>
+											<li>十门课基础知识深入讲解与全面提高</li>
+											<li>面试课程、全真模拟测试</li>
+											<li>复旦全真模拟测试试卷分析 开放答疑</li>
+										</ul>
+									</td>
+								</tr>
+								<tr class="last">
+									<td>Ⅱ班（徐汇）：7月14号、16号、18号、20号、 22号、24号、26号、28号、30号、8月1号</td>
+									<td>Ⅳ班（徐汇）：8月2号、4号、6号、8号、10号、12号、14号、16号、18号、20号</td>
+								</tr>
+							</table>
+							<h4 class="news_h4 common_bg">课程特色</h4>
+							<dl class="news_dl news_list">
+								<dt class="common_bg">2012级海风学员复旦预录取131人，交大预录取154人！</dt>
+								<dd>高质量，最深视角解读自主招生</dd>
+								<dd>课程中层层深入解析笔试精髓，将海量真题划分难度、知识点，在应试基础上同时改善学习方式；</dd>
+								<dd>前瞻性地传授面试经验，改变思维方式，提高个人素质，为迎接自主招生面试及未来更多挑战打下基础。</dd>
+								<dd>高效率，最全指导夯实学科基础</dd>
+								<dd>十门课的基础知识巩固与拓展，帮助高三学生梳理脉络；</dd>
+								<dd>暑期强化学习，提高时间利用率，全面解析自招政策、考试秘籍，指明复习方向，助你取得事半功倍之效。</dd>
+								<dd>高保真，最大限度贴近名校要求</dd>
+								<dd>从真题出发进行分析、讲解，内容贴合笔试实战，带你体验笔试历年考点分布规律及变化趋势，得名校选材要求之核心；两次贴近实战的模拟考试，使你在拥有体验感的同时，检测自我。</dd>
+							</dl>
+							<h4 class="news_h4 common_bg">师资优势</h4>
+							<dl class="news_dl news_list">
+								<dt class="common_bg">师资优势</dt>
+								<dd>我们的讲师团队全部是来自复旦大学的顶尖学生，都有成功的自主招生实战经历。</dd>
+								<dd>我们将讲述对于复旦笔试、面试的亲身体验，以最直观的方式传授最有独创性的方法技巧。</dd>
+								<dd>我们会把所有科目的知识点、重难点详尽扫盲，使你查漏补缺，全面提高。</dd>
+								<dd>我们更能设身处地、换位思考，了解你的想法和困惑，提出有针对性的经验和建议，使学习不再盲目。</dd>
+							</dl>
+							<h4 class="news_h4 common_bg">班级形式</h4>
+							<dl class="news_dl news_list">
+								<dt class="common_bg">班级形式</dt>
+								<dd>小班化授课：充分体现课程互动性，使每一名学员得到充足学习机会。</dd>
+								<dd>一对一咨询、答疑：根据学生学科强弱情况特点和千分考学科难度分布特点，为你量身打造最高效的复习建议与指导。提供课后答疑以及固定时间的个性化答疑服务。拥有强大的在线真题答疑系统解答你的疑惑。</dd>
+							</dl>
+							<h4 class="news_h4 common_bg">课程价格</h4>
+							<dl class="news_dl news_list">
+								<dt class="common_bg">课程价格</dt>
+								<dd>4280元（共75小时），为将来做一次投资，为进入名校增加一些筹码，绝对值得！</dd>
+							</dl>
+							<p class="registration_btn common_bg"><a href="#" >点击这里，在线报名</a></p>
+						</div>
+						<p class="back_p"><a class="back common_bg" href="course_center.html">返回</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btm_nav clearfix">
+				<ul class="fl">
+					<li class=""><strong>关于海风教育</strong></li>
+					<li class=""><a href="#">关于我们</a></li>
+					<li class=""><a href="#">联系我们</a></li>
+					<li class=""><a href="#">隐私声明</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>新手指南</strong></li>
+					<li class=""><a href="#">注册登录</a></li>
+					<li class=""><a href="#">身份验证</a></li>
+					<li class=""><a href="#">在线购买</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>帮助中心</strong></li>
+					<li class=""><a href="#">常见问题</a></li>
+					<li class=""><a href="#">找回密码</a></li>
+					<li class=""><a href="#">其他问题</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>支付方式</strong></li>
+					<li class=""><a href="#">支付方式</a></li>
+					<li class=""><a href="#">关于发票</a></li>
+					<li class=""><a href="#">支付常见问题</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

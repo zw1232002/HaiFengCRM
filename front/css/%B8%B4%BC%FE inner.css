@@ -1,0 +1,213 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.page .login{margin-top:7px;margin-bottom:43px;}
+.page .login p.login_top{text-align:right;margin-bottom:11px;}
+.page .login p.login_top a{color:#000;font-size:14px;margin-left:16px;}
+.page .login form{width:438px;height:278px;border:1px solid #298da7;padding:30px 0 0 0px;background:url(../images/login_right_top.jpg) right top no-repeat;}
+.page .login form .login_right_top{padding-left:37px;padding-bottom:6px;}
+.page .login form .login_right_top h2{font-size:24px;color:#000;margin-bottom:34px;}
+.page .login form .login_right_top ul li{margin-bottom:12px;}
+.page .login form .login_right_top ul li span.input_text{color:#000;font-size:14px;}
+.page .login form .login_right_top ul li a.text{color:#298da7;margin-left:13px;}
+.page .login form .login_right_top ul li span.input_text,.page .login form ul li a.text{position:relative\9;top:-6px\9;}
+.page .login form .login_right_top ul li input.text{width:190px;height:28px;height:15px\9;border:1px solid #c3c3c3;padding:0 5px;padding:8px 5px 3px 5px\9;}
+.page .login form .login_right_top ul li input.very_code{width:93px;margin-right:8px;}
+.page .login form .login_right_top ul li input.button,.page .login form .login_right_top ul li a.regist{width:70px;height:26px;background-position:0 -138px;border:0;text-indent:-9999px;cursor:pointer;margin-top:10px;}
+
+.page .login form .login_right_top ul li.float_li span{display:block;width:70px;height:28px;}
+.page .login form .login_right_top ul li a.regist{display:block;margin:10px 0 0 62px;background-position:-462px -138px;margin-top:16px\9;}
+
+.page .login form .login_right_btm{padding:22px 0 0 37px;border-top:1px solid #298da7;}
+.page .login form .login_right_btm li strong{color:#000;font-size:14px;}
+.page .login form .login_right_btm li{padding-top:2px;}
+.page .login form .login_right_btm li a{font-size:14px;color:#000;margin-left:13px;padding:2px 0 2px 20px;}
+.page .login form .login_right_btm li a:hover{text-decoration:none;}
+.page .login form .login_right_btm li a.sina{background-position:-784px -131px;}
+.page .login form .login_right_btm li a.renren{background-position:-784px -103px;}
+
+
+.page .colum .colum_content .registration .mt20{margin-bottom:20px !important;}
+.page .colum .colum_content .registration{padding:17px 0 77px 0;}
+.page .colum .colum_content .registration h2{font-size:24px;color:#000;margin-bottom:8px;}
+.page .colum .colum_content .registration h3{font-size:14px;color:#000;margin-bottom:5px;}
+.page .colum .colum_content .registration p{color:#000;}
+.page .colum .colum_content .registration p a{color:#298da7;font-weight:bold;}
+.page .colum .colum_content .registration .step{height:63px;margin:23px 0;background:url(../images/registration_step1.gif) left top no-repeat;}
+.page .colum .colum_content .registration .step2{background:url(../images/registration_step2.gif) left top no-repeat;}
+.page .colum .colum_content .registration .step3{background:url(../images/registration_step3.gif) left top no-repeat;}
+.page .colum .colum_content .registration .step4{background:url(../images/registration_step4.gif) left top no-repeat;}
+.page .colum .colum_content .registration form span.hidden{color:#eee;}
+.page .colum .colum_content .registration form  ul li{margin-bottom:12px;}
+.page .colum .colum_content .registration form ul li span.input_text{color:#010101;font-size:14px;}
+.page .colum .colum_content .registration form  ul li a.text{color:#298da7;margin-left:13px;}
+.page .colum .colum_content .registration form  ul li span.input_text,.page .login form ul li a.text{position:relative\9;top:-6px\9;}
+.page .colum .colum_content .registration form  ul li input.text{width:259px;height:28px;height:15px\9;border:1px solid #aaa;padding:0 5px;padding:8px 5px 3px 5px\9;}
+
+.page .colum .colum_content .registration form  input.button{width:70px;height:26px;border:0;text-indent:-9999px;cursor:pointer;margin-top:10px;}
+.page .colum .colum_content .registration form  ul li input.send_code{width:85px;height:26px;margin-left:12px;margin-top:0;background-position:-253px -138px;}
+.page .colum .colum_content .registration form  input.next_step{background-position:-126px -138px;}
+
+.page .colum .colum_content .registration form .large_class{width:auto !important;}
+
+.page .colum .colum_content .registration form dl.choose_teacher{background:#fff;border:1px solid #ccc;padding:15px;_padding-bottom:0px;margin:20px 0;}
+.page .colum .colum_content .registration form dl.choose_teacher dt{width:130px;}
+.page .colum .colum_content .registration form dl.choose_teacher dd{width:798px;margin-left:20px;}
+.page .colum .colum_content .registration form dl.choose_teacher dt .select_btn{margin:10px 0 0 20px;}
+.page .colum .colum_content .registration form dl.choose_teacher dd p{line-height:27px;font-size:13px;}
+.page .colum .colum_content .registration form dl.choose_teacher dd .mr10{margin-right:10px;}
+.page .colum .colum_content .registration form dl.choose_teacher dd p.low_text{height:82px;overflow:hidden;color:#666;}
+
+
+.page .colum .colum_content .registration form  ul li textarea{height:88px;width:259px;padding:5px;border:1px solid #aaa;resize:none;}
+.page .colum .colum_content .registration form  ul li label input.radio,.page .colum .colum_content .registration form  ul li span.text3,.page .colum .colum_content .registration form  ul li span.check_span,.page .colum .colum_content .registration form  ul li input.checkbox{margin-right:5px;}
+.page .colum .colum_content .registration form  ul li span.text3,.page .colum .colum_content .registration form  ul li span.check_span{color:#010101;}
+.page .colum .colum_content .registration form  ul li label.br_label{margin-left:108px;}
+.page .colum .colum_content .registration form  ul li span.textarea_text{display:block;float:left;position:relative;top:3px\9;}
+.page .colum .colum_content .registration form  ul li span.iehack{position:relative;top:0px\9;}
+
+
+.page .colum .colum_content .registration input.text{width:338px;height:18px;padding:3px 5px;border:1px solid #ccc;}
+.page .colum .colum_content .registration input.search_btn{width:91px;height:26px;border:none;cursor:pointer;margin-left:5px;position:relative;top:1px;background-position:0 -475px;}
+
+/* Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{.page .colum .colum_content .registration input.search_btn{position:relative;top:-4px;}}
+
+.page .colum .colum_content .registration h5{font-size:18px;color:#000;margin:13px 0;}
+.page .colum .colum_content .registration h6{color:#000;font-size:15px;margin:13px 0;}
+
+.page .colum .colum_content .registration table.confirm{border:1px solid #ccc;background:#fff;margin-bottom:45px;}
+.page .colum .colum_content .registration table.confirm th,.page .colum .colum_content .registration table.confirm td{height:26px;line-height:26px;color:#010101;text-align:center;font-size:14px;border-bottom:1px solid #eee;}
+.page .colum .colum_content .registration table.confirm th{font-weight:bold;}
+.page .colum .colum_content .registration table.confirm tr.last{border:none;}
+
+.page .colum .colum_content .registration  .right_tab{height:28px;_position:relative;_z-index:100;}
+.page .colum .colum_content .registration  .right_tab li{float:left;*display:inline;}
+.page .colum .colum_content .registration  .right_tab li a{display:block;color:#555;width:90px;height:28px;line-height:28px;text-align:center;font-weight:bold;background:url(../images/white_border.gif) left top no-repeat;border:1px solid #ccc;border-bottom:none;}
+.page .colum .colum_content .registration  .right_tab li a:hover{text-decoration:none;background:url(../images/white.gif) left top no-repeat;}
+.page .colum .colum_content .registration  .right_tab li a.select{background:url(../images/white.gif) left top no-repeat;}
+.page .colum .colum_content .registration  .right_tab li a.select:hover{}
+
+.page .colum .colum_content .registration .tab_content_wrap{background:#fff;padding:30px 20px;border:1px solid #ccc;margin-bottom:16px;_margin-top:-1px;}
+
+.page .colum .colum_content .registration .answer_tab{margin-top:30px;}
+
+
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_method{}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_method li{height:40px;line-height:40px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_method li label{display:block;height:40px;cursor:pointer;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_method li .radio{height:40px;line-height:40px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_method li span{width:535px;height:40px;margin-left:14px;background-position:0 -233px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_method li span.taobao{background-position:0 -300px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_method li span.xianchang{background-position:0 -842px;}
+
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank{margin-left:26px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li{margin:0 10px 20px 0;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li,.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label{width:168px;height:36px;line-height:36px;cursor:pointer;float:left;*display:inline;} 
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.icon{width:140px;height:36px;text-indent:-9999px;border:1px solid #ccc;background:url(../images/common_bank.png) left top no-repeat;margin-left:-3px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li.current label span.icon{border:1px solid #f00;}
+
+/*支付银行*/
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.ICBC{background-position:0 -504px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.CCB{background-position:0 -144px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.ABC{background-position:0 0;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.PSBC{background-position:0 -576px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.COMM{background-position:0 -360px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.CMB{background-position:0 -288px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.BOC{background-position:0 -108px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.CEB{background-position:0 -180px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.CITIC{background-position:0 -252px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.SDB{background-position:0 -612px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.SPDB{background-position:0 -756px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.CMBC{background-position:0 -324px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.CIB{background-position:0 -216px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.SPABANK{background-position:0 -720px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.GDB{background-position:0 -432px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.SHRCB{background-position:0 -684px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.SHBANK{background-position:0 -648px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.NBBANK{background-position:0 -540px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.HZCB{background-position:0 -468px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.BJBANK{background-position:0 -36px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.BJRCB{background-position:0 -72px;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.FDB{background-position:0 -396px;}
+/*支付银行*/
+
+
+.page .colum .colum_content .registration .confirm_wrap{text-align:center;}
+.page .colum .colum_content .registration .confirm_wrap input.btn{width:104px;height:26px;float:right;background-position:0 -398px;border:none;cursor:pointer;*display:inline;}
+.page .colum .colum_content .registration .confirm_wrap input.go_taobao{width:87px;margin-left:11px;background-position:-115px -398px;}
+.page .colum .colum_content .registration .confirm_wrap input.go_user_center{background-position:0 -706px;float:none;}
+
+
+.page .colum .colum_content .registration  .inner_tab{background:#bcbcbc;}
+.page .colum .colum_content .registration  .inner_tab li a.select{background:#ddd;color:#444;}
+.page .colum .colum_content .registration  .inner_tab li a.select:hover{color:#555;}
+
+.page .colum .colum_content .registration  .tab_content_wrap .tab_content{display:none;}
+.page .colum .colum_content .registration  .tab_content_wrap .show{display:block;}
+
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl{font-size:14px;color:#000;padding-left:13px;margin-bottom:20px;background:url(../images/answer_left.gif) left top repeat-y;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dt{}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li{float:left;*display:inline;margin-right:10px;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li a.lists{display:block;width:67px;height:20px;text-align:center;line-height:20px;font-size:12px;background:#aac5e7;color:#3860a5;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li a.lists:hover{background:#3860a5;color:#fff;text-decoration:none;}
+
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li ul.course{width:462px;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li ul.course li{margin-top:10px;}
+
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn{float:right;margin-top:10px;*display:inline;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a,.page .colum .colum_content .registration form dl.choose_teacher dt .select_btn{display:block;width:78px;height:22px;line-height:22px;text-align:center;color:#fff;font-size:13px;background-position:0 -542px;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a:hover,.page .colum .colum_content .registration form dl.choose_teacher dt .select_btn:hover{text-decoration:none;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_pay{background-position:-118px -542px !important;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_free{background-position:0 -542px !important;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.correct_error{color:#000;background-position:-118px -475px !important;}
+
+
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd .detail{display:none;width:822px;padding-top:13px;margin-left:57px;margin-top:6px;background:url(../images/title_top.gif) left top no-repeat;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd .detail ul.detail_ul{padding:20px;border:1px solid #ccc;border-top:none;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd .detail ul.detail_ul li.question{color:#000;margin-bottom:20px;line-height:23px;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd .detail ul.detail_ul li.question ul {width:400px;margin-left:5px;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd .detail ul.detail_ul li.question ul li{}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd .detail ul.detail_ul li.answer p{color:#555;line-height:20px;}
+
+
+/* 弹出层 */
+.dialog-box{ position: absolute; z-index:1001}
+.dialog-popup{/*background-color:#333333\9;*/filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F333333', endColorstr='#7F333333'); position:relative;z-index:29; zoom:1;background:#fff url(../images/login_right_top.jpg) right top no-repeat;border:1px solid #ccc;padding: 33px;filter:alpha(opacity="100");}
+.dialog-popup .dialog-title-bar{ height:30px; position:relative;}
+.dialog-popup .dialog-title-bar h2{ font-size:24px;line-height:30px; padding-left:10px;margin-bottom:30px !important;font-weight:700}
+
+.dialog-popup .dialog-title-bar a.close-dialog{display:none;position:absolute;top:5px; right:10px; background-color:#FFFFFF; border:1px solid #000; font-size:14px; font-weight:700; display:block; height:18px; width:18px; line-height:18px;}
+.dialog-popup .dialog-title-bar a.close-dialog{display:none;text-decoration:none; color:#555555; text-align:center;}
+.dialog-popup .dialog-title-bar a.close-dialog:hover{text-decoration:none; color:#333333}
+.dialog-content{ background-color:#FFFFFF; padding:10px}
+.dialog-iframe-mask{position:absolute; left:0; top:0; border: none;}
+.boxy-modal-blackout{position:absolute; left:0; top:0; border: none; background-color:#333333; overflow:hidden; z-index:999}
+
+
+.dialog-box{}
+.dialog-box .dialog-content{width:434px;overflow:hidden;}
+.dialog-box input.text{width:307px !important;height:28px;line-height:28px;padding:0 5px;border:1px solid #c3c3c3;width:290px\9;}
+.dialog-box input.save{margin-left:45%;}
+.dialog-box input.btns{width:70px;height:26px;text-indent:-9999px;cursor:pointer;border:none;background-position:0 -617px;}
+.dialog-box input.close-dialog{margin-left:7px;margin-top:10px;background-position:-77px -617px;}
+.dialog-box input.sub_btn{margin-left:256px;margin-top:10px;_position:relative;_left:250px;}
+.dialog-box input.small_text{width:117px !important;}
+.dialog-box .very_code{margin-left:10px;}
+
+
+.dialog-box ul{margin:10px 5px;_overflow:hidden;}
+.dialog-box li{margin-left:0;margin:5px 0;}
+.dialog-box li span.text{position:relative;top:-7px\9;}
+.dialog-box li span.text2{display:block;height:100px;line-height:100px;float:left;*display:inline;margin-right:4px;}
+.dialog-box textarea{width:297px;height:80px;border:1px solid #c3c3c3;padding:10px;resize:none;width:297px\9;_width:280px;overflow:hidden\9;_margin-left:-3px;}
+.dialog-box textarea.small{margin-left:0;width:340px;_margin-top:-20px;_margin-left:-12px;}
+
+/* Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{.dialog-box textarea{float:right;}}
+
+
+.dialog-box p{padding-left:10px;}
+.dialog-box p.center{font-size:15px;text-align:center;color:#f00;}

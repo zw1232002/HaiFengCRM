@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育-课程详细</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/inner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		//tab切换js
+		$(".page .tab_btn_ul").each(function (){
+			var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+			$(this).find("li a").each(function (i){
+				$(this).click(function (e){
+					e.preventDefault();
+					$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+					contents.find(">.tab_content").removeClass("show");
+					contents.find(">.tab_content").eq(i).addClass("show");
+				});
+			});
+		});
+	});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="inner_top clearfix">
+				<div class="fl inner_left">
+					嗨，欢迎来到海风教育学员中心！请<a href="login.html" class="font_bold">登录</a>或<a href="registration.html" class="font_bold">免费注册</a>
+				</div>
+				<ul class="fr clearfix inner_right" >
+					<li class="fl "><a href="my_course.html" class=" debte_png">我的课程</a></li>
+					<li class="fl"><a href="#" class=" debte_png">我的收藏</a></li>
+					<li class="fl last"><a href="#" class="debte_png ">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="index.html" class="out_text">海风教育</a></h1>
+				<p>学员热线：<strong>（021）5588-5955</strong>    （09:00~22:00）</p>
+			</div>
+			<div class="search fr">
+					<form action="" method="post">
+						<input type="text" class="text common_bg" name="" value="尝试在此键入你感兴趣的课程直接搜索...."/>
+						<input type="submit" class="btn common_bg out_text" name="" value=""/>
+					</form>
+					<div class="fl clearfix hot_search">
+						<strong class="fl">热门搜索：</strong>
+						<ul class="fl clearfix">
+							<li class="fl "><a href="#" class="">自主招生</a></li>
+							<li class="fl"><a href="#" class="hot">复旦千分考</a></li>
+							<li class="fl "><a href="#" class=" ">交大自招</a></li>
+							<li class="fl "><a href="#" class=" ">杨浦教学点</a></li>
+							<li class="fl "><a href="#" class=" ">更多…</a></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl"><a href="index.html" class=""></a></li><!--首页-->
+					<li class="fl select"><a href="my_course.html" class="my_course"></a></li><!--学员中心-->
+					<li class="fl"><a href="course_center.html" class="clss_center"></a></li><!--课程中心-->
+					<li class="fl"><a href="answer.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl "><a href="news.html" class="news"></a></li><!--最新活动-->
+					<li class="fl"><a href="about_us.html" class="about"></a></li><!--关于海风-->
+					<li class="fl"><a href="contact_us.html" class="contact"></a></li><!--联系我们-->
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl "><strong>关注海风：</strong></li>
+					<li class="fl"><a href="#" class="sina common_bg">新浪微博</a></li>
+					<li class="fl"><a href="#" class="renren common_bg">人人主页</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner registration">
+					<h2 class="mt38 ">复旦笔试课程<span class="small">课程编号：HKC-001</span></h2>
+					<form class="select" action="" method="post">
+						<h6>课程资源</h6>
+						<dl class="choose_teacher clearfix">
+							<dd class="fl detail">
+								<p><strong class="mr10">课程下载地址：</strong><a class="url" href="#">http://www.hypen.com/kejian/hkc-001</a></p>
+								<p><strong class="mr10">密　　　　码：</strong><span class="">sdfdfs54</span></p>
+								<p><strong class="mr10">电子课程地址：</strong><a class="url" href="#">http://www.hypen.com/kejian/hkc-001</a><a href="#username_pass" class="extra">查看用户名和密码</a></p>
+							</dd>
+						</dl>
+						<h6>上课安排</h6>
+						<dl class="choose_teacher clearfix">
+							<dd class="fl detail">
+								<p><strong class="cyan">杨浦班</strong></p>
+								<p><strong class="mr10">上课时间：</strong><span class="">2012-03-20<span class="m5">至</span>2012-04-30</span></p>
+								<p><strong class="mr10">上课地点：</strong><span class="">杨浦区固定路335号2号楼4楼</span></p>
+								<p class="clearfix"><strong class="mr10 pm fl">交通指引：</strong><span class="">1.轨道交通10号线五角场站<br/>2.60路国定路邯郸路</span></p>
+								<p><strong class="mr10">周边餐饮：</strong><span class="">三角湾</span></p>
+							</dd>
+						</dl>
+						<h6>辅导员</h6>
+						<dl class="choose_teacher clearfix">
+							<dd class="fl detail">
+								<p><strong class="mr10">姓　　　　名：</strong><span class="">伍老师</span></p>
+								<p><strong class="mr10">专　　　　业：</strong><span class="">北京用友软件架构师 </span></p>
+								<p><strong class="mr10">大学入学年份：</strong><span class="">2000-09-16</span></p>
+								<p class="clearfix"><strong class="mr10 pm fl">　个 人 介 绍：</strong><span class=" ">讲师伍老师拥有丰富的J2EE开发经验，具有4年的软件企业实战经验,3年的培训讲师经验，先后在重庆达内等顶级培训机构从事过一线教学工作，多年来主要从事办公OA系统的研发。课程讲解内容完全贴近企业需求。 </span></p>
+							</dd>
+						</dl>
+						<h6><a name="username_pass"></a>电子课程</h6>
+						<dl class="choose_teacher clearfix">
+							<dd class="fl detail">
+								<p><strong class="mr10">用户名：</strong><span class="">sdfsdsdf</span></p>
+								<p><strong class="mr10">密　码：</strong><span class="">sdfsdsdfHGDFDG465456 </span></p>
+							</dd>
+						</dl>
+						<p class="back_p"><a href="#" class="back common_bg">返回</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btm_nav clearfix">
+				<ul class="fl">
+					<li class=""><strong>关于海风教育</strong></li>
+					<li class=""><a href="#">关于我们</a></li>
+					<li class=""><a href="#">联系我们</a></li>
+					<li class=""><a href="#">隐私声明</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>新手指南</strong></li>
+					<li class=""><a href="#">注册登录</a></li>
+					<li class=""><a href="#">身份验证</a></li>
+					<li class=""><a href="#">在线购买</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>帮助中心</strong></li>
+					<li class=""><a href="#">常见问题</a></li>
+					<li class=""><a href="#">找回密码</a></li>
+					<li class=""><a href="#">其他问题</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>支付方式</strong></li>
+					<li class=""><a href="#">支付方式</a></li>
+					<li class=""><a href="#">关于发票</a></li>
+					<li class=""><a href="#">支付常见问题</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

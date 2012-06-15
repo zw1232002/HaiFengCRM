@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育-注册</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/inner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		//tab切换js
+		$(".page .tab_btn_ul").each(function (){
+			var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+			$(this).find("li a").each(function (i){
+				$(this).click(function (e){
+					e.preventDefault();
+					$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+					contents.find(">.tab_content").removeClass("show");
+					contents.find(">.tab_content").eq(i).addClass("show");
+				});
+			});
+		});
+		
+		//选择辅导员js
+		var selectCounselorWrap=$("#select_counselor"),needLi=selectCounselorWrap.find("li.if_need_teacher"),choose_radio=selectCounselorWrap.find("li.choose_radio"),teachList=selectCounselorWrap.find("li.teach_list"),needCheckbox=needLi.find(".need_checkbox").eq(0),youChooseRaio=selectCounselorWrap.find("li.you_choose input.radio"),selfChooseRaio=selectCounselorWrap.find("li.self_choose input.radio");
+		
+		/*开始设置一系列的默认值*/
+		needCheckbox.checkStatus=0;//设置一个状态，来判断选择辅导员按钮的显示隐藏
+		selectCounselorWrap.children("li").css("display","none");//所有的都设置隐藏
+		needLi.css("display","block");//选择框设置显示
+		needCheckbox.attr("checked",false);//选择辅导员复选框设置为不选
+		function setRaio(){
+			choose_radio.find("input.radio").attr("checked",false);//所有的单选设置为不选
+			youChooseRaio.attr("checked","true");//随机选择框设置为选中
+			teachList.hide();
+		}
+		setRaio();
+		/*结束设置一系列的默认值*/
+		
+		needCheckbox.click(function (){//选择辅导员复选框的点击切换
+			choose_radio.toggle(needCheckbox.checkStatus++ %2==0);
+			setRaio();
+		});
+		
+		selfChooseRaio.click(function (){
+			teachList.show();
+		});
+		
+		youChooseRaio.click(function (){
+			teachList.hide();
+		});
+		
+		//选择辅导员
+		var allBtn=teachList.find("a.select_btn");
+		allBtn.click(function (e){
+			e.preventDefault();
+			allBtn.css("background-position","0 -542px");
+			allBtn.html("选择");
+			$(this).css("background-position","-118px -475px");
+			$(this).html("已选择");
+		});
+	});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="inner_top clearfix">
+				<div class="fl inner_left">
+					嗨，欢迎来到海风教育学员中心！请<a href="login.html" class="font_bold">登录</a>或<a href="registration.html" class="font_bold">免费注册</a>
+				</div>
+				<ul class="fr clearfix inner_right" >
+					<li class="fl "><a href="my_course.html" class=" debte_png">我的课程</a></li>
+					<li class="fl"><a href="#" class=" debte_png">我的收藏</a></li>
+					<li class="fl last"><a href="#" class="debte_png ">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="index.html" class="out_text">海风教育</a></h1>
+				<p>学员热线：<strong>（021）5588-5955</strong>    （09:00~22:00）</p>
+			</div>
+			<div class="search fr">
+					<form action="" method="post">
+						<input type="text" class="text common_bg" name="" value="尝试在此键入你感兴趣的课程直接搜索...."/>
+						<input type="submit" class="btn common_bg out_text" name="" value=""/>
+					</form>
+					<div class="fl clearfix hot_search">
+						<strong class="fl">热门搜索：</strong>
+						<ul class="fl clearfix">
+							<li class="fl "><a href="#" class="">自主招生</a></li>
+							<li class="fl"><a href="#" class="hot">复旦千分考</a></li>
+							<li class="fl "><a href="#" class=" ">交大自招</a></li>
+							<li class="fl "><a href="#" class=" ">杨浦教学点</a></li>
+							<li class="fl "><a href="#" class=" ">更多…</a></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="colum">
+			<!--<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl "><a href="#" class=""></a></li>
+					<li class="fl select"><a href="#" class="clss_center"></a></li>
+					<li class="fl"><a href="#" class="why_system"></a></li>
+					<li class="fl"><a href="#" class="news"></a></li>
+					<li class="fl"><a href="#" class="about"></a></li>
+					<li class="fl"><a href="#" class="contact"></a></li>
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl "><strong>关注海风：</strong></li>
+					<li class="fl"><a href="#" class="sina common_bg">新浪微博</a></li>
+					<li class="fl"><a href="#" class="renren common_bg">人人主页</a></li>
+				</ul>
+			</div>-->
+			<div class="colum_content">
+				<div class="content_inner registration">
+					<h2>在线报名</h2>
+					<p>提示：如果您曾经报过名，或者已注册过海风帐号，请先<a href="#">登录</a>，您将无须重复填写个人信息。</p>
+					<div class="step step2"></div>
+					<form class="select" action="registration3.html" method="post">
+						<h6>课程信息</h6>
+						<div class="classs clearfix mt20">
+							<div class="fl kuang large_class">
+								<h2 class="font_bold common_bg">复旦面试课程/<span class="small">课程编号：HKC-001</span></h2>
+								<p class="text">小班化授课：充分体现课程互动性，使每一名学员得到充足学习机会；</p>
+								<p class="text">一对一咨询、答疑：根据学生学科强弱情况特点和千分考学科难度分布特点，为你量身打造最高效的复习建议与指导。提供课后答疑以及固定时间的个性化答疑服务。拥有强大的在线真题答疑系统解答你的疑惑。</p>
+								<p class="btn"><a href="course_center.html">>>点击查看课程详细介绍</a></p>
+								<table width="954" border="0" cellpadding="0" cellspacing="0">
+								  <tr>
+								  	 <th>&nbsp;</th>
+								    <th scope="col" height="25">上课地点</th>
+								    <th scope="col">上课时间 </th>
+								    <th scope="col">报名/开课人数</th>
+								    <th scope="col">获得积分</th>
+								  </tr>
+								  <tr class="">
+								  	<td><input type="radio" name="set_class" class="radio"/></td>
+								    <td height="25">杨浦教学点 </td>
+								    <td>2013.1.1-1.31</td>
+								    <td><strong>14/</strong>15 </td>
+								    <td>20</td>
+								  </tr>
+								  <tr class="double">
+								  	<td><input type="radio" name="set_class" class="radio"/></td>
+								    <td height="25">杨浦教学点 </td>
+								    <td>2013.1.1-1.31</td>
+								    <td><strong>14/</strong>15 </td>
+								    <td>20</td>
+								  </tr>
+								   <tr class="">
+								   	<td><input type="radio" name="set_class" class="radio"/></td>
+								    <td height="25">杨浦教学点 </td>
+								    <td>2013.1.1-1.31</td>
+								    <td><strong>14/</strong>15 </td>
+								    <td>20</td>
+								  </tr>
+								  <tr class="double">
+								  	<td><input type="radio" name="set_class" class="radio"/></td>
+								    <td height="25">杨浦教学点 </td>
+								    <td>2013.1.1-1.31</td>
+								    <td><strong>14/</strong>15 </td>
+								    <td>20</td>
+								  </tr>
+								</table>
+							</div>
+						</div>
+						<h6>选取辅导员</h6>
+						<ul id="select_counselor">
+							<li class="if_need_teacher">
+								<label><input type="checkbox" name="how_konw" class="checkbox need_checkbox"/><span class="check_span">我需要辅导员</span></label>
+							</li>
+							<li class="you_choose choose_radio"><label><input type="radio" name="sex" class="radio" checked="checked"/><span class="text3">你们帮我分配一位辅导员</span></label></li>
+							<li class="self_choose choose_radio"><label><input type="radio" name="sex" class="radio"/><span class="text3">我自己来选择</span></label></li>
+							<li class="teach_list">
+								<dl class="choose_teacher clearfix">
+									<dt class="fl">
+										<img src="images/login_left.jpg" width="130" height="130" alt="海风教育"/>
+										<a href="#" class="common_bg select_btn">选择</a>
+									</dt>
+									<dd class="fl width796">
+										<p><strong class="mr10">辅导员A</strong>辅导员带的人数：10人</p>
+										<p>大学：<span class="mr10">复旦大学</span><span class="mr10">物理专业</span><span class="">2005年秋入学</span></p>
+										<p>高中：<span class="mr10">格致中学</span><span class="">2005年秋入学</span></p>
+										<p class="low_text">自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、</p>
+									</dd>
+								</dl>
+								<dl class="choose_teacher clearfix">
+									<dt class="fl">
+										<img src="images/login_left.jpg" width="130" height="130" alt="海风教育"/>
+										<a href="#" class="common_bg select_btn">选择</a>
+									</dt>
+									<dd class="fl width796">
+										<p><strong class="mr10">辅导员A</strong>辅导员带的人数：10人</p>
+										<p>大学：<span class="mr10">复旦大学</span><span class="mr10">物理专业</span><span class="">2005年秋入学</span></p>
+										<p>高中：<span class="mr10">格致中学</span><span class="">2005年秋入学</span></p>
+										<p class="low_text">自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、</p>
+									</dd>
+								</dl>
+								<dl class="choose_teacher clearfix">
+									<dt class="fl">
+										<img src="images/login_left.jpg" width="130" height="130" alt="海风教育"/>
+										<a href="#" class="common_bg select_btn">选择</a>
+									</dt>
+									<dd class="fl width796">
+										<p><strong class="mr10">辅导员A</strong>辅导员带的人数：10人</p>
+										<p>大学：<span class="mr10">复旦大学</span><span class="mr10">物理专业</span><span class="">2005年秋入学</span></p>
+										<p>高中：<span class="mr10">格致中学</span><span class="">2005年秋入学</span></p>
+										<p class="low_text">自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、</p>
+									</dd>
+								</dl>
+								<dl class="choose_teacher clearfix">
+									<dt class="fl">
+										<img src="images/login_left.jpg" width="130" height="130" alt="海风教育"/>
+										<a href="#" class="common_bg select_btn">选择</a>
+									</dt>
+									<dd class="fl width796">
+										<p><strong class="mr10">辅导员A</strong>辅导员带的人数：10人</p>
+										<p>大学：<span class="mr10">复旦大学</span><span class="mr10">物理专业</span><span class="">2005年秋入学</span></p>
+										<p>高中：<span class="mr10">格致中学</span><span class="">2005年秋入学</span></p>
+										<p class="low_text">自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、自我介绍、</p>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+						<h6>确认支付金额</h6>
+						<table class="confirm" border="0" cellspadding="0" cellspacing="0" width="980">
+							<tr>
+								<th>项目</th>
+								<th>说明</th>
+								<th>单价</th>
+								<th>数量</th>
+								<th>金额</th>
+							</tr>
+							<tr>
+								<td>课程</td>
+								<td>复旦自主招生笔试课程 </td>
+								<td>￥1000.00</th>
+								<td><strong>1</strong></td>
+								<td><strong>￥1000.00</strong></td>
+							</tr>
+							<tr>
+								<td>辅导员服务</td>
+								<td>辅导员C </td>
+								<td>￥300.00</th>
+								<td><strong>1</strong></td>
+								<td><strong>￥300.00</strong></td>
+							</tr>
+							<tr class="last">
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</th>
+								<td><strong>总计</strong></td>
+								<td><strong>￥1200.00</strong></td>
+							</tr>
+						</table>
+						<div class="confirm_wrap clearfix">
+							<input type="submit" value="" name="" class="btn common_bg"/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btm_nav clearfix">
+				<ul class="fl">
+					<li class=""><strong>关于海风教育</strong></li>
+					<li class=""><a href="#">关于我们</a></li>
+					<li class=""><a href="#">联系我们</a></li>
+					<li class=""><a href="#">隐私声明</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>新手指南</strong></li>
+					<li class=""><a href="#">注册登录</a></li>
+					<li class=""><a href="#">身份验证</a></li>
+					<li class=""><a href="#">在线购买</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>帮助中心</strong></li>
+					<li class=""><a href="#">常见问题</a></li>
+					<li class=""><a href="#">找回密码</a></li>
+					<li class=""><a href="#">其他问题</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>支付方式</strong></li>
+					<li class=""><a href="#">支付方式</a></li>
+					<li class=""><a href="#">关于发票</a></li>
+					<li class=""><a href="#">支付常见问题</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

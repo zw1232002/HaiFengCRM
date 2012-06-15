@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育CRM系统-辅导员管理</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="js/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css" />
+<link href="js/miniui/themes/icons.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/miniui/miniui.js"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		//tab切换js
+		$(".page .tab_btn_ul").each(function (){
+			var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+			$(this).find("li a").each(function (i){
+				$(this).click(function (e){
+//					e.preventDefault();
+					$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+					contents.find(">.tab_content").removeClass("show");
+					contents.find(">.tab_content").eq(i).addClass("show");
+				});
+			});
+		});
+		
+		//删除确认弹出框
+		$(".delete_btn").click(function (e){
+			e.preventDefault();
+			if(window.confirm("确认要删除吗？")){
+				location.reload();
+			}else{
+				
+			}
+		});
+	});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover,.page .colum .colum_content .content_inner .right_select .right_tab li a.select');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="#" class="out_text">海风教育</a></h1>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl select"><a href="#" class=""></a></li>
+					<li class="fl"><a href="#" class="clss_center"></a></li>
+					<li class="fl"><a href="#" class="why_system"></a></li>
+					<li class="fl"><a href="#" class="news"></a></li>
+					<li class="fl"><a href="#" class="about"></a></li>
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl ">当前用户：</li>
+					<li class="fl"><strong>张三</strong></li>
+					<li class="fl">角色：</li>
+					<li class="fl"><strong>超级管理员</strong></li>
+					<li class="fl"><a href="#">[ 退出 ]</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner clearfix">
+					<div class="fl left_nav">
+						<ul>
+							<li><a href="#" class="">课程管理</a></li>
+							<li><a href="#" class="select">辅导员管理</a></li>
+							<li><a href="#" class="">电子课程</a></li>
+							<li><a href="#" class="">账号资源</a></li>
+						</ul>
+					</div>
+					<div class="fl right_select">
+						<ul class="right_tab tab_btn_ul">
+							<li><a href="#"  class="select">辅导员管理</a></li>
+							<li><a href="#"  class="">新增辅导员</a></li>
+						</ul>
+						<div class="tab_content_wrap ">
+							<div class="tab_content show">
+								<form class="select" action="" method="post">
+									<div class="set_bg">
+										<h4>查询条件</h4>
+										<ul class="clearfix">
+											<li class="fl">
+												<span>姓名：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　辅导员编号：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>专业：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl ">
+												<span>大学入学年份：</span>
+												<input type="text" class="text small" name=""/>
+												<span class="to">至</span>
+												<input type="text" class="text small" name=""/>
+											</li>
+										</ul>
+									</div>
+									<input type="submit" value="查询" class="btn select common_bg"/>
+									<input type="submit" value="新增辅导员" class="btn add common_bg"/>
+									<input type="submit" value="批量导入" class="btn add common_bg"/>
+									<input type="submit" value="删除" class="btn delete common_bg delete_btn"/>
+								</form>
+								<form>
+									<div class="set_bg">
+										<h4>查询结果列表</h4>
+										<table width="772" cellspacing="0" cellpadding="0" class="select_result">
+											<tr>
+												<th height="31" width="30"><input type="checkbox" name="" class="checkbox"/></th>
+												<th >&nbsp;</th>
+												<th >操作</th>
+												<th>辅导员编号</th>
+												<th>姓名</th>
+												<th>专业</th>
+												<th>大学入学年份</th>
+												<th>个人介绍</th>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>1</td>
+												<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">FDY-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">傅三强</a>
+												</td>
+												<td>
+													工商管理
+												</td>
+												<td>
+													2009.9
+												</td>
+												<td>这是个人介绍的文字</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>2</td>
+												<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">FDY-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">傅三强</a>
+												</td>
+												<td>
+													工商管理
+												</td>
+												<td>
+													2009.9
+												</td>
+												<td>这是个人介绍的文字</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>3</td>
+												<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">FDY-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">傅三强</a>
+												</td>
+												<td>
+													工商管理
+												</td>
+												<td>
+													2009.9
+												</td>
+												<td>这是个人介绍的文字</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>4</td>
+												<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">FDY-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">傅三强</a>
+												</td>
+												<td>
+													工商管理
+												</td>
+												<td>
+													2009.9
+												</td>
+												<td>这是个人介绍的文字</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>5</td>
+												<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">FDY-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">傅三强</a>
+												</td>
+												<td>
+													工商管理
+												</td>
+												<td>
+													2009.9
+												</td>
+												<td>这是个人介绍的文字</td>
+											</tr>
+										</table>
+									</div>
+								</form>
+							</div>
+							<div class="tab_content">
+								<form class="select" action="" method="post">
+									<div class="set_bg">
+										<h4>辅导员基本信息</h4>
+										<ul class="clearfix mal_special">
+											<li class="fl">
+												<span>　辅导员编号：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　　　专业：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　辅导员姓名：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　电子邮件：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　　　高中：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　　　大学：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　高中选科：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>大学入学年份：</span>
+												<select class="input_width">
+													<option value="2000">2000</option>
+													<option value="2001">2001</option>
+													<option value="2002">2002</option>
+													<option value="2003">2003</option>
+													<option value="2004">2004</option>
+												</select>
+											</li>
+											<li class="fl ml_left">
+												<span>能带的人上限：</span>
+												<select class="">
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+												</select>
+											</li>
+											<li class="fl clearfix">
+												<span class="text">　　个人介绍：</span>
+												<textarea class="fr textar2"></textarea>
+											</li>
+											<li class="fl">
+												<span class="fl">可辅导的课程：</span>
+												<ul id="tree2" class="mini-tree fl" url="js/miniui/data/tree.txt" style="" showTreeIcon="true" textField="text" idField="id" showCheckBox="true" onbeforenodecheck="onBeforeNodeCheck" checkRecursive="true" allowSelect="false" enableHotTrack="false"></ul>
+											</li>
+										</ul>
+									</div>
+									<input type="submit" value="保存" class="btn select common_bg save"/>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

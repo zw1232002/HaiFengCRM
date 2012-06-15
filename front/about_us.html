@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育-关于我们</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/inner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dialog.js"></script>
+<script type="text/javascript">
+		jQuery(function ($){
+			//tab切换js
+			$(".page .tab_btn_ul").each(function (){
+				var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+				$(this).find("li a").each(function (i){
+					$(this).click(function (e){
+						e.preventDefault();
+						$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+						contents.find(">.tab_content").removeClass("show");
+						contents.find(">.tab_content").eq(i).addClass("show");
+					});
+				});
+			});
+		});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="inner_top clearfix">
+				<div class="fl inner_left">
+					嗨，欢迎来到海风教育学员中心！请<a href="login.html" class="font_bold">登录</a>或<a href="registration.html" class="font_bold">免费注册</a>
+				</div>
+				<ul class="fr clearfix inner_right" >
+					<li class="fl "><a href="#" class=" debte_png">我的课程</a></li>
+					<li class="fl"><a href="#" class=" debte_png">我的收藏</a></li>
+					<li class="fl last"><a href="#" class="debte_png ">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="#" class="out_text">海风教育</a></h1>
+				<p>学员热线：<strong>（021）5588-5955</strong>    （09:00~22:00）</p>
+			</div>
+			<div class="search fr">
+					<form action="" method="post">
+						<input type="text" class="text common_bg" name="" value="尝试在此键入你感兴趣的课程直接搜索...."/>
+						<input type="submit" class="btn common_bg out_text" name="" value=""/>
+					</form>
+					<div class="fl clearfix hot_search">
+						<strong class="fl">热门搜索：</strong>
+						<ul class="fl clearfix">
+							<li class="fl "><a href="#" class="">自主招生</a></li>
+							<li class="fl"><a href="#" class="hot">复旦千分考</a></li>
+							<li class="fl "><a href="#" class=" ">交大自招</a></li>
+							<li class="fl "><a href="#" class=" ">杨浦教学点</a></li>
+							<li class="fl "><a href="#" class=" ">更多…</a></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl"><a href="index.html" class=""></a></li><!--首页-->
+					<li class="fl"><a href="my_course.html" class="my_course"></a></li><!--学员中心-->
+					<li class="fl"><a href="course_center.html" class="clss_center"></a></li><!--课程中心-->
+					<li class="fl"><a href="answer.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl"><a href="news.html" class="news"></a></li><!--最新活动-->
+					<li class="fl select"><a href="about_us.html" class="about"></a></li><!--关于海风-->
+					<li class="fl"><a href="contact_us.html" class="contact"></a></li><!--联系我们-->
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl "><strong>关注海风：</strong></li>
+					<li class="fl"><a href="#" class="sina common_bg">新浪微博</a></li>
+					<li class="fl"><a href="#" class="renren common_bg">人人主页</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner registration">
+					<div class="news_content">
+						<h2 class="news_title">关于海风</h2>
+						<img src="images/about_us.jpg" width="800" height="566" alt="海风教育"/>
+						<h4 class="news_h4 common_bg">关于海风</h4>
+						<dl class="news_dl news_list">
+							<dt class="common_bg">关于海风</dt>
+							<dd>上海风创信息咨询有限公司由复旦、交大在校与毕业学生一起创立，旗下“海风教育”帮助了无数的同学成功找到与实现自己的梦想。“海风”，寓意我们希望给这个略显功利和灰暗的教育市场带来一股清新的气息；“Hyphen”取“海风”谐音的同时，也以其“连接号”的意思，传达我们对能成为大学和高中之间桥梁的希望。</dd>
+						</dl>
+						<h4 class="news_h4 common_bg">我们是谁？</h4>
+						<dl class="news_dl news_list">
+							<dt class="common_bg">我们是谁？</dt>
+							<dd>我们，是一群有创意想法和社会责任感的复旦大学学生，作为“过来人”，希望创立一个广大大学生普遍认为更应该出现的、不同于传统意义上单纯应试培训的，高中生素质拓展机构来补足高中方面教育上的缺位。我们致力于使高中学习在更有针对性的基础上，也更有长效性。</dd>
+						</dl>
+						<h4 class="news_h4 common_bg">我们要做什么？</h4>
+						<dl class="news_dl news_list">
+							<dt class="common_bg">我们要做什么？</dt>
+							<dd> 海风教育提供针对高中生素质拓展和自主招生、专业选择和职业规划等相关信息咨询服务。</dd>
+							<dd>目前，不仅是国外高校，国内高校也逐渐意识到学生个人素质的多方位考察，而学生在高三繁重的课业与令人窒息的压力中，难以抓住应试与素质的平衡点。我们希望培养一个个具有良好思维能力，眼界开阔，心怀梦想的年轻人，使他们可以更容易地进入理想的大学殿堂。我们想引导、帮助很多年轻人对前途进行思考从而在人生关键路口作出更好的选择，并且帮助他们去实现理想。</dd>
+						</dl>
+						<h4 class="news_h4 common_bg">什么让我们与众不同？</h4>
+						<dl class="choose_teacher news_dl news_list clearfix">
+							<dt class="width_auto common_bg">与市面上存在的培训补习班的差别：</dt>
+							<dd class="fl detail">
+								<p class="clearfix">
+									<strong class="mr10 pm fl"> 1.公益性　：</strong>
+									<span class="">我们的服务最基础的一层是公益性，免费的高校招考信息整理、中转服务，以公开讲座和短信、邮件的新闻稿（newsletter）等形式提供；在此之上是复旦优秀大学生提供有针对性和个性化的一对一辅导（one-on-one mentorship）和小组互动课程（group workshop），在相关方面通过提供适合学生个人情况的专业服务更深入有效地帮助学生获得显著成长和进步。</span>
+								</p>
+								<p class="clearfix">
+									<strong class="mr10 pm pm55 fl">2. 形式不同：</strong>
+									<span class="">收费服务中，我们将采用一对一辅导和小组互动课程的形式，针对学员的情况进行分析，量身定制辅导服务，引导学员自主思考相关问题，解答他们的困惑并提出建议。这种形式发源、成熟于国外，目前正在国内大学的求职留学指导服务中流行起来。我们的导师将都是通过复旦自主程序、百里挑一的优秀学生，尽可能地保证了将优秀的品质和能力在一对一的交流中薪火相传。我们最熟悉自主招生考试，最熟悉大学的这些专业，最熟悉高三这年的流程和关键，也最熟悉我们的学员！</span>
+								</p>
+								<p class="clearfix">
+									<strong class="mr10 pm fl">3. 更加全面：</strong>
+									<span class="">我们的服务中不仅提供自招相关的笔试、面试训练服务，我们还会人性化地帮助学生整合信息，做出决策。我们提供职业倾向性测试、成功经验分享和大量各专业同学对本专业情况描述等信息作为辅助参考，帮助学生选择适合自己的道路。同时，批判性思维（critical thinking）等方面的训练也将极大帮助高中学生在素质方面有极大拓展。</span>
+								</p>
+								<p class="clearfix">
+									<strong class="mr10 pm  pm91 fl">4. 着眼长久：</strong>
+									<span class="">在我们看来，自主招生的核心目的，除了考察和保证学生具有一定的学术能力外，更重要的是要筛选和奖励那些视野开阔，思维清晰，和怀有梦想与信念的优秀人才。而不像大部分的培训补习班还仅仅将自主招生看作一个形式不同的高考，一切活动仍然指向应试。我们希望可以凭借我们的项目，加入推动引导教育制度的改变，使得教育能够更多带有素质指向这一过程，把正在被社会越来越普遍认可的许多目前中学课堂内还很难获得的学习、工作、生活中的重要能力以“授之以渔”的形式传授给学员。而这些立足长远的课程又很能很迅速的反作用于一些诸如自主招生、填报志愿甚至高考本身这样一些短期目标。</span>
+								</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btm_nav clearfix">
+				<ul class="fl">
+					<li class=""><strong>关于海风教育</strong></li>
+					<li class=""><a href="#">关于我们</a></li>
+					<li class=""><a href="#">联系我们</a></li>
+					<li class=""><a href="#">隐私声明</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>新手指南</strong></li>
+					<li class=""><a href="#">注册登录</a></li>
+					<li class=""><a href="#">身份验证</a></li>
+					<li class=""><a href="#">在线购买</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>帮助中心</strong></li>
+					<li class=""><a href="#">常见问题</a></li>
+					<li class=""><a href="#">找回密码</a></li>
+					<li class=""><a href="#">其他问题</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>支付方式</strong></li>
+					<li class=""><a href="#">支付方式</a></li>
+					<li class=""><a href="#">关于发票</a></li>
+					<li class=""><a href="#">支付常见问题</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

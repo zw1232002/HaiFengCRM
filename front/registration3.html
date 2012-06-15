@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育-注册</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/inner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		//tab切换js
+		$(".page .tab_btn_ul").each(function (){
+			var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+			$(this).find("li a").each(function (i){
+				$(this).click(function (e){
+					e.preventDefault();
+					$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+					contents.find(">.tab_content").removeClass("show");
+					contents.find(">.tab_content").eq(i).addClass("show");
+				});
+			});
+		});
+		
+		//选择支付宝付款 （让IE6支持label）
+		$(".page .colum .colum_content .registration .tab_content_wrap ul.pay_method li").click(function (){
+			$(this).find("input.radio").attr("checked",true);//IE6支持label
+		});
+		
+		//选择银行
+		var payBankUl=$("#pay_bank_ul"),bankLi=payBankUl.find("li");
+		bankLi.click(function (){
+			$(this).find("input.radio").attr("checked",true);//IE6支持label
+		});
+	});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="inner_top clearfix">
+				<div class="fl inner_left">
+					嗨，欢迎来到海风教育学员中心！请<a href="login.html" class="font_bold">登录</a>或<a href="registration.html" class="font_bold">免费注册</a>
+				</div>
+				<ul class="fr clearfix inner_right" >
+					<li class="fl "><a href="my_course.html" class=" debte_png">我的课程</a></li>
+					<li class="fl"><a href="#" class=" debte_png">我的收藏</a></li>
+					<li class="fl last"><a href="#" class="debte_png ">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="index.html" class="out_text">海风教育</a></h1>
+				<p>学员热线：<strong>（021）5588-5955</strong>    （09:00~22:00）</p>
+			</div>
+			<div class="search fr">
+					<form action="" method="post">
+						<input type="text" class="text common_bg" name="" value="尝试在此键入你感兴趣的课程直接搜索...."/>
+						<input type="submit" class="btn common_bg out_text" name="" value=""/>
+					</form>
+					<div class="fl clearfix hot_search">
+						<strong class="fl">热门搜索：</strong>
+						<ul class="fl clearfix">
+							<li class="fl "><a href="#" class="">自主招生</a></li>
+							<li class="fl"><a href="#" class="hot">复旦千分考</a></li>
+							<li class="fl "><a href="#" class=" ">交大自招</a></li>
+							<li class="fl "><a href="#" class=" ">杨浦教学点</a></li>
+							<li class="fl "><a href="#" class=" ">更多…</a></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="colum">
+			<!--<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl "><a href="#" class=""></a></li>
+					<li class="fl select"><a href="#" class="clss_center"></a></li>
+					<li class="fl"><a href="#" class="why_system"></a></li>
+					<li class="fl"><a href="#" class="news"></a></li>
+					<li class="fl"><a href="#" class="about"></a></li>
+					<li class="fl"><a href="#" class="contact"></a></li>
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl "><strong>关注海风：</strong></li>
+					<li class="fl"><a href="#" class="sina common_bg">新浪微博</a></li>
+					<li class="fl"><a href="#" class="renren common_bg">人人主页</a></li>
+				</ul>
+			</div>-->
+			<div class="colum_content">
+				<div class="content_inner registration">
+					<h2>在线报名</h2>
+					<p>提示：如果您曾经报过名，或者已注册过海风帐号，请先<a href="#">登录</a>，您将无须重复填写个人信息。</p>
+					<div class="step step3"></div>
+					<form class="select" action="registration4.html" method="post">
+						<h6>课程信息</h6>
+						<div class="classs clearfix mt20">
+							<div class="fl kuang large_class">
+								<h2 class="font_bold common_bg">复旦面试课程/<span class="small">课程编号：HKC-001</span></h2>
+								<p class="text">小班化授课：充分体现课程互动性，使每一名学员得到充足学习机会；</p>
+								<p class="text">一对一咨询、答疑：根据学生学科强弱情况特点和千分考学科难度分布特点，为你量身打造最高效的复习建议与指导。提供课后答疑以及固定时间的个性化答疑服务。拥有强大的在线真题答疑系统解答你的疑惑。</p>
+								<p class="btn"><a href="course_center.html">>>点击查看课程详细介绍</a></p>
+								<table width="954" border="0" cellpadding="0" cellspacing="0">
+								  <tr>
+								  	 <th>&nbsp;</th>
+								    <th scope="col" height="25">上课地点</th>
+								    <th scope="col">上课时间 </th>
+								    <th scope="col">报名/开课人数</th>
+								    <th scope="col">获得积分</th>
+								  </tr>
+								  <tr class="">
+								  	<td><input type="radio" name="set_class" class="radio"/></td>
+								    <td height="25">杨浦教学点 </td>
+								    <td>2013.1.1-1.31</td>
+								    <td><strong>14/</strong>15 </td>
+								    <td>20</td>
+								  </tr>
+								</table>
+							</div>
+						</div>
+						<h6>确认支付金额</h6>
+						<table class="confirm" border="0" cellspadding="0" cellspacing="0" width="980">
+							<tr>
+								<th>项目</th>
+								<th>说明</th>
+								<th>单价</th>
+								<th>数量</th>
+								<th>金额</th>
+							</tr>
+							<tr>
+								<td>课程</td>
+								<td>复旦自主招生笔试课程 </td>
+								<td>￥1000.00</th>
+								<td><strong>1</strong></td>
+								<td><strong>￥1000.00</strong></td>
+							</tr>
+							<tr>
+								<td>辅导员服务</td>
+								<td>辅导员C </td>
+								<td>￥300.00</th>
+								<td><strong>1</strong></td>
+								<td><strong>￥300.00</strong></td>
+							</tr>
+							<tr class="last">
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</th>
+								<td><strong>总计</strong></td>
+								<td><strong>￥1200.00</strong></td>
+							</tr>
+						</table>
+						<h6>选择支付方式</h6>
+						<ul class="right_tab tab_btn_ul">
+							<li><a href="#"  class="select">在线支付</a></li>
+							<li><a href="#"  class="">线下支付</a></li>
+						</ul>
+						<div class="tab_content_wrap ">
+							<div class="tab_content show">
+								<ul class="pay_method">
+									<li><label><input type="radio" class="radio" name="display"/><span class="aidipay inline_block common_bg"></span></label></li>
+									<li><label><input type="radio" class="radio" name="display"/><span class="taobao inline_block common_bg"></span></label></li>
+								</ul>
+							</div>
+							<div class="tab_content ">
+								<ul class="pay_bank clearfix" id="pay_bank_ul">
+									<li>
+										<label class="clearfix">
+											<input type="radio" class="radio fl" name="pay_bank"/>
+											<div class=" fl">
+												<span title="中国工商银行" class="icon ICBC fl">中国工商银行</span>
+												<div class="fl bank_info">
+													<p><span>开户行：</span>中国工商银行股份有限公司北京积水潭支行</p>
+													<p><span>账　号：</span>6222 0202 0008 4851 332</p>
+													<p><span>开户人：</span>赵晓丹</p>
+												</div>
+											</div>
+										</label>
+									</li>
+									<li>
+										<label class="clearfix">
+											<input type="radio" class="radio fl" name="pay_bank"/>
+											<div class=" fl">
+												<span title="中国建设银行" class="icon CCB fl">中国建设银行</span>
+												<div class="fl bank_info">
+													<p><span>开户行：</span>中国建设银行北京市西城区德外储蓄所</p>
+													<p><span>账　号：</span>6227 0000 1080 0075 543</p>
+													<p><span>开户人：</span>赵晓丹</p>
+												</div>
+											</div>
+										</label>
+									</li>
+									<li>
+										<label class="clearfix">
+											<input type="radio" class="radio fl" name="pay_bank"/>
+											<div class=" fl">
+												<span title="中国农业银行" class="icon ABC fl">中国农业银行</span>
+												<div class="fl bank_info">
+													<p><span>开户行：</span>中国农业银行北京分行人定湖支行</p>
+													<p><span>账　号：</span>62284 4800 1071 6629 919</p>
+													<p><span>开户人：</span>赵晓丹</p>
+												</div>
+											</div>
+										</label>
+									</li>
+									<li>
+										<label class="clearfix">
+											<input type="radio" class="radio fl" name="pay_bank"/>
+											<div class=" fl">
+												<span title="现场付款" class="icon xianchang fl">现场付款</span>
+												
+											</div>
+										</label>
+									</li>
+								</ul>
+								<p class="note">请在汇款“备注栏”中注明您的手机号码后四位</p>
+							</div>
+						</div>
+						<div class="confirm_wrap clearfix">
+							<input type="submit" value="" name="" class="btn common_bg"/>
+							
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btm_nav clearfix">
+				<ul class="fl">
+					<li class=""><strong>关于海风教育</strong></li>
+					<li class=""><a href="#">关于我们</a></li>
+					<li class=""><a href="#">联系我们</a></li>
+					<li class=""><a href="#">隐私声明</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>新手指南</strong></li>
+					<li class=""><a href="#">注册登录</a></li>
+					<li class=""><a href="#">身份验证</a></li>
+					<li class=""><a href="#">在线购买</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>帮助中心</strong></li>
+					<li class=""><a href="#">常见问题</a></li>
+					<li class=""><a href="#">找回密码</a></li>
+					<li class=""><a href="#">其他问题</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>支付方式</strong></li>
+					<li class=""><a href="#">支付方式</a></li>
+					<li class=""><a href="#">关于发票</a></li>
+					<li class=""><a href="#">支付常见问题</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

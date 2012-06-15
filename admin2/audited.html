@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		//tab切换js
+		$(".page .tab_btn_ul").each(function (){
+			var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+			$(this).find("li a").each(function (i){
+				$(this).click(function (e){
+//					e.preventDefault();
+					$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+					contents.find(">.tab_content").removeClass("show");
+					contents.find(">.tab_content").eq(i).addClass("show");
+				});
+			});
+		});
+		
+		//删除确认弹出框
+		$(".delete_btn").click(function (e){
+			e.preventDefault();
+			if(window.confirm("确认要删除吗？")){
+				location.reload();
+			}else{
+				
+			}
+		});
+	});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover,.page .colum .colum_content .content_inner .right_select .right_tab li a.select');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="#" class="out_text">海风教育</a></h1>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl "><a href="#" class=""></a></li>
+					<li class="fl select"><a href="#" class="clss_center"></a></li>
+					<li class="fl"><a href="#" class="why_system"></a></li>
+					<li class="fl"><a href="#" class="news"></a></li>
+					<li class="fl"><a href="#" class="about"></a></li>
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl ">当前用户：</li>
+					<li class="fl"><strong>张三</strong></li>
+					<li class="fl">角色：</li>
+					<li class="fl"><strong>超级管理员</strong></li>
+					<li class="fl"><a href="#">[ 退出 ]</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner clearfix">
+					<div class="fl left_nav">
+						<ul>
+							<li><a href="#"  class="">题目管理</a></li>
+							<li><a href="#"  class="">待审核勘误</a></li>
+							<li><a href="#"  class="select">已审核勘误</a></li>
+						</ul>
+					</div>
+					<div class="fl right_select">
+						<ul class="right_tab tab_btn_ul">
+							<li><a href="#"  class="select">已审核勘误</a></li>
+						</ul>
+						<div class="tab_content_wrap ">
+							<div class="tab_content show">
+								<form class="select" action="" method="post">
+									<div class="set_bg">
+										<h4>查询条件</h4>
+										<ul class="clearfix">
+											<li class="fl ">
+												<span>勘误题目：</span>
+												<input type="text" class="text" name=""/>
+												<input type="submit" value="查询" class="btn select common_bg"/>
+											</li>
+										</ul>
+									</div>
+								</form>
+								<form>
+									<div class="set_bg">
+										<h4>电子课程</h4>
+										<table width="772" cellspacing="0" cellpadding="0" class="select_result">
+											<tr>
+												<th height="31" width="30"><input type="checkbox" name="" class="checkbox"/></th>
+												<th >&nbsp;</th>
+												<th >操作</th>
+												<th>课程编号</th>
+												<th>课程名称</th>
+												<th>开课状态</th>
+												<th>课程价格</th>
+												<th>赠送积分</th>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>1</td>
+												<td>
+													<a href="#" class="blue">详细</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="blue">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>2</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="yellow1">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>3</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="red">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>4</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="green">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>5</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="yellow2">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+										</table>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

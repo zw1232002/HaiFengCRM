@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href='css/dialog.css' rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type='text/javascript' src='js/jquery.dialog.js'></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		//tab切换js
+		$(".page .tab_btn_ul").each(function (){
+			var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+			$(this).find("li a").each(function (i){
+				$(this).click(function (e){
+//					e.preventDefault();
+					$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+					contents.find(">.tab_content").removeClass("show");
+					contents.find(">.tab_content").eq(i).addClass("show");
+				});
+			});
+		});
+		
+		//开始弹出层
+		$("#add_registration").click(function (){//认可并修改
+			var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'> <li  class='fl clearfix'> <span class=''>输入要报名的手机号码：</span><input type='text' class='text'/><input type='submit' value='获取手机验证码' class='btn select common_bg big_btn' /></li></ul><input type='submit' value='确认' class='btn select common_bg big_btn' style='margin-left:130px;'/><input type='button' value='取消' class='btn add common_bg big_btn close-dialog'/></div> </form>",{
+				'width':'500px',
+				'title':'fuck world!',
+				'closeModal':false,
+				modal: true,
+				title: '新增海风账号',
+				closeDelay:'500000'
+			});
+		});
+		//结束弹出层
+	});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover,.page .colum .colum_content .content_inner .right_select .right_tab li a.select');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="#" class="out_text">海风教育</a></h1>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl "><a href="#" class=""></a></li>
+					<li class="fl select"><a href="#" class="clss_center"></a></li>
+					<li class="fl"><a href="#" class="why_system"></a></li>
+					<li class="fl"><a href="#" class="news"></a></li>
+					<li class="fl"><a href="#" class="about"></a></li>
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl ">当前用户：</li>
+					<li class="fl"><strong>张三</strong></li>
+					<li class="fl">角色：</li>
+					<li class="fl"><strong>超级管理员</strong></li>
+					<li class="fl"><a href="#">[ 退出 ]</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner clearfix">
+					<div class="fl left_nav">
+						<ul>
+							<li><a href="#" class="select">报名管理</a></li>
+							<li><a href="#" class="">学员查询</a></li>
+						</ul>
+					</div>
+					<div class="fl right_select">
+						<ul class="right_tab tab_btn_ul">
+							<li><a href="#"  class="select">报名管理</a></li>
+						</ul>
+						<div class="tab_content_wrap ">
+							<div class="tab_content show">
+								<form class="select" action="" method="post">
+									<div class="set_bg">
+										<h4>查询条件</h4>
+										<ul class="clearfix">
+											<li class="fl ">
+												<span>　报名时间：</span>
+												<input type="text" class="text small" name=""/>
+												<span class="to">至</span>
+												<input type="text" class="text small" name=""/>
+											</li>
+											<li class="fl">
+												<span>　学员姓名：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　手机号码：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　课程名称：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl" >
+												<span>　学员类型：</span>
+												<select>
+													<option value="0">报名中</option>
+													<option value="1">报满</option>
+													<option value="2">停止报名</option>
+													<option value="3">已开课</option>
+													<option value="4">已结课</option>
+												</select>
+											</li>
+											<li class="fl">
+												<span>　　辅导员：</span>
+												<select>
+													<option value="0">无</option>
+													<option value="1">报满</option>
+													<option value="2">停止报名</option>
+													<option value="3">已开课</option>
+													<option value="4">已结课</option>
+												</select>
+											</li><li class="fl">
+												<span>　　　状态：</span>
+												<select>
+													<option value="0">报名中</option>
+													<option value="1">报满</option>
+													<option value="2">停止报名</option>
+													<option value="3">已开课</option>
+													<option value="4">已结课</option>
+												</select>
+											</li>
+										</ul>
+									</div>
+									<input type="button" value="新增报名" class="btn select common_bg" id="add_registration"/>
+									<input type="submit" value="确认收款" class="btn add common_bg"/>
+									<input type="submit" value="分配辅导员" class="btn add common_bg"/>
+									<input type="submit" value="开通电子课程" class="btn delete common_bg big_btn"/>
+									<input type="submit" value="删除" class="btn delete common_bg"/>
+								</form>
+								<form>
+									<div class="set_bg">
+										<h4>查询结果列表</h4>
+										<table width="772" cellspacing="0" cellpadding="0" class="select_result">
+											<tr>
+												<th height="31" width="30"><input type="checkbox" name="" class="checkbox"/></th>
+												<th >&nbsp;</th>
+												<th >操作</th>
+												<th>课程编号</th>
+												<th>课程名称</th>
+												<th>开课状态</th>
+												<th>课程价格</th>
+												<th>赠送积分</th>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>1</td>
+												<td>
+													<a href="#" class="blue">详细</a>
+													<a href="#" class="blue">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="blue">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>2</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="yellow1">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>3</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="red">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>4</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="green">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>5</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="yellow2">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+										</table>
+									</div>
+								</form>
+							</div>
+							<div class="tab_content">
+								<form class="select" action="" method="post">
+									<div class="set_bg">
+										<h4>辅导员基本信息</h4>
+										<ul class="clearfix">
+											<li class="fl">
+												<span>辅导员编号：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　专业：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>辅导员姓名：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>电子邮件：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　　高中：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　大学：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　高中选科：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>大学入学年份：</span>
+												<select>
+													<option value="2000">2000</option>
+													<option value="2001">2001</option>
+													<option value="2002">2002</option>
+													<option value="2003">2003</option>
+													<option value="2004">2004</option>
+												</select>
+											</li>
+											
+											<li class="fl">
+												<span>能带的人上限：</span>
+												<select>
+													<option value="0">1</option>
+													<option value="1">2</option>
+													<option value="2">3</option>
+												</select>
+											</li>
+											
+											<li class="fl clearfix">
+												<span class="text">个人介绍：</span>
+												<textarea class="fr"></textarea>
+											</li>
+										</ul>
+									</div>
+									<input type="submit" value="保存" class="btn select common_bg save"/>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

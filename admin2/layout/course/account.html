@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育CRM系统-账号资源</title>
+<link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
+<link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
+<script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
+<script type="text/javascript" src="../../js/kindeditor-4.1/kindeditor.js"></script><!--kindeditor-->
+<script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
+<script type="text/javascript" src="../../js/load_editor.js"></script><!--加载kindeditor-->
+<script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
+<script type="text/javascript" src="../../js/calendar/WdatePicker.js"></script><!--日期控件-->
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover,.page .colum .colum_content .content_inner .right_select .right_tab li a.select');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="header clearfix ">
+			<!--后台logo开始-->
+			<div class="logo fl ">
+				<h1><a href="#" class="out_text">海风教育</a></h1>
+			</div>
+			<!--后台logo结束-->
+		</div>
+		<div class="colum">
+			<!--tab和用户开始-->
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl select"><a href="course_manage.html" class=""></a></li><!--课程管理-->
+					<li class="fl"><a href="../student/apply_manage.html" class="clss_center"></a></li><!--学员管理-->
+					<li class="fl"><a href="../answer/question_manage.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl"><a href="#" class="about"></a></li><!--用户账号-->
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl ">当前用户：</li>
+					<li class="fl"><strong>张三</strong></li>
+					<li class="fl">角色：</li>
+					<li class="fl"><strong>超级管理员</strong></li>
+					<li class="fl"><a href="#">[ 退出 ]</a></li>
+				</ul>
+			</div>
+			<!--tab和用户结束-->
+			<div class="colum_content">
+				<div class="content_inner clearfix">
+					<!--左侧菜单开始-->
+					<div class="fl left_nav">
+						<ul>
+							<li><a href="course_manage.html">课程管理</a></li>
+							<li><a href="counsellor_manage.html" class="">辅导员管理</a></li>
+							<li><a href="ecourse.html" class="">电子课程</a></li>
+							<li><a href="account.html" class="select">账号资源</a></li>
+						</ul>
+					</div>
+					<!--左侧菜单结束-->
+					<div class="fl right_select">
+						<ul class="right_tab tab_btn_ul">
+							<li><a href="course_manage.html"  class="select">账号资源 </a></li>
+						<!-- 	<li><a href="#"  class="">新增课程</a></li>
+							<li><a href="#"  class="">课程详细</a></li> -->
+						</ul>
+						<div class="tab_content_wrap ">
+							<div class="tab_content show">
+								<form class="select" action="" method="post">
+									<!--查询表单域开始-->
+									<div class="set_bg">
+										<h4>查询条件</h4>
+										<ul class="clearfix">
+											<li class="fl">
+												<span>　用户名：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>密　　码：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>账号状态：</span>
+												<select>
+													<option value="0">可用</option>
+													<option value="1">已分配</option>
+												</select>
+											</li>
+											<li class="fl ">
+												<span>导入时间：</span>
+												<input onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text" class="text small" name=""/>
+												<span class="to">至</span>
+												<input onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text" class="text small" name=""/>
+											</li>
+											<li class="fl">
+												<span>　导入人： </span>
+												<input type="text" class="text" name=""/>
+											</li>
+										</ul>
+									</div>
+									<!--查询表单域结束-->
+									<input type="submit" value="查询" class="btn select common_bg"/>
+									<input type="button" value="导入账号" class="btn add common_bg"/>
+									<input type="button" value="删除" class="btn delete common_bg delete_btn"/>
+								</form>
+								<form>
+									<div class="set_bg">
+										<h4>查询结果列表</h4>
+										<!--表格开始-->
+										<table width="772" cellspacing="0" cellpadding="0" class="select_result">
+											<tr>
+												<th height="31" width="30"><input type="checkbox" name="" class="checkbox"/></th>
+												<th>&nbsp;</th>
+												<th>操作</th>
+												<th>用户名</th>
+												<th>密码</th>
+												<th>账号状态</th>
+												<th>使用学员</th>
+												<th>分配时间</th>
+                                                <th>导入时间</th>
+                                                <th>导入人</th>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>1</td>
+												<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">ua310-11</a>
+												</td>
+												<td>
+													<a href="#" class="blue">31xxfet</a>
+												</td>
+												<td>
+													<div class="green">可用</div>
+												</td>
+												<td>
+												
+												</td>
+												<td>--</td>
+                                                <td>2012-03-31 18:00</td>
+                                                <td>张三</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>2</td>
+													<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">ua310-11</a>
+												</td>
+												<td>
+													<a href="#" class="blue">31xxfet</a>
+												</td>
+												<td>
+													<div class="green">可用</div>
+												</td>
+												<td>
+												
+												</td>
+												<td>--</td>
+                                                <td>2012-03-31 18:00</td>
+                                                <td>张三</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>3</td>
+													<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">ua310-11</a>
+												</td>
+												<td>
+													<a href="#" class="blue">31xxfet</a>
+												</td>
+												<td>
+													<div class="red">已分配</div>
+												</td>
+												<td>
+													<a href="#" class="blue">王五</a>
+												</td>
+												<td>--</td>
+                                                <td>2012-03-31 18:00</td>
+                                                <td>张三</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>4</td>
+													<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">ua310-11</a>
+												</td>
+												<td>
+													<a href="#" class="blue">31xxfet</a>
+												</td>
+												<td>
+													<div class="red">已分配</div>
+												</td>
+												<td>
+												<a href="#" class="blue">	赵六</a>
+												</td>
+												<td>--</td>
+                                                <td>2012-03-31 18:00</td>
+                                                <td>张三</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>5</td>
+													<td>
+													<a href="#" class="blue">修改</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">ua310-11</a>
+												</td>
+												<td>
+													<a href="#" class="blue">31xxfet</a>
+												</td>
+												<td>
+													<div class="green">可用</div>
+												</td>
+												<td>
+												
+												</td>
+												<td>--</td>
+                                                <td>2012-03-31 18:00</td>
+                                                <td>张三</td>
+											</tr>
+										</table>
+										<!--表格结束-->
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚开始-->
+		<div class="footer">
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+		<!--页脚结束-->
+	</div>
+</body>
+</html>

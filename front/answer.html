@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育-答疑系统</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/inner.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/tinybox.css" type="text/css" />
+<script type="text/javascript" src="js/tinybox.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dialog.js"></script>
+<script type="text/javascript">
+		jQuery(function ($){
+			//tab切换js
+			$(".page .tab_btn_ul").each(function (){
+				var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+				$(this).find("li a").each(function (i){
+					$(this).click(function (e){
+						e.preventDefault();
+						$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+						contents.find(">.tab_content").removeClass("show");
+						contents.find(">.tab_content").eq(i).addClass("show");
+					});
+				});
+			});
+			
+			
+			//隐藏答案
+			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.detail_ul li.answer").hide();
+			
+			//查看题目
+			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_question").click(function (evt){
+				evt.preventDefault();
+				$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
+			});
+			
+			//查看详细(免费)
+			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_free").click(function (evt){
+				evt.preventDefault();
+				$(this).parents("ul.btns_ul").next(".detail").find(".answer").toggle();
+				$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
+			});
+			
+			//查看详细(收费)
+			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_pay").click(function (evt){
+				evt.preventDefault();
+				if($(this).attr("show")!=="false"){
+					if(window.confirm("查看答案将扣除20积分，确认吗？")){
+						$(this).parents("ul.btns_ul").next(".detail").find(".answer").toggle();
+						$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
+						var content3 = "您已扣除20积分！";
+						TINY.box.show(content3,0,0,0,0,2,0);
+						$(this).attr("show","false");
+					}
+				}else{
+					$(this).parents("ul.btns_ul").next(".detail").find(".answer").toggle();
+					$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
+				}
+				
+			});
+			
+			//开始弹出层
+			$(".correct_error").click(function (e){//勘误
+				e.preventDefault();
+				var dialogBox1= new Dialog("<form method='post' action='' class='select kanwu'>  									<ul class='clearfix'>  										<li class='fl clearfix'>  											<span class='text'>此题正确答案：</span> 											<input type='text' name='' class='text'/> 										</li> 										<li class='fl clearfix'>  											<span class='text2'>　　相关描述：</span> 											<textarea></textarea> 										</li> 										<li class='fl clearfix'>  											<span class='text'>　　　勘误人：</span> 											<input type='text' name='' class='text'/> 										</li> 										<li class='fl clearfix'>  											<span class='text'>　　联系方式：</span> 											<input type='text' name='' class='text'/> 										</li> 										<li class='fl clearfix'> 											 											<input type='button' name='' class='btns fr common_bg close-dialog' value='' /> 											<input type='submit' name='' class='btns fl common_bg sub_btn submit_btn' value='' /> 										</li> 									</ul> 									 								</form>",{
+					'width':'500px',
+					'title':'勘误',
+					'closeModal':true,
+					modal: true,
+					title: '勘误',
+					closeDelay:'500000'
+				});
+				$('.kanwu .submit_btn').click(function (e){
+					e.preventDefault();
+					var content3 = "提交成功！",_this=this;
+					TINY.box.show(content3,0,0,0,0,2,0);
+					setTimeout(function (){
+						$(_this).parents("form.kanwu").submit();
+					},700);
+				});
+			});
+			
+		
+			//结束弹出层
+		});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="inner_top clearfix">
+				<div class="fl inner_left">
+					嗨，欢迎来到海风教育学员中心！请<a href="login.html" class="font_bold">登录</a>或<a href="registration.html" class="font_bold">免费注册</a>
+				</div>
+				<ul class="fr clearfix inner_right" >
+					<li class="fl "><a href="#" class=" debte_png">我的课程</a></li>
+					<li class="fl"><a href="#" class=" debte_png">我的收藏</a></li>
+					<li class="fl last"><a href="#" class="debte_png ">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="index.html" class="out_text">海风教育</a></h1>
+				<p>学员热线：<strong>（021）5588-5955</strong>    （09:00~22:00）</p>
+			</div>
+			<div class="search fr">
+					<form action="" method="post">
+						<input type="text" class="text common_bg" name="" value="尝试在此键入你感兴趣的课程直接搜索...."/>
+						<input type="submit" class="btn common_bg out_text" name="" value=""/>
+					</form>
+					<div class="fl clearfix hot_search">
+						<strong class="fl">热门搜索：</strong>
+						<ul class="fl clearfix">
+							<li class="fl "><a href="#" class="">自主招生</a></li>
+							<li class="fl"><a href="#" class="hot">复旦千分考</a></li>
+							<li class="fl "><a href="#" class=" ">交大自招</a></li>
+							<li class="fl "><a href="#" class=" ">杨浦教学点</a></li>
+							<li class="fl "><a href="#" class=" ">更多…</a></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl"><a href="index.html" class=""></a></li><!--首页-->
+					<li class="fl"><a href="my_course.html" class="my_course"></a></li><!--学员中心-->
+					<li class="fl"><a href="course_center.html" class="clss_center"></a></li><!--课程中心-->
+					<li class="fl select"><a href="answer.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl"><a href="news.html" class="news"></a></li><!--最新活动-->
+					<li class="fl"><a href="about_us.html" class="about"></a></li><!--关于海风-->
+					<li class="fl"><a href="contact_us.html" class="contact"></a></li><!--联系我们-->
+					
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl "><strong>关注海风：</strong></li>
+					<li class="fl"><a href="#" class="sina common_bg">新浪微博</a></li>
+					<li class="fl"><a href="#" class="renren common_bg">人人主页</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner registration">
+					<h3 class="search_note">请在此输入标签搜索（标签之间用空格分隔）：</h3>
+					<input type="text" class="text search" name=""/><input type="submit" name="" value="" class="search_btn common_bg"/>
+					<ul class="right_tab tab_btn_ul answer_tab">
+						<li><a href="#"  class="select">所有题目</a></li>
+						<li><a href="#"  class="">已购买的题目</a></li>
+					</ul>
+					<div class="tab_content_wrap ">
+						<div class="tab_content show">
+							<dl class=" ans_dl">
+								<dt>复旦 物理 2009 103</dt>
+								<dd>
+									<ul class="btns_ul clearfix">
+										<li>
+											<ul class="course">
+												<li><a href="#" class="lists">理科</a></li>
+												<li><a href="#" class="lists">光学</a></li>
+												<li><a href="#" class="lists">复旦</a></li>
+												<li><a href="#" class="lists">理科</a></li>
+												<li><a href="#" class="lists">光学</a></li>
+												<li><a href="#"class="lists">复旦</a></li>
+												<li><a href="#"class="lists">复旦</a></li>
+												<li><a href="#"class="lists">复旦</a></li>
+												<li><a href="#"class="lists">复旦</a></li>
+											</ul>
+										</li>
+										<li class="btn"><a href="#" class="common_bg correct_error">勘误</a></li>
+										<li class="btn"><a href="#" class="common_bg view_more_free">查看详细</a></li>
+										<li class="btn"><a href="#" class="common_bg view_question">查看题目</a></li>
+									</ul>
+									<div class="detail">
+										<ul class="detail_ul">
+											<li class="question">
+												<p>190、FTP的主要功能是________。</p>
+												<ul class="clearfix">
+													<li class="fl">A.在网上传送各类文件</li>
+													<li class="fr">B.在网上传送各类文件2</li>
+													<li class="fl">C.在网上传送各类文件3</li>
+													<li class="fr">D.在网上传送各类文件4</li>
+												</ul>
+											</li>
+											<li class="answer">
+												<p>【答案】A</p>
+												<p>【解析】FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，</p>
+											</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+							<dl class=" ans_dl">
+								<dt>复旦 物理 2009 103</dt>
+								<dd>
+									<ul class="btns_ul clearfix">
+										<li>
+											<ul class="course">
+												<li><a href="#" class="lists">理科</a></li>
+												<li><a href="#" class="lists">光学</a></li>
+												<li><a href="#" class="lists">复旦</a></li>
+												<li><a href="#" class="lists">理科</a></li>
+												<li><a href="#" class="lists">光学</a></li>
+												<li><a href="#"class="lists">复旦</a></li>
+												<li><a href="#"class="lists">复旦</a></li>
+												<li><a href="#"class="lists">复旦</a></li>
+												<li><a href="#"class="lists">复旦</a></li>
+											</ul>
+										</li>
+										<li class="btn"><a href="#" class="common_bg correct_error">勘误</a></li>
+										<li class="btn"><a href="#" class="common_bg view_more_pay">查看详细</a></li>
+										<li class="btn"><a href="#" class="common_bg view_question">查看题目</a></li>
+									</ul>
+									<div class="detail">
+										<ul class="detail_ul">
+											<li class="question">
+												<p>190、FTP的主要功能是________。</p>
+												<ul class="clearfix">
+													<li class="fl">A.在网上传送各类文件</li>
+													<li class="fr">B.在网上传送各类文件2</li>
+													<li class="fl">C.在网上传送各类文件3</li>
+													<li class="fr">D.在网上传送各类文件4</li>
+												</ul>
+											</li>
+											<li class="answer">
+												<p>【答案】A</p>
+												<p>【解析】FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，</p>
+											</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btm_nav clearfix">
+				<ul class="fl">
+					<li class=""><strong>关于海风教育</strong></li>
+					<li class=""><a href="#">关于我们</a></li>
+					<li class=""><a href="#">联系我们</a></li>
+					<li class=""><a href="#">隐私声明</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>新手指南</strong></li>
+					<li class=""><a href="#">注册登录</a></li>
+					<li class=""><a href="#">身份验证</a></li>
+					<li class=""><a href="#">在线购买</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>帮助中心</strong></li>
+					<li class=""><a href="#">常见问题</a></li>
+					<li class=""><a href="#">找回密码</a></li>
+					<li class=""><a href="#">其他问题</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>支付方式</strong></li>
+					<li class=""><a href="#">支付方式</a></li>
+					<li class=""><a href="#">关于发票</a></li>
+					<li class=""><a href="#">支付常见问题</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

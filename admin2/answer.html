@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/dialog.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dialog.js"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		//tab切换js
+		$(".page .tab_btn_ul").each(function (){
+			var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+			$(this).find("li a").each(function (i){
+				$(this).click(function (e){
+//					e.preventDefault();
+					$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+					contents.find(">.tab_content").removeClass("show");
+					contents.find(">.tab_content").eq(i).addClass("show");
+				});
+			});
+		});
+		
+		//开始弹出层
+		$("#imports_btn").click(function (){//导入
+			var dialogBox1= new Dialog("<p class='center'>导入成功</p><p class='large'>成功上传<strong>1000</strong>条</p><p class='large'>重复<strong>200</strong>条</p><p class='large'>无效<strong>1条</strong></p></div>",{
+				'width':'500px',
+				'title':'fuck world!',
+				'closeModal':false,
+				modal: true,
+				title: '导入题目',
+				closeDelay:'500000'
+			});
+		});
+		
+		$("#modify_title").click(function (){//修改题目
+			var dialogBox2 = new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'> <li  class='fl clearfix'> <textarea  class='fr' disabled='disabled'>题干</textarea> </li><li  class='fl clearfix'> <textarea  class='fr' disabled='disabled'>答案</textarea> </li><li  class='fl clearfix'> <span class=''>　　题目标题：</span><input type='text' class='text'/> </li><li  class='fl clearfix'><span class=''>　　　小标签：</span><textarea  class='fr small'>答案</textarea> </li><li  class='fl clearfix'> <span class='text'>重新上传题干：</span><input type='file' /><input type='submit' value='上传' class='btn select common_bg big_btn' style='margin-left:55px;margin-bottom:0;'/></li><li  class='fl clearfix'> <span class='text'>重新上传答案：</span><input type='file' /><input type='submit' value='上传' class='btn select common_bg big_btn' style='margin-left:55px;margin-bottom:0;'/></li></ul><input type='submit' value='确认修改' class='btn select common_bg big_btn' style='margin-left:145px;'/><input type='button' value='取消' class='btn add common_bg big_btn close-dialog'/></div> </form>",{
+				'width':'500px',
+				'title':'fuck world!',
+				'closeModal':false,
+				modal: true,
+				title: '修改题目',
+				closeDelay:'500000'
+			});
+		});
+		
+		//结束弹出层
+		
+		
+		//删除确认弹出框
+		$(".delete_btn").click(function (e){
+			e.preventDefault();
+			if(window.confirm("确认要删除吗？")){
+				location.reload();
+			}else{
+				
+			}
+		});
+	});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover,.page .colum .colum_content .content_inner .right_select .right_tab li a.select');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="#" class="out_text">海风教育</a></h1>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl "><a href="#" class=""></a></li>
+					<li class="fl select"><a href="#" class="clss_center"></a></li>
+					<li class="fl"><a href="#" class="why_system"></a></li>
+					<li class="fl"><a href="#" class="news"></a></li>
+					<li class="fl"><a href="#" class="about"></a></li>
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl ">当前用户：</li>
+					<li class="fl"><strong>张三</strong></li>
+					<li class="fl">角色：</li>
+					<li class="fl"><strong>超级管理员</strong></li>
+					<li class="fl"><a href="#">[ 退出 ]</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner clearfix">
+					<div class="fl left_nav">
+						<ul>
+							<li><a href="#"  class="select">题目管理</a></li>
+							<li><a href="#"  class="">待审核勘误</a></li>
+							<li><a href="#"  class="">已审核勘误</a></li>
+						</ul>
+					</div>
+					<div class="fl right_select">
+						<ul class="right_tab tab_btn_ul">
+							<li><a href="#"  class="select">题目管理</a></li>
+						</ul>
+						<div class="tab_content_wrap ">
+							<div class="tab_content show">
+								<form class="select" action="" method="post">
+									<div class="set_bg">
+										<h4>题目查询条件</h4>
+										<ul class="clearfix">
+											<li class="fl ">
+												<span>查询标签：</span>
+												<input type="text" class="text" name=""/>
+												<input type="submit" value="查询" class="btn select common_bg"/>
+											</li>
+										</ul>
+									</div>
+									<input type="button" value="导入题目" class="btn add common_bg" id="imports_btn"/>
+									<input type="submit" value="删除" class="btn delete common_bg delete_btn"/>
+								</form>
+								<form>
+									<div class="set_bg">
+										<h4>答疑系统题目列表</h4>
+										<table width="772" cellspacing="0" cellpadding="0" class="select_result">
+											<tr>
+												<th height="31" width="30"><input type="checkbox" name="" class="checkbox"/></th>
+												<th >&nbsp;</th>
+												<th >操作</th>
+												<th>课程编号</th>
+												<th>课程名称</th>
+												<th>开课状态</th>
+												<th>课程价格</th>
+												<th>赠送积分</th>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>1</td>
+												<td>
+													<a href="#" class="blue" id="modify_title">详细</a>
+													<a href="#" class="blue delete_btn">删除</a>
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="blue">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>2</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="yellow1">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>3</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="red">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>4</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="green">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr class="double">
+												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
+												<td>5</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													<a href="#" class="blue">FDB-001</a>
+												</td>
+												<td>
+													<a href="#" class="blue">复旦笔试课程</a>
+												</td>
+												<td>
+													<div class="yellow2">报名中</div>
+												</td>
+												<td>
+													￥100.00 /课时
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+										</table>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
