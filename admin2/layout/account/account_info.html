@@ -8,11 +8,10 @@
 <script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
 <script type="text/javascript" src="../../js/kindeditor-4.1/kindeditor.js"></script><!--kindeditor-->
 <script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
-<script type="text/javascript" src="../../js/load_editor.js"></script><!--加载kindeditor-->
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
 
 <!--[if IE 6]>
-<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script type="text/javascript" >
 DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover,.page .colum .colum_content .content_inner .right_select .right_tab li a.select');
 </script>
@@ -34,9 +33,8 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 				<ul class="clearfix colum_btn fl">
 					<li class="fl"><a href="../course/course_manage.html" class=""></a></li><!--课程管理-->
 					<li class="fl"><a href="../student/apply_manage.html" class="clss_center"></a></li><!--学员管理-->
-					<li class="fl select"><a href="question_manage.html" class="why_system"></a></li><!--答疑系统-->
-					<li class="fl"><a href="#" class="news"></a></li><!--用户权限-->
-					<li class="fl"><a href="#" class="about"></a></li><!--用户账号-->
+					<li class="fl "><a href="../answer/question_manage.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl select"><a href="account_info.html" class="about"></a></li><!--用户账号-->
 				</ul>
 				<ul class="know fr clearfix">
 					<li class="fl ">当前用户：</li>
@@ -52,87 +50,106 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 					<!--左侧菜单开始-->
 					<div class="fl left_nav">
 						<ul>
-							<li><a href="accoutn_info.html" >用户资料</a></li>
+							<li><a href="account_info.html" class="select">用户资料</a></li>
 						</ul>
 					</div>
 					<!--左侧菜单结束-->
 					<div class="fl right_select">
 						<ul class="right_tab tab_btn_ul">
-							<li><a href="course_manage.html"  class="select">已审核勘误</a></li>
+							<li><a href="course_manage.html"  class="select">用户资料</a></li>
 						<!-- 	<li><a href="#"  class="">新增课程</a></li>
 							<li><a href="#"  class="">课程详细</a></li> -->
 						</ul>
 						<div class="tab_content_wrap ">
-							<div class='tab_content show'>
-								<form class='select' action='' method='post'>
-									<div class='set_bg'>
-										<h4>查询条件</h4>
-										<ul class='clearfix'>
-											<li class='fl '>
-												<span>勘误题目：</span>
-												<input type='text' class='text' name=''/>
-												<input type='submit' value='查询' class='btn select common_bg'/>
+							<div class="tab_content show">
+								<form class="select" action="" method="post">
+									<div class="set_bg">
+										<h4>基本信息</h4>
+										<ul class="clearfix mal_special">
+											<li class="fl">
+												<span>用户编号：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl ">
+												<span>　　　　姓名：</span>
+												<input type="text" class="text" name=""/>
+											</li>	
+											<li class="fl">
+												<span class="fl">　　性别：</span>
+												<div class="label_wrap fl">
+													<label class="radio"><input type="radio" class="radio" name="sex"/><span>男</span></label>
+													<label class="radio"><input type="radio" class="radio" name="sex"/><span>女</span></label>
+												</div>
+											</li>
+											
+											<li class="fl">
+												<span>　　出生日期：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>手机号码：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　固定电话：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>电子邮件：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>其他联系方式：</span>
+												<input type="text" class="text" name=""/>
 											</li>
 										</ul>
 									</div>
-									<input type='button' value='查询' class='btn add common_bg'  id="agree_modify"/>
+									<input type="submit" value="保存修改" class="btn select common_bg" id=""/>
+									<input type="button" value="关闭" class="btn select common_bg"/>
 								</form>
-								<form>
-									<div class='set_bg'>
-										<h4>查询结果</h4>
-										<table width='772' cellspacing='0' cellpadding='0' class='select_result'>
-											<tr>
-												<th height='31' width='30'><input type='checkbox' name='' class='checkbox'/></th>
-												<th >&nbsp;</th>
-												<th >勘误题目</th>
-												<th>此题正确答案</th>
-												<th>相关描述</th>
-												<th>处理方式</th>
-												<th>审核人</th>
-												<th>审核意见</th>
-												<th>审核时间</th>
-												<th>勘误人</th>
-												<th>联系方式</th>
-												<th>提交时间</th>
-											</tr>
-											<tr class='double'>
-												<td height='31'><input type='checkbox' name='' class='checkbox'/></td>
-												<td>1</td>
-												<td>
-													<a href='#' class='blue'>复旦 计算机 2006 189</a>
-													
-												</td>
-												<td>
-													A
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													<div class='green'>认可</div>
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													张三
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													
-												</td>
-											</tr>
-											
-										</table>
+								<form action="" method="post" class="mb30">
+									<div class="set_bg">
+										<h4>角色信息</h4>
+										<ul class="clearfix mal_special">
+											<li class="fl">
+												<span>用户角色：</span>
+												<span class="info">超级管理员</span>
+											</li>
+										</ul>
 									</div>
+								</form>
+								<form action="" method="post">
+									<div class="set_bg">
+										<h4>登陆信息</h4>
+										<ul class="clearfix mal_special">
+											<li class="fl">
+												<span>　用户名：</span>
+												<span class="info">admin</span>
+											</li>
+										</ul>
+									</div>
+									<input type="button" value="修改密码" class="btn select common_bg"/>
+								</form>
+								<form action="" method="post">
+									<div class="set_bg">
+										<h4>修改密码</h4>
+										<ul class="clearfix mal_special">
+											<li class="">
+												<span>　　原密码：</span>
+												<input type="password" class="text" name=""/>
+											</li>
+											<li class="">
+												<span>　　新密码：</span>
+												<input type="password" class="text" name=""/>
+											</li>
+											<li class="">
+												<span>确认新密码：</span>
+												<input type="password" class="text" name=""/>
+											</li>
+										</ul>
+									</div>
+									<input type="submit" value="确认修改密码" class="btn select common_bg" id=""/>
+									<input type="button" value="取消" class="btn select common_bg"/>
 								</form>
 							</div>
 						</div>
