@@ -5,12 +5,13 @@
 <title>海风教育CRM系统-账号资源</title>
 <link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
 <link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
+<link href='../../css/dialog.css' rel='stylesheet' type='text/css' />
 <script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
+<script type="text/javascript" src="../../js/jquery.dialog.js"></script>
 <script type="text/javascript" src="../../js/kindeditor-4.1/kindeditor.js"></script><!--kindeditor-->
 <script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
-<script type="text/javascript" src="../../js/load_editor.js"></script><!--加载kindeditor-->
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
-<script type="text/javascript" src="../../js/calendar/WdatePicker.js"></script><!--日期控件-->
+<script type="text/javascript" src="../../js/import_account.js"></script>
 <!--[if IE 6]>
 <script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script type="text/javascript" >
@@ -100,7 +101,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 									</div>
 									<!--查询表单域结束-->
 									<input type="submit" value="查询" class="btn select common_bg"/>
-									<input type="button" value="导入账号" class="btn add common_bg"/>
+									<input type="button" value="导入账号" class="btn add common_bg" id="import_account"/>
 									<input type="button" value="删除" class="btn delete common_bg delete_btn"/>
 								</form>
 								<form>
