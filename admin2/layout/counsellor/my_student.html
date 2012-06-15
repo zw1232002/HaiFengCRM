@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>海风教育CRM系统-课程管理</title>
+<title>海风教育CRM系统-我的学生</title>
 <link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
 <link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
 <script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
@@ -10,7 +10,7 @@
 <script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
 <script type="text/javascript" src="../../js/load_editor.js"></script><!--加载kindeditor-->
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
-<script type="text/javascript" src="../../js/del_confirm.js"></script>
+
 <!--[if IE 6]>
 <script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script type="text/javascript" >
@@ -32,11 +32,10 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 			<!--tab和用户开始-->
 			<div class="clearfix colum_btn_wrap">
 				<ul class="clearfix colum_btn fl">
-					<li class="fl select"><a href="course_manage.html" class=""></a></li><!--课程管理-->
-					<li class="fl"><a href="../student/apply_manage.html" class="clss_center"></a></li><!--学员管理-->
+					<li class="fl"><a href="../course/course_manage.html" class=""></a></li><!--课程管理-->
+					<li class="fl select"><a href="apply_manage.html" class="clss_center"></a></li><!--学员管理-->
 					<li class="fl"><a href="../answer/question_manage.html" class="why_system"></a></li><!--答疑系统-->
 					<li class="fl"><a href="../account/account_info.html" class="about"></a></li><!--用户账号-->
-					<li class="fl"><a href="../counsellor/my_course.html" class="fudaoyuan"></a></li><!--辅导员-->
 				</ul>
 				<ul class="know fr clearfix">
 					<li class="fl ">当前用户：</li>
@@ -52,10 +51,9 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 					<!--左侧菜单开始-->
 					<div class="fl left_nav">
 						<ul>
-							<li><a href="course_manage.html" class="select">课程管理</a></li>
-							<li><a href="counsellor_manage.html" class="">辅导员管理</a></li>
-							<li><a href="ecourse.html" class="">电子课程</a></li>
-							<li><a href="account.html" class="">账号资源</a></li>
+							<li><a href="my_course.html" class="">我辅导的课程</a></li>
+							<li><a href="my_student.html" class="select">我带的学生</a></li>
+							<li><a href="my_info.html" class="">我的详情</a></li>
 						</ul>
 					</div>
 					<!--左侧菜单结束-->
@@ -68,165 +66,128 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 						<div class="tab_content_wrap ">
 							<div class="tab_content show">
 								<form class="select" action="" method="post">
-									<!--查询表单域开始-->
 									<div class="set_bg">
 										<h4>查询条件</h4>
 										<ul class="clearfix">
-											<li class="fl">
-												<span>课程名称：</span>
-												<input type="text" class="text" name=""/>
-											</li>
-											<li class="fl">
-												<span>课程编号：</span>
-												<input type="text" class="text" name=""/>
-											</li>
-											<li class="fl">
-												<span>课程状态：</span>
-												<select>
-													<option value="0">报名中</option>
-													<option value="1">报满</option>
-													<option value="2">停止报名</option>
-													<option value="3">已开课</option>
-													<option value="4">已结课</option>
-												</select>
-											</li>
 											<li class="fl ">
-												<span>课程价格：</span>
-												<input type="text" class="text small" name=""/>
-												<span class="to">至</span>
-												<input type="text" class="text small" name=""/>
+												<span>海风账号：</span>
+												<input type="text" class="text" name=""/>
 											</li>
 											<li class="fl">
-												<span>赠送积分： </span>
-												<input type="text" class="text small" name=""/>
-												<span class="to">至</span>
-												<input type="text" class="text small" name=""/>
+												<span>学员姓名：</span>
+												<input type="text" class="text" name=""/>
 											</li>
+											<li class="fl">
+												<span>手机号码：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>电子邮箱：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>家长手机：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											<li class="fl">
+												<span>　　高中：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+											
 										</ul>
 									</div>
-									<!--查询表单域结束-->
 									<input type="submit" value="查询" class="btn select common_bg"/>
-									<input type="button" value="新增课程" class="btn add common_bg" onclick="location.href='course_new.html'"/>
-									<input type="submit" value="删除" class="btn delete common_bg delete_btn"/>
 								</form>
 								<form>
 									<div class="set_bg">
 										<h4>查询结果列表</h4>
-										<!--表格开始-->
 										<table width="772" cellspacing="0" cellpadding="0" class="select_result">
 											<tr>
 												<th height="31" width="30"><input type="checkbox" name="" class="checkbox"/></th>
 												<th >&nbsp;</th>
 												<th >操作</th>
-												<th>课程编号</th>
-												<th>课程名称</th>
-												<th>开课状态</th>
-												<th>课程价格</th>
-												<th>赠送积分</th>
+												<th>海风账号</th>
+												<th>学员姓名</th>
+												<th>手机号码</th>
+												<th>电子邮箱</th>
+												<th>家长手机</th>
+												<th>高中</th>
+												<th>总消费额</th>
+												<th>学员类型</th>
+												<th>备注</th>
 											</tr>
 											<tr class="double">
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
 												<td>1</td>
 												<td>
-													<a href="course_detail.html" class="blue">详细</a>
-													<a href="#" class="blue delete_btn">删除</a>
+													<a href="#" class="blue">详细</a>
+											
 												</td>
 												<td>
-													<a href="#" class="blue">FDB-001</a>
+													<a href="#" class="blue">130000000000</a>
 												</td>
 												<td>
-													<a href="#" class="blue">复旦笔试课程</a>
+													<a href="#" class="blue">张三</a>
 												</td>
 												<td>
-													<div class="blue">报名中</div>
+													13000000000000
 												</td>
 												<td>
-													￥100.00 /课时
+													zhangsan@123.com
 												</td>
-												<td>&nbsp;</td>
+												<td>
+													12300003333
+												</td>
+												<td>
+													某个高中
+												</td>
+												<td>
+													123034
+												</td>
+												<td>
+													老学员
+												</td>
+												<td>
+													查看备注
+												</td>
 											</tr>
 											<tr>
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
-												<td>2</td>
-												<td>&nbsp;
+												<td>1</td>
+												<td>
+													<a href="#" class="blue">详细</a>
 													
 												</td>
 												<td>
-													<a href="#" class="blue">FDB-001</a>
+													<a href="#" class="blue">130000000000</a>
 												</td>
 												<td>
-													<a href="#" class="blue">复旦笔试课程</a>
+													<a href="#" class="blue">张三</a>
 												</td>
 												<td>
-													<div class="yellow1">报名中</div>
+													13000000000000
 												</td>
 												<td>
-													￥100.00 /课时
+													zhangsan@123.com
 												</td>
-												<td>&nbsp;</td>
+												<td>
+													12300003333
+												</td>
+												<td>
+													某个高中
+												</td>
+												<td>
+													123034
+												</td>
+												<td>
+													老学员
+												</td>
+												<td>
+													查看备注
+												</td>
 											</tr>
-											<tr class="double">
-												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
-												<td>3</td>
-												<td>&nbsp;
-													
-												</td>
-												<td>
-													<a href="#" class="blue">FDB-001</a>
-												</td>
-												<td>
-													<a href="#" class="blue">复旦笔试课程</a>
-												</td>
-												<td>
-													<div class="red">报名中</div>
-												</td>
-												<td>
-													￥100.00 /课时
-												</td>
-												<td>&nbsp;</td>
-											</tr>
-											<tr>
-												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
-												<td>4</td>
-												<td>&nbsp;
-													
-												</td>
-												<td>
-													<a href="#" class="blue">FDB-001</a>
-												</td>
-												<td>
-													<a href="#" class="blue">复旦笔试课程</a>
-												</td>
-												<td>
-													<div class="green">报名中</div>
-												</td>
-												<td>
-													￥100.00 /课时
-												</td>
-												<td>&nbsp;</td>
-											</tr>
-											<tr class="double">
-												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
-												<td>5</td>
-												<td>&nbsp;
-													
-												</td>
-												<td>
-													<a href="#" class="blue">FDB-001</a>
-												</td>
-												<td>
-													<a href="#" class="blue">复旦笔试课程</a>
-												</td>
-												<td>
-													<div class="yellow2">报名中</div>
-												</td>
-												<td>
-													￥100.00 /课时
-												</td>
-												<td>&nbsp;</td>
-											</tr>
+											
 										</table>
-										<!--表格结束-->
 									</div>
 								</form>
 							</div>
