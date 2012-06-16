@@ -41,8 +41,8 @@
 .page .colum .colum_content .registration .news_content h3.news_h3 a:hover{text-decoration:none;}
 .page .colum .colum_content .registration .news_content h4.news_h4{color:#000;font-size:16px;margin:20px 0;}
 .page .colum .colum_content .registration .news_list{margin:10px 0;font-size:14px;color:#000;line-height:20px;}
-.page .colum .colum_content .registration .news_content .news_dl dt{font-weight:bold;margin-bottom:10px;background-position:-795px -917px;padding-left:15px;}
-.page .colum .colum_content .registration .news_content .news_dl dd{margin-bottom:10px;padding-left:16px;}
+.page .colum .colum_content .registration .news_content .news_dl dt,.page .colum .colum_content .content_inner .content_left .news_dl dt{font-weight:bold;margin-bottom:10px;background-position:-795px -917px;padding-left:15px;}
+.page .colum .colum_content .registration .news_content .news_dl dd,.page .colum .colum_content .content_inner .content_left .news_dl dd{margin-bottom:10px;padding-left:16px;}
 .page .colum .colum_content .registration .news_content .news_dl dd.pl101{padding-left:101px;}
 .page .colum .colum_content .registration .news_content a.url{color:#298DA7 !important;}
 .page .colum .colum_content .registration .news_content p.registration_btn{padding:20px 0;background-position:-784px -963px;padding-left:30px;}
@@ -272,6 +272,7 @@
 .dialog-box li span.text{position:relative;top:-7px\9;}
 .dialog-box li span.text2{display:block;height:100px;line-height:100px;float:left;*display:inline;margin-right:4px;}
 .dialog-box li span.content{font-size:14px;}
+.dialog-box li strong.title{font-size:15px;margin:10px 0;color:#666;}
 .dialog-box li .high_light{color:#f00;position:relative;top:-5px\9;}
 .dialog-box li label{margin:0 5px;}
 .dialog-box li label .radio{margin:0 5px;}
