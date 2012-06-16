@@ -5,6 +5,7 @@
 <title>海风教育CRM系统-报名管理</title><!--标题-->
 <link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
 <link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
+<link href="../../css/dialog.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
 <script type='text/javascript' src='../../js/jquery.dialog.js'></script>
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
@@ -14,12 +15,12 @@
 		//开始弹出层
 		$("#give_lead").click(function (){
 
-		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'> <li  class='fl clearfix'> <span class=''>导入账号：</span><input type='file' class='text'/></li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
+		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class='fl clearfix'> <span class=''>学生信息</span></li><br/><li  class='fl clearfix'> <span class=''>zhangsan</span></li><br/><li  class='fl clearfix'> <span class=''>男</span></li> <li  class='fl clearfix'> <span class=''>可分配的辅导员：</li><li  class='fl clearfix'><input type='radio' name='lead'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio' name='lead'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
 			'width':'500px',
-			'title':'导入账号',
+			'title':'可分配的辅导员',
 			'closeModal':false,
 			modal: true,
-			title: '导入账号/修改',
+			title: '可分配的辅导员',
 			closeDelay:'500000'
 		}); 
 		});

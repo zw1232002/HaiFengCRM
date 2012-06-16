@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>海风教育CRM系统-用户资料</title>
+<title>海风教育CRM系统-新增用户</title>
 <link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
 <link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
 <script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
@@ -50,14 +50,14 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 					<!--左侧菜单开始-->
 					<div class="fl left_nav">
 						<ul>
-							<li><a href="account_info.html" class="select">用户资料</a></li>
-							<li><a href="account_new.html" class="">新增用户</a></li>
+							<li><a href="account_info.html" class="">用户资料</a></li>
+							<li><a href="account_new.html" class="select">新增用户</a></li>
 						</ul>
 					</div>
 					<!--左侧菜单结束-->
 					<div class="fl right_select">
 						<ul class="right_tab tab_btn_ul">
-							<li><a href="course_manage.html"  class="select">用户资料</a></li>
+							<li><a href="course_manage.html"  class="select">新增用户</a></li>
 						<!-- 	<li><a href="#"  class="">新增课程</a></li>
 							<li><a href="#"  class="">课程详细</a></li> -->
 						</ul>
@@ -103,55 +103,18 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<span>其他联系方式：</span>
 												<input type="text" class="text" name=""/>
 											</li>
+											<li class="fl">
+												<span>用户角色：</span>
+												<input type="radio" class="text" name="role"/>管理员  
+												<input type="radio" class="text" name="role"/>审核
+												<input type="radio" class="text" name="role"/>辅导员
+											</li>
 										</ul>
 									</div>
 									<input type="submit" value="保存修改" class="btn select common_bg" id=""/>
 									<input type="button" value="关闭" class="btn select common_bg"/>
 								</form>
-								<form action="" method="post" class="mb30">
-									<div class="set_bg">
-										<h4>角色信息</h4>
-										<ul class="clearfix mal_special">
-											<li class="fl">
-												<span>用户角色：</span>
-												<span class="info">超级管理员</span>
-											</li>
-										</ul>
-									</div>
-								</form>
-								<form action="" method="post">
-									<div class="set_bg">
-										<h4>登陆信息</h4>
-										<ul class="clearfix mal_special">
-											<li class="fl">
-												<span>　用户名：</span>
-												<span class="info">admin</span>
-											</li>
-										</ul>
-									</div>
-									<input type="button" value="修改密码" class="btn select common_bg"/>
-								</form>
-								<form action="" method="post">
-									<div class="set_bg">
-										<h4>修改密码</h4>
-										<ul class="clearfix mal_special">
-											<li class="">
-												<span>　　原密码：</span>
-												<input type="password" class="text" name=""/>
-											</li>
-											<li class="">
-												<span>　　新密码：</span>
-												<input type="password" class="text" name=""/>
-											</li>
-											<li class="">
-												<span>确认新密码：</span>
-												<input type="password" class="text" name=""/>
-											</li>
-										</ul>
-									</div>
-									<input type="submit" value="确认修改密码" class="btn select common_bg" id=""/>
-									<input type="button" value="取消" class="btn select common_bg"/>
-								</form>
+								
 							</div>
 						</div>
 					</div>
