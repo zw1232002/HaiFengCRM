@@ -45,13 +45,13 @@
 			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_pay").click(function (evt){
 				evt.preventDefault();
 				if($(this).attr("show")!=="false"){
-					if(window.confirm("查看答案将扣除20积分，确认吗？")){
+					//if(window.confirm("查看答案将扣除20积分，确认吗？")){
 						$(this).parents("ul.btns_ul").next(".detail").find(".answer").toggle();
 						$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
 						var content3 = "您已扣除20积分！";
 						TINY.box.show(content3,0,0,0,0,2,0);
 						$(this).attr("show","false");
-					}
+					//}
 				}else{
 					$(this).parents("ul.btns_ul").next(".detail").find(".answer").toggle();
 					$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
