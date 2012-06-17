@@ -27,3 +27,8 @@
 .dialog-box p.large{font-size:14px;margin:10px 0;text-align:center;}
 .dialog-box p.large strong{color:#f00;font-weight:normal;}
 .dialog-box select.select_big{width:202px;}
+
+.dialog-box  label span.check_span{position:relative;top:0px\9;}
+.dialog-box  label.top_label span{font-weight:bold;color:#444;}
+.dialog-box .sub_radio{margin:10px 0;}
+.dialog-box .sub_radio label.sub_label{margin:0 10px;}
