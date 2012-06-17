@@ -28,6 +28,7 @@ body{background:#fff;}
 .pt15{padding-top:15px;}
 .mb30{margin-bottom:30px;}
 .out_text{text-indent:-9999px;}
+.high_light{color:#f00;}
 a{color:#fff;} 
 a.no_underline:hover{text-decoration:none;}
 .common_bg{background:url(../images/common_bg.png) no-repeat 0 0;}
