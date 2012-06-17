@@ -128,7 +128,7 @@
 .page .colum .colum_content .registration h5{font-size:18px;color:#000;margin:13px 0;}
 .page .colum .colum_content .registration h6{color:#000;font-size:15px;margin:13px 0;}
 
-.page .colum .colum_content .content_inner{overflow:hidden;}
+.page .colum .colum_content .content_inner{}
 .page .colum .colum_content .content_inner .content_left{width:730px;}
 .page .colum .colum_content .content_inner .content_left .left_title{margin:13px 0 20px 0;}
 .page .colum .colum_content .content_inner .content_left .basic_info{background:#fff;border:1px solid #ccc;padding:20px;padding-top:10px;}
@@ -216,13 +216,14 @@
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl{font-size:14px;color:#000;padding-left:13px;margin-bottom:20px;background:url(../images/answer_left.gif) left top repeat-y;}
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dt{}
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li{float:left;*display:inline;margin-right:10px;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.course_title{width:650px;}
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li a.lists{display:block;width:87px;height:22px;text-align:center;line-height:22px;font-size:12px;background:#1094b6;color:#fff;}
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li a.lists:hover{background:#ff4e18;color:#fff;text-decoration:none;}
 
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li ul.course{width:492px;}
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li ul.course li{margin-top:0px;}
 
-.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn{float:right;margin-top:10px;*display:inline;}
+.page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn{float:left;margin-top:10px;*display:inline;}
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a,.page .colum .colum_content .registration form dl.choose_teacher dt .select_btn{display:block;width:78px;height:22px;line-height:22px;text-align:center;color:#fff;font-size:13px;background-position:0 -542px;}
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a:hover,.page .colum .colum_content .registration form dl.choose_teacher dt .select_btn:hover{text-decoration:none;}
 .page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_pay{background-position:-118px -542px !important;}
