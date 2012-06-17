@@ -13,18 +13,35 @@
 <script type="text/javascript">
 	jQuery(function ($){
 		//开始弹出层
+		// $("#give_lead").click(function (){
+
+		// var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class='fl clearfix'> <span class=''>学生信息</span></li><br/><li  class='fl clearfix'> <span class=''>zhangsan</span></li><br/><li  class='fl clearfix'> <span class=''>男</span></li> <li  class='fl clearfix'> <span class=''>可分配的辅导员：</li><li  class='fl clearfix'><input type='radio' name='lead'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio' name='lead'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
+		// 	'width':'500px',
+		// 	'title':'可分配的辅导员',
+		// 	'closeModal':false,
+		// 	modal: true,
+		// 	title: '可分配的辅导员',
+		// 	closeDelay:'500000'
+		// }); 
+		// });
+		//结束弹出层
+
+
+		//开始弹出层
 		$("#give_lead").click(function (){
 
-		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class='fl clearfix'> <span class=''>学生信息</span></li><br/><li  class='fl clearfix'> <span class=''>zhangsan</span></li><br/><li  class='fl clearfix'> <span class=''>男</span></li> <li  class='fl clearfix'> <span class=''>可分配的辅导员：</li><li  class='fl clearfix'><input type='radio' name='lead'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio' name='lead'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
+		//退班
+		var dialogBox1= new Dialog("<form method='post' action='' class='select'> <ul class='clearfix'><li class='fl clearfix'><strong class='title'>发票寄送需要付款，江浙沪范围内约为10元。</strong></li><li class='fl clearfix'>  											<span class='text'>可开票金额：</span> 											<input type='text' name='' class='text'/> 										</li><li class='fl clearfix'>  											<span class='text'>　发票抬头：</span> 											<input type='text' name='' class='text'/> 										</li><li class='fl clearfix'><strong class='title'>确认快递信息：</strong></li><li class='fl clearfix'>  											<span class='text'>　　收件人：</span> 											<input type='text' name='' class='text'/> 										</li><li class='fl clearfix'>  											<span class='text'>　联系方式：</span> 											<input type='text' name='' class='text'/> 										</li><li class='fl clearfix'>  											<span class='text'>可收件时间：</span> 											<input type='text' name='' class='text'/> 										</li><li class='fl clearfix'>  											<span class='text'>　收件地址：</span> 											<input type='text' name='' class='text'/> 										</li><li class='fl clearfix'> 											 											<input type='submit' name='' class='btns left236 fl common_bg sub_btn' value='' style=''/><input type='button' name='' class='btns right20 common_bg fl close-dialog' value='' /> 											 										</li> 									</ul> 									 								</form>",{
 			'width':'500px',
-			'title':'可分配的辅导员',
+			'title':'选择辅导员',
 			'closeModal':false,
 			modal: true,
-			title: '可分配的辅导员',
+			title: '选择辅导员',
 			closeDelay:'500000'
 		}); 
 		});
 		//结束弹出层
+
 	});
 </script>
 <!--[if IE 6]>
