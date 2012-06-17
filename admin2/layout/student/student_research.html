@@ -10,7 +10,7 @@
 <script type='text/javascript' src='../../js/jquery.dialog.js'></script>
 <script type="text/javascript" src="../../js/kindeditor-4.1/kindeditor.js"></script><!--kindeditor-->
 <script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
-<script type="text/javascript" src="../../js/load_editor.js"></script><!--加载kindeditor-->
+<!--<script type="text/javascript" src="../../js/load_editor.js"></script>加载kindeditor-->
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
 
 <script type="text/javascript">
@@ -18,7 +18,8 @@
 		//开始弹出层
 		$("#giveup_class").click(function (){
 
-		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class='fl clearfix'><input type='radio'/> <span class=''>class A</span></li><li  class='fl clearfix'><input type='radio'/> <span class=''>class B</span></li></ul><input type='submit' value='确定' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
+		//退班
+		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class=''><label><input type='checkbox' name='class_a'/> <span class='check_span'>class A</span></label></li><li  class=''><label><input type='checkbox' name='class_b'/> <span class='check_span'>class B</span></label></li></ul><input type='submit' value='确定' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
 			'width':'500px',
 			'title':'请选择课程',
 			'closeModal':false,
@@ -30,16 +31,26 @@
 		//结束弹出层
 
 			//开始弹出层
+			//转班
 		$("#trans_class").click(function (){
-
-		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class='fl clearfix'><input type='radio'/> <span class=''>class A</span></li><br/><li  class='fl clearfix'><input type='radio'/> <span class=''>a1</span></li><li  class='fl clearfix'><input type='radio'/> <span class=''>a2</span></li><br/><li  class='fl clearfix'><input type='radio'/> <span class=''>class B</span></li><br/><li  class='fl clearfix'><input type='radio'/> <span class=''>b1</span></li><li  class='fl clearfix'><input type='radio'/> <span class=''>b2</span></li></ul><input type='submit' value='确定' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
-			'width':'500px',
-			'title':'请选择课程',
-			'closeModal':false,
-			modal: true,
-			title: '请选择课程',
-			closeDelay:'500000'
-		}); 
+			var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class=''><label class='top_label'><input type='radio' name='class_a'/> <span class=''>高一课程</span></label><div class='sub_radio'><label class='sub_label'><input type='radio' name='class_a_sub' class='radio'/> <span class=''>复旦笔试课程</span></label><label class='sub_label'><input type='radio' name='class_a_sub' class='radio'/> <span class=''>复旦笔试课程</span></label></div></li><li  class=''><label class='top_label'><input type='radio' name='class_a'/> <span class=''>高二课程</span></label><div class='sub_radio'><label class='sub_label'><input type='radio' name='class_a_sub' class='radio'/> <span class=''>复旦笔试课程</span></label><label class='sub_label'><input type='radio' name='class_a_sub' class='radio'/> <span class=''>复旦笔试课程</span></label></div></li></ul><input type='submit' value='确定' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
+				'width':'500px',
+				'title':'请选择课程',
+				'closeModal':false,
+				modal: true,
+				title: '请选择课程',
+				closeDelay:'500000'
+			}); 
+			
+			//设置选择
+			function setSubRadioDisabled(){
+				$(".dialog-box .sub_radio input.radio").attr("disabled","disabled");
+			}
+			setSubRadioDisabled();
+			$(".dialog-box .dialog-content label.top_label").click(function (){
+				setSubRadioDisabled();
+				$(this).next(".sub_radio").find("input.radio").removeAttr("disabled");
+			});
 		});
 		//结束弹出层
 	});
