@@ -32,6 +32,7 @@
 			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_question").click(function (evt){
 				evt.preventDefault();
 				$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
+				$(this).parents("ul.btns_ul").next(".detail").find(".answer").hide();
 			});
 			
 			//查看详细(免费)
@@ -161,7 +162,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 								<dt>复旦 物理 2009 103</dt>
 								<dd>
 									<ul class="btns_ul clearfix">
-										<li>
+										<li class="course_title">
 											<ul class="course">
 												<li><a href="#" class="lists">理科</a></li>
 												<li><a href="#" class="lists">光学</a></li>
@@ -174,19 +175,23 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<li><a href="#"class="lists">复旦</a></li>
 											</ul>
 										</li>
-										<li class="btn"><a href="#" class="common_bg correct_error">勘误</a></li>
-										<li class="btn"><a href="#" class="common_bg view_more_free">查看详细</a></li>
 										<li class="btn"><a href="#" class="common_bg view_question">查看题目</a></li>
+										<li class="btn"><a href="#" class="common_bg view_more_free">查看详细</a></li>
+										<li class="btn"><a href="#" class="common_bg correct_error">勘误</a></li>
 									</ul>
 									<div class="detail">
 										<ul class="detail_ul">
 											<li class="question">
 												<p>190、FTP的主要功能是________。</p>
 												<ul class="clearfix">
-													<li class="fl">A.在网上传送各类文件</li>
-													<li class="fr">B.在网上传送各类文件2</li>
-													<li class="fl">C.在网上传送各类文件3</li>
-													<li class="fr">D.在网上传送各类文件4</li>
+													<li class="clearfix">
+														<div class="fl">A.在网上传送各类文件</div>
+														<div class="fr">B.在网上传送各类文件2</div>
+													</li>
+													<li class="clearfix">
+														<div class="fl">C.在网上传送各类文件3</div>
+														<div class="fr">D.在网上传送各类文件4</div>
+													</li>
 												</ul>
 											</li>
 											<li class="answer">
@@ -201,7 +206,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 								<dt>复旦 物理 2009 103</dt>
 								<dd>
 									<ul class="btns_ul clearfix">
-										<li>
+										<li class="course_title">
 											<ul class="course">
 												<li><a href="#" class="lists">理科</a></li>
 												<li><a href="#" class="lists">光学</a></li>
@@ -214,19 +219,23 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<li><a href="#"class="lists">复旦</a></li>
 											</ul>
 										</li>
-										
-										<li class="btn"><a href="#" class="common_bg view_more_pay">查看详细</a></li>
 										<li class="btn"><a href="#" class="common_bg view_question">查看题目</a></li>
+										<li class="btn"><a href="#" class="common_bg view_more_pay">查看详细</a></li>
+										
 									</ul>
 									<div class="detail">
 										<ul class="detail_ul">
 											<li class="question">
 												<p>190、FTP的主要功能是________。</p>
-												<ul class="clearfix">
-													<li class="fl">A.在网上传送各类文件</li>
-													<li class="fr">B.在网上传送各类文件2</li>
-													<li class="fl">C.在网上传送各类文件3</li>
-													<li class="fr">D.在网上传送各类文件4</li>
+												<ul >
+													<li class="clearfix">
+														<div class="fl">A.在网上传送各类文件</div>
+														<div class="fr">B.在网上传送各类文件2</div>
+													</li>
+													<li class="clearfix">
+														<div class="fl">C.在网上传送各类文件3</div>
+														<div class="fr">D.在网上传送各类文件4</div>
+													</li>
 												</ul>
 											</li>
 											<li class="answer">
