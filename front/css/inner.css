@@ -182,9 +182,11 @@
 .page .colum .colum_content .registration .tab_content_wrap ul.pay_method li span.taobao{background-position:0 -300px;}
 
 .page .colum .colum_content .registration .tab_content_wrap ul.pay_bank{}
-.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li{width:400px;height:60px;line-height:60px;margin:0 10px 20px 0;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li{width:600px;height:60px;line-height:60px;margin:0 10px 20px 0;}
 .page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label{display:block;height:60px;line-height:60px;cursor:pointer;float:left;*display:inline;} 
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label .pay_wrap{width:560px;}
 .page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label span.icon{display:block;width:60px;height:60px;text-indent:-9999px;background:url(../images/bank_bg.png) left top no-repeat;}
+.page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li .total_money{color:#f00;font-weight:bold;margin-left:30px;font-size:20px;height:60px;line-height:60px;}
 
 .page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label input.radio{height:60px;line-height:60px;margin-right:15px;}
 .page .colum .colum_content .registration .tab_content_wrap ul.pay_bank li label .bank_info{margin-left:10px;}
