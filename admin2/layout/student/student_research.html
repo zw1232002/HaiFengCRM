@@ -28,10 +28,24 @@
 			closeDelay:'500000'
 		}); 
 		});
-		//结束弹出层
-
-			//开始弹出层
-			//转班
+		
+		//回访记录
+		$(".page .colum .colum_content .content_inner  table.select_result tr td a.back_record").click(function (e){
+			e.preventDefault();
+			var dialogBox1= new Dialog("<form class='select' action='' method='post' id='back_dialog'> <div class='set_bg'><table width='460' cellspacing='0' cellpadding='0' class='select_result'> 	<tr> 		<th width='116'>日期时间</th> 		<th width='152'>回访人</th> 		<th width='158'>回访内容</th> 	</tr> 	<tr class='double'> 		<td>2012-06-05 19:20</td> 		<td>钱卓群（管理员用户名）</td> 		<td>系统测试</td> 	</tr> 	<tr class='double'> 		<td>2012-06-05 19:20</td> 		<td>王大妈（管理员用户名）</td> 		<td>闲来逛逛</td> 	</tr> </table><ul class='clearfix'><li class='fl clearfix'><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:117px;'/><input type='button' value='新增' class='btn add common_bg big_btn add_record'/></li></ul></div> </form>",{
+				'width':'500px',
+				'title':'回访记录',
+				'closeModal':false,
+				modal: true,
+				title: '回访记录',
+				closeDelay:'500000'
+			}); 
+			$("#back_dialog .add_record").click(function (){
+				$("<tr class='double'> 		<td>2012-06-05 19:20</td> 		<td>王大妈（管理员用户名）</td> 		<td><input type='text' class='back_input'/></td> 	</tr>").appendTo($("#back_dialog .select_result"));
+			});
+		});	
+		
+		//转班
 		$("#trans_class").click(function (){
 			var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class=''><label class='top_label'><input type='radio' name='class_a'/> <span class=''>高一课程</span></label><div class='sub_radio'><label class='sub_label'><input type='radio' name='class_a_sub' class='radio'/> <span class=''>复旦笔试课程</span></label><label class='sub_label'><input type='radio' name='class_a_sub' class='radio'/> <span class=''>复旦笔试课程</span></label></div></li><li  class=''><label class='top_label'><input type='radio' name='class_a'/> <span class=''>高二课程</span></label><div class='sub_radio'><label class='sub_label'><input type='radio' name='class_a_sub' class='radio'/> <span class=''>复旦笔试课程</span></label><label class='sub_label'><input type='radio' name='class_a_sub' class='radio'/> <span class=''>复旦笔试课程</span></label></div></li></ul><input type='submit' value='确定' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
 				'width':'500px',
@@ -41,7 +55,6 @@
 				title: '请选择课程',
 				closeDelay:'500000'
 			}); 
-			
 			//设置选择
 			function setSubRadioDisabled(){
 				$(".dialog-box .sub_radio input.radio").attr("disabled","disabled");
@@ -163,6 +176,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<th>高中</th>
 												<th>总消费额</th>
 												<th>学员类型</th>
+												<th>回访记录</th>
 											</tr>
 											<tr class="double">
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
@@ -195,6 +209,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<td>
 													老学员
 												</td>
+												<td><a href="#" class="blue back_record">回访记录</a> </td>
 											</tr>
 											<tr>
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
@@ -227,6 +242,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<td>
 													老学员
 												</td>
+												<td><a href="#" class="blue back_record">回访记录</a> </td>
 											</tr>
 											
 										</table>

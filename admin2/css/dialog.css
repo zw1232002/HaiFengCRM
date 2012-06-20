@@ -35,3 +35,8 @@
 .dialog-box  label.top_label span{font-weight:bold;color:#444;}
 .dialog-box .sub_radio{margin:10px 0;}
 .dialog-box  label.sub_label{margin:0 10px;}
+
+.dialog-box table.select_result{margin:20px 0;border-left:1px solid #999;}
+.dialog-box table.select_result th,.dialog-box table.select_result td{padding:5px;}
+.dialog-box table.select_result th{border-right:1px solid #777;}
+.dialog-box table.select_result td{border-bottom:1px solid #999;border-right:1px solid #999;}

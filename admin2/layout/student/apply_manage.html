@@ -19,7 +19,7 @@
 		// var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'><li  class='fl clearfix'> <span class=''>学生信息</span></li><br/><li  class='fl clearfix'> <span class=''>zhangsan</span></li><br/><li  class='fl clearfix'> <span class=''>男</span></li> <li  class='fl clearfix'> <span class=''>可分配的辅导员：</li><li  class='fl clearfix'><input type='radio' name='lead'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio' name='lead'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li><li  class='fl clearfix'><input type='radio'/> <span class=''>zhangsan</li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
 		// 	'width':'500px',
 		// 	'title':'可分配的辅导员',
-		// 	'closeModal':false,
+		// 	'closeModal':false,	
 		// 	modal: true,
 		// 	title: '可分配的辅导员',
 		// 	closeDelay:'500000'
@@ -29,17 +29,36 @@
 
 
 		//开始弹出层
-		$("#give_lead").click(function (){
-
-		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><h4 class='text14'>学生信息</h4><ul class='clearfix'> <li  class=''> <span class='text14'>常用联系手机：</span><span class='text14 input_text high_light'>1230000000</span></li><li  class=''> <span class='text14'>备用联系号码：</span><span class='text14 input_text high_light'>32423423423</span></li><li  class=''> <span class='text14'>　　电子邮箱：</span><span class='text14 input_text high_light'>zwd555@163.com</span></li><li  class=''> <span class='text14'>　　　　性别：</span><span class='text14 input_text high_light'>男</span></li><li  class=''> <span class='text14'>　　就读高中：</span><span class='text14 input_text high_light'>什么高中</span></li><li  class=''> <span class='text14'>　　高中选科：</span><span class='text14 input_text high_light'>物理</span></li><li  class=''> <span class='text14'>　　目标专业：</span><span class='text14 input_text high_light'>数学</span></li><li  class=''> <span class='text14'>　　笔试成绩：</span><span class='text14 input_text high_light'>100</span></li><li  class=''> <span class='text14'>　可选辅导员：</span><label class='sub_label'><input type='radio' name='class_a'/> <span class='radio_span'>赵忠祥</span></label><label class='sub_label'><input type='radio' name='class_a'/> <span class='radio_span'>倪萍</span></label></li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
-
-			'width':'500px',
-			'title':'选择辅导员',
-			'closeModal':false,
-			modal: true,
-			title: '选择辅导员',
-			closeDelay:'500000'
-		}); 
+		
+		//分配辅导员
+		$("#give_lead").click(function (e){
+			e.preventDefault();
+			var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><h4 class='text14'>学生信息</h4><ul class='clearfix'> <li  class=''> <span class='text14'>常用联系手机：</span><span class='text14 input_text high_light'>1230000000</span></li><li  class=''> <span class='text14'>备用联系号码：</span><span class='text14 input_text high_light'>32423423423</span></li><li  class=''> <span class='text14'>　　电子邮箱：</span><span class='text14 input_text high_light'>zwd555@163.com</span></li><li  class=''> <span class='text14'>　　　　性别：</span><span class='text14 input_text high_light'>男</span></li><li  class=''> <span class='text14'>　　就读高中：</span><span class='text14 input_text high_light'>什么高中</span></li><li  class=''> <span class='text14'>　　高中选科：</span><span class='text14 input_text high_light'>物理</span></li><li  class=''> <span class='text14'>　　目标专业：</span><span class='text14 input_text high_light'>数学</span></li><li  class=''> <span class='text14'>　　笔试成绩：</span><span class='text14 input_text high_light'>100</span></li><li  class=''> <span class='text14'>　可选辅导员：</span><label class='sub_label'><input type='radio' name='class_a'/> <span class='radio_span'>赵忠祥</span></label><label class='sub_label'><input type='radio' name='class_a'/> <span class='radio_span'>倪萍</span></label></li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
+	
+				'width':'500px',
+				'title':'选择辅导员',
+				'closeModal':false,
+				modal: true,
+				title: '选择辅导员',
+				closeDelay:'500000'
+			}); 
+		});
+		
+		
+		//回访记录
+		$(".page .colum .colum_content .content_inner .right_select .set_bg table.select_result tr td a.back_record").click(function (e){
+			e.preventDefault();
+			var dialogBox1= new Dialog("<form class='select' action='' method='post' id='back_dialog'> <div class='set_bg'><table width='460' cellspacing='0' cellpadding='0' class='select_result'> 	<tr> 		<th width='116'>日期时间</th> 		<th width='152'>回访人</th> 		<th width='158'>回访内容</th> 	</tr> 	<tr class='double'> 		<td>2012-06-05 19:20</td> 		<td>钱卓群（管理员用户名）</td> 		<td>系统测试</td> 	</tr> 	<tr class='double'> 		<td>2012-06-05 19:20</td> 		<td>王大妈（管理员用户名）</td> 		<td>闲来逛逛</td> 	</tr> </table><ul class='clearfix'><li class='fl clearfix'><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:117px;'/><input type='button' value='新增' class='btn add common_bg big_btn add_record'/></li></ul></div> </form>",{
+				'width':'500px',
+				'title':'回访记录',
+				'closeModal':false,
+				modal: true,
+				title: '回访记录',
+				closeDelay:'500000'
+			}); 
+			$("#back_dialog .add_record").click(function (){
+				$("<tr class='double'> 		<td>2012-06-05 19:20</td> 		<td>王大妈（管理员用户名）</td> 		<td><input type='text' class='back_input'/></td> 	</tr>").appendTo($("#back_dialog .select_result"));
+			});
 		});
 		//结束弹出层
 
@@ -175,6 +194,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
                                                 <th>支付金额</th>
                                                 <th>支付方式</th>
                                                 <th>支付银行</th>
+                                                <th>回访记录</th>
 											</tr>
 											<tr class="double">
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
@@ -201,6 +221,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
                                                 <td> ￥20000.00</td>
                                                 <td>线下汇款</td>
                                                 <td>中国工商银行</td>
+                                                 <td><a href="#" class="blue back_record">回访记录</a> </td>
 											</tr>
 											<tr>
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
@@ -227,6 +248,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
                                                 <td> ￥20000.00</td>
                                                 <td>线下汇款</td>
                                                 <td>中国工商银行</td>
+                                                 <td><a href="#" class="blue back_record">回访记录</a> </td>
 											</tr>
 											<tr class="double">
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
@@ -252,6 +274,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
                                                 <td> ￥20000.00</td>
                                                 <td>线下汇款</td>
                                                 <td>中国工商银行</td>
+                                                <td><a href="#" class="blue back_record">回访记录</a> </td>
 											</tr>
 											<tr>
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
@@ -277,6 +300,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
                                                 <td> ￥20000.00</td>
                                                 <td>线下汇款</td>
                                                 <td>中国工商银行</td>
+                                                 <td><a href="#" class="blue back_record">回访记录</a> </td>
 											</tr>
 											<tr class="double">
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
@@ -302,6 +326,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
                                                 <td> ￥20000.00</td>
                                                 <td>线下汇款</td>
                                                 <td>中国工商银行</td>
+                                                <td><a href="#" class="blue back_record">回访记录</a> </td>
 											</tr>
 										</table>
 									</div>
