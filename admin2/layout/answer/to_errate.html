@@ -12,6 +12,60 @@
 <script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
 <!--<script type="text/javascript" src="../../js/load_editor.js"></script>加载kindeditor-->
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
+
+<!--begin grid-->
+<script src="../../js/grid/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>  
+<script src="../../js/grid/js/jquery.layout.js" type="text/javascript"></script>  
+<script src="../../js/grid/js/i18n/grid.locale-en.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+  $.jgrid.no_legacy_api = true;  
+  $.jgrid.useJSON = true;  
+</script>
+<script src="../../js/grid/js/jquery.jqGrid.min.js" type="text/javascript"></script>  
+<script src="../../js/grid/js/jquery.tablednd.js" type="text/javascript"></script>  
+<script src="../../js/grid/js/jquery.contextmenu.js" type="text/javascript"></script>  
+<script src="../../js/grid/js/ui.multiselect.js" type="text/javascript"></script>  
+<script type="text/javascript">     
+jQuery(document).ready(function(){     
+jQuery("#list4").jqGrid({  
+  datatype: "local",  
+  height: 250,  
+  colNames:['Inv No','Date', 'Client', 'Amount','Tax','Total','Notes'],  
+  colModel:[  
+      {name:'id',index:'id', width:60, sorttype:"int"},  
+      {name:'invdate',index:'invdate', width:90, sorttype:"date"},  
+      {name:'name',index:'name', width:100},  
+      {name:'amount',index:'amount', width:80, align:"right",sorttype:"float"},  
+      {name:'tax',index:'tax', width:80, align:"right",sorttype:"float"},       
+      {name:'total',index:'total', width:80,align:"right",sorttype:"float"},        
+      {name:'note',index:'note', width:150, sortable:false}         
+  ],  
+  multiselect: true,  
+  caption: "Manipulating Array Data"  
+});  
+var mydata = [     
+          {id:"1",invdate:"2007-10-01",name:"test",note:"note",amount:"200.00",tax:"10.00",total:"210.00"},     
+          {id:"2",invdate:"2007-10-02",name:"test2",note:"note2",amount:"300.00",tax:"20.00",total:"320.00"},     
+          {id:"3",invdate:"2007-09-01",name:"test3",note:"note3",amount:"400.00",tax:"30.00",total:"430.00"},     
+          {id:"4",invdate:"2007-10-04",name:"test",note:"note",amount:"200.00",tax:"10.00",total:"210.00"},     
+          {id:"5",invdate:"2007-10-05",name:"test2",note:"note2",amount:"300.00",tax:"20.00",total:"320.00"},     
+          {id:"6",invdate:"2007-09-06",name:"test3",note:"note3",amount:"400.00",tax:"30.00",total:"430.00"},     
+          {id:"7",invdate:"2007-10-04",name:"test",note:"note",amount:"200.00",tax:"10.00",total:"210.00"},     
+          {id:"8",invdate:"2007-10-03",name:"test2",note:"note2",amount:"300.00",tax:"20.00",total:"320.00"},     
+          {id:"9",invdate:"2007-09-01",name:"test3",note:"note3",amount:"400.00",tax:"30.00",total:"430.00"}     
+          ];     
+  for(var i=0;i<=mydata.length;i++)     
+         //jqgrid_demo35中用这个方法,发现不能加载数据  
+       jQuery("#list4").jqGrid('addRowData',i+1,mydata[i]);  
+
+    
+         //我改用以下方法就可以成功加载,不知为什么?还请高手指点???  
+//         jQuery("#list4").addRowData(i+1,mydata[i]);     
+
+});     
+</script>   
+<!--end grid-->
+
 <script type='text/javascript'>
 	jQuery(function ($){
 		//开始弹出层
@@ -124,56 +178,8 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 								<form>
 									<div class='set_bg'>
 										<h4>查询结果</h4>
-										<table width='772' cellspacing='0' cellpadding='0' class='select_result'>
-											<tr>
-												<th height='31' width='30'><input type='checkbox' name='' class='checkbox'/></th>
-												<th >&nbsp;</th>
-												<th >勘误题目</th>
-												<th>此题正确答案</th>
-												<th>相关描述</th>
-												<th>处理方式</th>
-												<th>审核人</th>
-												<th>审核意见</th>
-												<th>审核时间</th>
-												<th>勘误人</th>
-												<th>联系方式</th>
-												<th>提交时间</th>
-											</tr>
-											<tr class='double'>
-												<td height='31'><input type='checkbox' name='' class='checkbox'/></td>
-												<td>1</td>
-												<td>
-													<a href='#' class='blue'>复旦 计算机 2006 189</a>
-													
-												</td>
-												<td>
-													A
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													<div class='green'>认可</div>
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													张三
-												</td>
-												<td>
-													
-												</td>
-												<td>
-													
-												</td>
-											</tr>
+										<table width='772' cellspacing='0' cellpadding='0' class='select_result' id='list4'>
+									
 											
 										</table>
 									</div>
