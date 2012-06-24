@@ -2,30 +2,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>海风教育CRM系统-发票管理</title><!--标题-->
+<title>海风教育CRM系统-课程管理</title>
 <link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
 <link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
-<link href="../../css/dialog.css" rel="stylesheet" type="text/css" />
+<link href='../../css/dialog.css' rel='stylesheet' type='text/css' /><!--dialog css-->
 <script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
-<script type='text/javascript' src='../../js/jquery.dialog.js'></script>
+<script type="text/javascript" src="../../js/jquery.dialog.js"></script><!--jquery dialog-->
+<script type="text/javascript" src="../../js/kindeditor-4.1/kindeditor.js"></script><!--kindeditor-->
+<script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
+<!--<script type="text/javascript" src="../../js/load_editor.js"></script>加载kindeditor-->
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
 <script type="text/javascript" src="../../js/del_confirm.js"></script><!--删除确认-->
 <script type="text/javascript">
-	jQuery(function ($){
-		//开始弹出层
-		$(".fa").click(function (){
-
-		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'> <li  class='fl clearfix'> <span class=''>运单号：</span><input type='text' class='text'/></li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
+jQuery(function ($){
+	//开始弹出层
+	$("#add_card").click(function (){
+		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'> <li  class='fl clearfix'> <span class=''>图片:</span><input type='file'/></li><li  class='fl clearfix'> <span class=''>超链接:</span><input type='text' class='text'/></li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
 			'width':'500px',
-			'title':'运单号',
+			'title':'fuck world!',
 			'closeModal':false,
 			modal: true,
-			title: '运单号',
+			title: '新增走马灯',
 			closeDelay:'500000'
-		}); 
 		});
-		//结束弹出层
 	});
+	//结束弹出层
+});
+
 </script>
 <!--[if IE 6]>
 <script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
@@ -48,10 +51,12 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 			<!--tab和用户开始-->
 			<div class="clearfix colum_btn_wrap">
 				<ul class="clearfix colum_btn fl">
-					<li class="fl"><a href="../course/course_manage.html" class=""></a></li><!--课程管理-->
-					<li class="fl select"><a href="apply_manage.html" class="clss_center"></a></li><!--学员管理-->
+					<li class="fl select"><a href="course_manage.html" class=""></a></li><!--课程管理-->
+					<li class="fl"><a href="../student/apply_manage.html" class="clss_center"></a></li><!--学员管理-->
 					<li class="fl"><a href="../answer/question_manage.html" class="why_system"></a></li><!--答疑系统-->
 					<li class="fl"><a href="../account/account_info.html" class="about"></a></li><!--用户账号-->
+					<li class="fl"><a href="../counsellor/my_course.html" class="fudaoyuan"></a></li><!--辅导员-->
+					<li class="fl"><a href="../index/pic.html" class="fudaoyuan"></a></li><!--辅导员-->
 				</ul>
 				<ul class="know fr clearfix">
 					<li class="fl ">当前用户：</li>
@@ -67,50 +72,35 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 					<!--左侧菜单开始-->
 					<div class="fl left_nav">
 						<ul>
-							<li><a href="apply_manage.html" class="">报名管理</a></li>
-							<li><a href="student_research.html" >学员查询</a></li>
-							<li><a href="receipt.html" class="select">发票管理</a></li>
+							<li><a href="pic.html"  class="select">走马灯管理</a></li>
+							<li><a href="course_card.html">课程卡片</a></li>
 						</ul>
 					</div>
 					<!--左侧菜单结束-->
 					<div class="fl right_select">
 						<ul class="right_tab tab_btn_ul">
-							<li><a href="course_manage.html">发票管理</a></li>
+							<li><a href="pic.html"  class="select">走马灯管理</a></li>
+						
 						<!-- 	<li><a href="#"  class="">新增课程</a></li>
 							<li><a href="#"  class="">课程详细</a></li> -->
 						</ul>
 						<div class="tab_content_wrap ">
 							<div class="tab_content show">
 								<form class="select" action="" method="post">
-									<div class="set_bg">
-										<h4>查询条件</h4>
-										<ul class="clearfix">
-											<li class="fl">
-												<span>　抬头：</span>
-												<input type="text" class="text" name=""/>
-											</li>
-											<li class="fl">
-												<span>　金额：</span>
-												<input type="text" class="text" name=""/>
-											</li>
-										</ul>
-									</div>
-								<input type="button"  value="查询" class="btn add common_bg"/>
+									<input type="button" id="add_card" value="新增走马灯" class="btn add common_bg"/>
 								</form>
 								<form>
 									<div class="set_bg">
 										<h4>查询结果列表</h4>
+										<!--表格开始-->
 										<table width="772" cellspacing="0" cellpadding="0" class="select_result">
 											<tr>
 												<th height="31" width="30"><input type="checkbox" name="" class="checkbox"/></th>
-												<th >&nbsp;</th>
+											
 												<th >操作</th>
-												<th>地址</th>
-												<th>金额</th>
-												<th>抬头</th>
-												<th>学员名字</th>
-												<th>备注</th>
-                                                <th>发</th>
+												<th>编号</th>
+												<th>图片url</th>
+												<th>超链接</th>
 											</tr>
 											<tr class="double">
 												<td height="31"><input type="checkbox" name="" class="checkbox"/></td>
@@ -119,27 +109,16 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 													<a href="#" class="blue delete_btn">删除</a>
 												</td>
 												<td>
-													fadsssssssssfadsfadsfadsfads
+													<a href="#" class="blue">http://hostname/img/a.jpg</a>
 												</td>
 												<td>
-													1000
-												</td>
-												<td>
-													zhangsan
-												</td>
-												<td>
-													zheshibeizhu
-												</td>
-												<td>
-													zheshitaitou
-												</td>
-												<td>
-													<a href="#" class="red fa">发</a>
+													<a href="#" class="blue">http://www.baidu.com</a>
 												</td>
 											
 											</tr>
 											
 										</table>
+										<!--表格结束-->
 									</div>
 								</form>
 							</div>

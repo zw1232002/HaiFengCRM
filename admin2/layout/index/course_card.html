@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育CRM系统-课程管理</title>
+<link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
+<link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
+<link href='../../css/dialog.css' rel='stylesheet' type='text/css' /><!--dialog css-->
+<script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
+<script type="text/javascript" src="../../js/jquery.dialog.js"></script><!--jquery dialog-->
+<script type="text/javascript" src="../../js/kindeditor-4.1/kindeditor.js"></script><!--kindeditor-->
+<script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
+<!--<script type="text/javascript" src="../../js/load_editor.js"></script>加载kindeditor-->
+<script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
+<script type="text/javascript" src="../../js/del_confirm.js"></script><!--删除确认-->
+<script type="text/javascript">
+
+function deltr(index){   
+    $table=$("#tab tr");  
+    $("tr[id=\'"+index+"\']").remove();                 
+}
+jQuery(function ($){
+		$("#append_card").click(function(){  
+            var $table=$("#card tr");  
+            var len=$table.length;  
+        //  alert("tr length :"+len);  
+        //  alert(" content :"+"<tr id="+(len+1)+"><td align=\'center\'>"+len+"</td><td align=\'center\'>jQuery"+len+"</td><td align=\'center\'><a href=\'#\' onclick=\'deltr("+(len+1)+")\'>删除</a></td></tr>");           
+            $("#card").append("<tr id="+(len+1)+"><td align=\'center\'>"+len+"</td><td align=\'center\'>jQuery"+len+"</td><td><input type=\'\' style=\'width:20px\' text</td><td><a href=\'#\' onclick=\'deltr("+(len+1)+")\'>删除</a></td></tr>");            
+        })
+
+
+	
+});  
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover,.page .colum .colum_content .content_inner .right_select .right_tab li a.select');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="header clearfix ">
+			<!--后台logo开始-->
+			<div class="logo fl ">
+				<h1><a href="#" class="out_text">海风教育</a></h1>
+			</div>
+			<!--后台logo结束-->
+		</div>
+		<div class="colum">
+			<!--tab和用户开始-->
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl select"><a href="course_manage.html" class=""></a></li><!--课程管理-->
+					<li class="fl"><a href="../student/apply_manage.html" class="clss_center"></a></li><!--学员管理-->
+					<li class="fl"><a href="../answer/question_manage.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl"><a href="../account/account_info.html" class="about"></a></li><!--用户账号-->
+					<li class="fl"><a href="../counsellor/my_course.html" class="fudaoyuan"></a></li><!--辅导员-->
+					<li class="fl"><a href="../index/pic.html" class="fudaoyuan"></a></li><!--辅导员-->
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl ">当前用户：</li>
+					<li class="fl"><strong>张三</strong></li>
+					<li class="fl">角色：</li>
+					<li class="fl"><strong>超级管理员</strong></li>
+					<li class="fl"><a href="#">[ 退出 ]</a></li>
+				</ul>
+			</div>
+			<!--tab和用户结束-->
+			<div class="colum_content">
+				<div class="content_inner clearfix">
+					<!--左侧菜单开始-->
+					<div class="fl left_nav">
+						<ul>
+							<li><a href="pic.html"  class="select">走马灯管理</a></li>
+							<li><a href="course_card.html">课程卡片</a></li>
+						</ul>
+					</div>
+					<!--左侧菜单结束-->
+					<div class="fl right_select">
+						<ul class="right_tab tab_btn_ul">
+							<li><a href="pic.html"  class="select">卡片管理</a></li>
+						
+						<!-- 	<li><a href="#"  class="">新增课程</a></li>
+							<li><a href="#"  class="">课程详细</a></li> -->
+						</ul>
+						<div class="tab_content_wrap ">
+							<div class="tab_content show">
+								<form>
+									<div class="set_bg">
+										<!--表格开始-->
+										<table width="772" cellspacing="0" cellpadding="0" class="select_result" id="card"> 
+											<tr>
+												<th>编号</th>
+												<th>课程名称</th>
+												<th>顺序</th>
+												<th>操作</th>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>
+													<a href="#" class="blue delete_btn">fadsfadsfadsdsfewfewxx</a>
+												</td>
+												<td>
+													<input type="text" style="width:20px;"/>
+												</td>
+												<td>
+													<a href="#" class="blue">删除</a>
+												</td>
+											</tr>
+											
+										</table>
+										<!--表格结束-->
+										<input type="button" id="add_card" value="更新" class="btn add common_bg"/>
+										<input type="button" id="append_card" value="新增" class="btn add common_bg"/>
+									</div>
+								</form>
+
+								<h4>available course</h4>
+								<form>
+									<div class="set_bg">
+										<!--表格开始-->
+										<table width="772" cellspacing="0" cellpadding="0" class="select_result">
+
+											<tr>
+												<td height="31" width="30"><input type="radio" name="coursename" class="checkbox"/></td>
+												<td>uerioewhfrqehfjhhfei</td>
+											</tr>
+											<tr>
+												<td height="31" width="30"><input type="radio" name="coursename" class="checkbox"/></td>
+												<td>uerioewhfrqehfjhhfei</td>
+											</tr>
+										</table>
+										
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚开始-->
+		<div class="footer">
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+		<!--页脚结束-->
+	</div>
+</body>
+</html>
