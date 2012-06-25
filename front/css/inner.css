@@ -163,7 +163,7 @@
 .page .colum .colum_content .registration table.course_table th{background:#eee;border-bottom:1px solid #ccc;}
 
 .page .colum .colum_content .registration  .right_tab{height:28px;_position:relative;_z-index:100;}
-.page .colum .colum_content .registration  .right_tab li{float:left;*display:inline;}
+.page .colum .colum_content .registration  .right_tab li{float:left;*display:inline;margin-top:0;}
 .page .colum .colum_content .registration  .right_tab li a{display:block;color:#555;width:90px;height:28px;line-height:28px;text-align:center;font-weight:bold;background:url(../images/white_border.gif) left top no-repeat;border:1px solid #ccc;border-bottom:none;}
 .page .colum .colum_content .registration  .right_tab li a:hover{text-decoration:none;background:url(../images/white.gif) left top no-repeat;}
 .page .colum .colum_content .registration  .right_tab li a.select{background:url(../images/white.gif) left top no-repeat;}
