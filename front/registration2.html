@@ -23,6 +23,7 @@
 		
 		//选择辅导员js
 		var selectCounselorWrap=$("#select_counselor"),needLi=selectCounselorWrap.find("li.if_need_teacher"),choose_radio=selectCounselorWrap.find("li.choose_radio"),teachList=selectCounselorWrap.find("li.teach_list"),needCheckbox=needLi.find(".need_checkbox").eq(0),youChooseRaio=selectCounselorWrap.find("li.you_choose input.radio"),selfChooseRaio=selectCounselorWrap.find("li.self_choose input.radio");
+		var allBtn=teachList.find("a.select_btn");
 		
 		/*开始设置一系列的默认值*/
 		needCheckbox.checkStatus=0;//设置一个状态，来判断选择辅导员按钮的显示隐藏
@@ -33,6 +34,8 @@
 			choose_radio.find("input.radio").attr("checked",false);//所有的单选设置为不选
 //			youChooseRaio.attr("checked","true");//随机选择框设置为选中
 			teachList.hide();
+			allBtn.css("background-position","0 -542px");
+			allBtn.html("选择");
 		}
 		setRaio();
 		/*结束设置一系列的默认值*/
@@ -51,7 +54,7 @@
 		});
 		
 		//选择辅导员
-		var allBtn=teachList.find("a.select_btn");
+		
 		allBtn.click(function (e){
 			e.preventDefault();
 			allBtn.css("background-position","0 -542px");
