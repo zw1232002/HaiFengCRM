@@ -282,6 +282,9 @@
 .dialog-box textarea{width:297px;height:80px;border:1px solid #c3c3c3;padding:10px;resize:none;width:297px\9;_width:280px;overflow:hidden\9;_margin-left:-3px;}
 .dialog-box textarea.small{margin-left:0;width:340px;_margin-top:-20px;_margin-left:-12px;}
 
+.dialog-box ul.invoice li{margin:10px 0;}
+.dialog-box ul.invoice li span.text{font-size:14px;}
+
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0)
 {.dialog-box textarea{float:right;}}
