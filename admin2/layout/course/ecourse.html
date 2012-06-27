@@ -13,7 +13,19 @@
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
 <script type="text/javascript" src="../../js/del_confirm.js"></script><!--删除确认-->
 <script type="text/javascript" src="../../js/add_ecourse.js"></script>
+<script>
+function  open_ecourse(){
 
+		var dialogBox1 = new Dialog("<ul class='clearfix'> <li> <span class='text14'>student1</span></li><li> <span class='text14'>student2</span></li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/><input type='button' value='取消' class='btn add common_bg big_btn close-dialog'/>",{
+		'width':'500px',
+		'title':'待开通账号',
+		'closeModal':false,
+		modal: true,
+		title:'待开通账号',
+		closeDelay:'500000'
+		});
+}
+</script>
 <!--[if IE 6]>
 <script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script type="text/javascript" >
@@ -111,7 +123,7 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<td>
 													<a href="#" class="blue">20</a>
                                                     &nbsp;
-                                                   	<a href="#" class="blue">立即开通</a>
+                                                   	<a href="#" class="blue" onclick="open_ecourse()">立即开通</a>
 												</td>
 											</tr>
 											<tr>
