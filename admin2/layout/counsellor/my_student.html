@@ -5,13 +5,29 @@
 <title>海风教育CRM系统-我的学生</title>
 <link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
 <link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
+<link href="../../css/dialog.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
 <script type="text/javascript" src="../../js/jquery.dialog.js"></script>
 <script type="text/javascript" src="../../js/kindeditor-4.1/kindeditor.js"></script><!--kindeditor-->
 <script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
 <!--<script type="text/javascript" src="../../js/load_editor.js"></script>加载kindeditor-->
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
-<script type="text/javascript" src="../../js/student_note.js"></script>
+<script type="text/javascript">
+jQuery(function ($){
+	//开始弹出层
+	$(".student_note").click(function (){
+		var dialogBox1= new Dialog("<form class='select' action='' method='post'> <div class='set_bg'><ul class='clearfix'> <li  class='fl clearfix'><textarea class='text'/></li></ul><input type='submit' value='保存' class='btn select common_bg big_btn' style='margin-left:185px;'/></div> </form>",{
+			'width':'500px',
+			'title':'student note',
+			'closeModal':false,
+			modal: true,
+			title: 'student_note',
+			closeDelay:'500000'
+		});
+	});
+	//结束弹出层
+});
+</script>
 <!--[if IE 6]>
 <script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script type="text/javascript" >
