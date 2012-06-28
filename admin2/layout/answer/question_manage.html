@@ -5,13 +5,18 @@
 <title>海风教育CRM系统-题目管理</title>
 <link href="../../css/common.css" rel="stylesheet" type="text/css" /><!--通用css-->
 <link href="../../css/index.css" rel="stylesheet" type="text/css" /><!--专有css-->
+<link href="../../css/dialog.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/jquery.min.js"></script><!--jquery基本-->
+<script type="text/javascript" src="../../js/jquery.dialog.js"></script>
 <script type="text/javascript" src="../../js/kindeditor-4.1/kindeditor.js"></script><!--kindeditor-->
 <script type="text/javascript" src="../../js/kindeditor-4.1/lang/zh_CN.js"></script><!--kindeditor-->
 <!--<script type="text/javascript" src="../../js/load_editor.js"></script>加载kindeditor-->
 <script type="text/javascript" src="../../js/tab_change.js"></script><!--tab切换-->
+<script type="text/javascript">
+jQuery(function($){
+
 //开始弹出层
-		$("#imports_btn").click(function (){//导入
+		$("#import_question").click(function (){//导入
 			var dialogBox1= new Dialog("<p class='center'>导入成功</p><p class='large'>成功上传<strong>1000</strong>条</p><p class='large'>重复<strong>200</strong>条</p><p class='large'>无效<strong>1条</strong></p></div>",{
 				'width':'500px',
 				'title':'fuck world!',
@@ -21,6 +26,8 @@
 				closeDelay:'500000'
 			});
 		});
+});
+</script>
 <!--[if IE 6]>
 <script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script type="text/javascript" >
@@ -87,8 +94,8 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 											</li>
 										</ul>
 									</div>
-									<input type='button' value='导入题目' class='btn add common_bg'  id="agree_modify"/>
-									<input type='button' value='删除' class='btn add common_bg'  id="agree_modify"/>
+									<input type='button' value='导入题目' class='btn add common_bg'  id="import_question"/>
+									<input type='button' value='删除' class='btn add common_bg' />
 								</form>
 								<form>
 									<div class='set_bg'>
