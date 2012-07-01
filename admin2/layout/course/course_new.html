@@ -16,19 +16,19 @@
 <script type="text/javascript" src="../../js/miniui/miniui.js"></script>
 <script type="text/javascript" src="../../js/tree_value.js"></script>
 <script type="text/javascript">
-	jQuery(function ($){
-		$("#has_ecourse").click(function (){
-			//alert('dd');
-			//$('#ecourse_name').prop('disabled', false);
-		var buttonsChecked = $('#has_ecourse:checked');
-            if (buttonsChecked.length) {
-                $('#ecourse_name').removeAttr('disabled');
-                }
-            else {
-                $('#ecourse_name').attr('disabled', 'disabled');
-                }
-        });
-	});
+	// jQuery(function ($){
+	// 	$("#has_ecourse").click(function (){
+	// 		//alert('dd');
+	// 		//$('#ecourse_name').prop('disabled', false);
+	// 	var buttonsChecked = $('#has_ecourse:checked');
+ //            if (buttonsChecked.length) {
+ //                $('#ecourse_name').removeAttr('disabled');
+ //                }
+ //            else {
+ //                $('#ecourse_name').attr('disabled', 'disabled');
+ //                }
+ //        });
+	// });
 
 </script>
 
@@ -121,19 +121,17 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<span>老学员减少价格：</span>
 												<input type="text" class="text" name=""/>
 											</li>
-											<li class="fl">
-												<span>大课课程资源：</span>
-												<input type="text" class="text" name=""/>
-											</li>
 										
-											<li class="fl">
+										
+											<!-- <li class="fl">
 												<span>是否有电子课程：</span>
 												<input type="checkbox" class="text" name="" id="has_ecourse"/>
+												<input type="text" class="text" name="" id="ecourse_name" disabled/>
 											</li>
 											<li class="fl">
 												<span>电子课程名字：</span>
-												<input type="text" class="text" name="" id="ecourse_name" disabled/>
-											</li>
+												
+											</li> -->
 											<li class="fl">
 												<span>计费方式：</span>
 												<select>
@@ -149,17 +147,16 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<span class="text">课程描述：</span>
 												<textarea class="fr class_description"></textarea>
 											</li>
-
+											<li class="fl clearfix">
+												<span class="text">课程资源：</span>
+												<textarea class="fr class_description"></textarea>
+											</li>
 											<li class="fl clearfix">
 												<span class="text">答疑系统：<br/><span class="mp">相关标签：</span></span>
 												<ul id="tree2" class="mini-tree fl" url="data/tree.txt" style="" showTreeIcon="true" textField="text" idField="id" showCheckBox="true"  checkRecursive="true" allowSelect="false" enableHotTrack="false"></ul>
-												<input type="button" onclick="setCheckedNodes('gaosan,ajax3,json3,date3,control3,messagebox3,window3')" value="setCheckedNodes">
-<input type="button" onclick="getCheckedNodes()" value="getCheckedNodes">
+												
 											</li>
-											<li class="fl clearfix">
-												<span class="text">大课课程资源</span>
-												<input type="text"/>
-											</li>
+											
 										</ul>
 									</div>
 									<input type="submit" value="保存" class="btn select common_bg save"/>
