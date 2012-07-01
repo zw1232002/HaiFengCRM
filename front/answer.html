@@ -63,13 +63,15 @@
 			//查看详细(收费)
 			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_pay").click(function (evt){
 				evt.preventDefault();
-				viewMore(this);
 				if($(this).attr("show")!=="false"){
 					//if(window.confirm("查看答案将扣除20积分，确认吗？")){
+						viewMore(this);
 						var content3 = "您已扣除20积分！";
 						TINY.box.show(content3,0,0,0,0,2,0);
 						$(this).attr("show","false");
 					//}
+				}else{
+					viewMore(this);
 				}
 			});
 			
@@ -228,21 +230,10 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 									<div class="detail">
 										<ul class="detail_ul">
 											<li class="question">
-												<p>190、FTP的主要功能是________。</p>
-												<ul >
-													<li class="clearfix">
-														<div class="fl">A.在网上传送各类文件</div>
-														<div class="fr">B.在网上传送各类文件2</div>
-													</li>
-													<li class="clearfix">
-														<div class="fl">C.在网上传送各类文件3</div>
-														<div class="fr">D.在网上传送各类文件4</div>
-													</li>
-												</ul>
+												<img src="images/question_demo.jpg" width="778" alt="海风题目"/>
 											</li>
 											<li class="answer">
-												<p>【答案】A</p>
-												<p>【解析】FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，FTP文件传送协议，</p>
+												<img src="images/answer_demo.jpg" width="778" alt="海风题目"/>
 											</li>
 										</ul>
 									</div>
