@@ -28,37 +28,49 @@
 			//隐藏答案
 			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.detail_ul li.answer").hide();
 			
+			//查看详细的函数
+			function viewMore(_this){
+				var detailDiv=$(_this).parents("ul.btns_ul").next(".detail");
+				$(_this).parents("ul.btns_ul").next(".detail").find(".answer").slideDown("normal",function (){
+					detailDiv.attr("show","false");
+				});
+				$(_this).parents("ul.btns_ul").next(".detail").find(".question").show();
+				if(detailDiv.attr("show")==="false"){
+					detailDiv.slideUp();
+					detailDiv.attr("show","true");
+				}else{
+					detailDiv.slideDown();
+				}
+			}
+			
+			
 			//查看题目
 			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_question").click(function (evt){
 				evt.preventDefault();
+				$(this).parents("ul.btns_ul").next(".detail").find(".question").show();
 				$(this).parents("ul.btns_ul").next(".detail").find(".answer").hide();
-				$(this).parents("ul.btns_ul").next(".detail").slideToggle();
-				
+				var detailDiv=$(this).parents("ul.btns_ul").next(".detail");
+				detailDiv.attr("show","true");
+				detailDiv.slideToggle("normal");
 			});
 			
 			//查看详细(免费)
 			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_free").click(function (evt){
 				evt.preventDefault();
-				$(this).parents("ul.btns_ul").next(".detail").find(".answer").toggle();
-				$(this).parents("ul.btns_ul").next(".detail").slideToggle();
+				viewMore(this);
 			});
 			
 			//查看详细(收费)
 			$(".page .colum .colum_content .registration  .tab_content_wrap .ans_dl dd ul.btns_ul li.btn a.view_more_pay").click(function (evt){
 				evt.preventDefault();
+				viewMore(this);
 				if($(this).attr("show")!=="false"){
 					//if(window.confirm("查看答案将扣除20积分，确认吗？")){
-						$(this).parents("ul.btns_ul").next(".detail").find(".answer").toggle();
-						$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
 						var content3 = "您已扣除20积分！";
 						TINY.box.show(content3,0,0,0,0,2,0);
 						$(this).attr("show","false");
 					//}
-				}else{
-					$(this).parents("ul.btns_ul").next(".detail").find(".answer").toggle();
-					$(this).parents("ul.btns_ul").next(".detail").slideToggle("normal");
 				}
-				
 			});
 			
 			//开始弹出层
