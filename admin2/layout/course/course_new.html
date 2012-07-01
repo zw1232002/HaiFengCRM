@@ -15,6 +15,23 @@
 <script type="text/javascript" src="../../js/del_confirm.js"></script><!--删除确认-->
 <script type="text/javascript" src="../../js/miniui/miniui.js"></script>
 <script type="text/javascript" src="../../js/tree_value.js"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		$("#has_ecourse").click(function (){
+			//alert('dd');
+			//$('#ecourse_name').prop('disabled', false);
+		var buttonsChecked = $('#has_ecourse:checked');
+            if (buttonsChecked.length) {
+                $('#ecourse_name').removeAttr('disabled');
+                }
+            else {
+                $('#ecourse_name').attr('disabled', 'disabled');
+                }
+        });
+	});
+
+</script>
+
 <!--[if IE 6]>
 <script type="text/javascript"  src="../../js/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script type="text/javascript" >
@@ -105,13 +122,25 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<input type="text" class="text" name=""/>
 											</li>
 											<li class="fl">
+												<span>大课课程资源：</span>
+												<input type="text" class="text" name=""/>
+											</li>
+										
+											<li class="fl">
+												<span>是否有电子课程：</span>
+												<input type="checkbox" class="text" name="" id="has_ecourse"/>
+											</li>
+											<li class="fl">
+												<span>电子课程名字：</span>
+												<input type="text" class="text" name="" id="ecourse_name" disabled/>
+											</li>
+											<li class="fl">
 												<span>计费方式：</span>
 												<select>
 													<option value="0">计时</option>
 													<option value="1">一次</option>
 												</select>
 											</li>
-
 											<li class="fl clearfix">
 												<span class="text">课程简介：</span>
 												<textarea class="fr class_description"></textarea>
@@ -120,11 +149,16 @@ DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_w
 												<span class="text">课程描述：</span>
 												<textarea class="fr class_description"></textarea>
 											</li>
+
 											<li class="fl clearfix">
 												<span class="text">答疑系统：<br/><span class="mp">相关标签：</span></span>
 												<ul id="tree2" class="mini-tree fl" url="data/tree.txt" style="" showTreeIcon="true" textField="text" idField="id" showCheckBox="true"  checkRecursive="true" allowSelect="false" enableHotTrack="false"></ul>
 												<input type="button" onclick="setCheckedNodes('gaosan,ajax3,json3,date3,control3,messagebox3,window3')" value="setCheckedNodes">
 <input type="button" onclick="getCheckedNodes()" value="getCheckedNodes">
+											</li>
+											<li class="fl clearfix">
+												<span class="text">大课课程资源</span>
+												<input type="text"/>
 											</li>
 										</ul>
 									</div>
