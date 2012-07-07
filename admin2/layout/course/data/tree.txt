@@ -6,7 +6,13 @@
 			{id: "date", text: "复旦笔试课程"},
 			{id: "control", text: "复旦笔试课程"},
 			{id: "messagebox", text: "复旦笔试课程"},
-			{id: "window", text: "复旦笔试课程"}
+			{id: "window", text: "复旦笔试课程", expanded: false,
+				children: [
+					{id :"hello", text: "world"},
+					{id :"zhangsan", text: "lisi"}
+				]
+
+			}
 		]
 	},
 	{id: "gaoer", text: "高二课程", expanded: false,
