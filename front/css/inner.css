@@ -77,7 +77,7 @@
 .page .colum .colum_content .registration p.back_p{text-align:center\9;}
 .page .colum .colum_content .registration p.back_p a.back{color:#fff;cursor:pointer;margin-left:460px;margin-left:0\9;}
 
-.page .colum .colum_content .registration  dl.choose_teacher{background:#fff;border:1px solid #ccc;padding:15px;_padding-bottom:0px;margin:20px 0;}
+.page .colum .colum_content .registration  dl.choose_teacher,.page .colum .colum_content .registration  dl.score_detail{background:#fff;border:1px solid #ccc;padding:15px;_padding-bottom:0px;margin:20px 0;}
 .page .colum .colum_content .registration  dl.choose_teacher dt{width:130px;}
 .page .colum .colum_content .registration  dl.choose_teacher dd{margin-left:20px;}
 .page .colum .colum_content .registration  dl.choose_teacher dd.width796{width:796px;}
@@ -132,6 +132,16 @@
 .page .colum .colum_content .content_inner .content_left{width:730px;}
 .page .colum .colum_content .content_inner .content_left .left_title{margin:13px 0 20px 0;}
 .page .colum .colum_content .content_inner .content_left .basic_info{background:#fff;border:1px solid #ccc;padding:20px;padding-top:10px;}
+
+/*我的成绩详细页*/
+.page .colum .colum_content .classs .kuang p.score_detail{margin:20px 0;font-size:14px;}
+.page .colum .colum_content .classs .kuang p.score_detail .large{font-size:16px;}
+.page .colum .colum_content .score_wrap{margin-bottom:30px;}
+.page .colum .colum_content .score_wrap p{word-wrap: break-word; }
+.page .colum .colum_content .sore_table{border:1px solid #aaa;border-right:none;border-bottom:none;margin:10px 0;}
+.page .colum .colum_content .sore_table td{border-bottom:1px solid #aaa;}
+.page .colum .colum_content .score_table2{margin:10px 0;}
+.page .colum .colum_content dd.score{margin:0 !important;}
 
 
 .page .colum .colum_content .content_inner .content_right{width:240px;}

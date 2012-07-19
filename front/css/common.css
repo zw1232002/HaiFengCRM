@@ -29,6 +29,7 @@ a{color:#fff;}
 .pt15{padding-top:15px;}
 .out_text{text-indent:-9999px;}
 .mlr15{margin-left:15px;margin-right:15px;}
+.mr15{margin-right:15px;}
 a.no_underline:hover{text-decoration:none;}
 .common_bg{background:url(../images/common_bg.png) no-repeat 0 0;}
 .high_light{color:#f00;}
@@ -104,13 +105,13 @@ a.no_underline:hover{text-decoration:none;}
 .page .colum .colum_content .classs .kuang p.text{font-size:14px;text-indent:28px;line-height:17px;}
 .page .colum .colum_content .classs .kuang p.btn{text-align:right;margin:10px 0;}
 .page .colum .colum_content .classs .kuang p.btn a{color:#888;font-size:14px;}
-.page .colum .colum_content .classs .kuang table{color:#000;}
-.page .colum .colum_content .classs .kuang table td,.page .colum .colum_content .classs .kuang table th{text-align:center;border-right:1px solid #aaa;}
-.page .colum .colum_content .classs .kuang table td.no_border,.page .colum .colum_content .classs .kuang table th.no_border{border:none;}
-.page .colum .colum_content .classs .kuang table th{background:#ddd;color:#000;}
-.page .colum .colum_content .classs .kuang table td{vertical-align:center;}
+.page .colum .colum_content .classs .kuang table,.page .colum .colum_content .score_table2{color:#000;}
+.page .colum .colum_content .classs .kuang table td,.page .colum .colum_content .classs .kuang table th,.page .colum .colum_content .sore_table th,.page .colum .colum_content .sore_table td,.page .colum .colum_content .score_table2 td,.page .colum .colum_content .score_table2 th{text-align:center;border-right:1px solid #aaa;}
+.page .colum .colum_content .classs .kuang table td.no_border,.page .colum .colum_content .classs .kuang table th.no_border,.page .colum .colum_content .score_table2 th.no_border,.page .colum .colum_content .score_table2 td.no_border{border:none;}
+.page .colum .colum_content .classs .kuang table th,.page .colum .colum_content .sore_table th,.page .colum .colum_content .score_table2 th{background:#ddd;color:#000;}
+.page .colum .colum_content .classs .kuang table td,.page .colum .colum_content .sore_table td,.page .colum .colum_content .score_table2 td{vertical-align:center;}
 .page .colum .colum_content .classs .kuang table td a{color:#298da7;font-weight:bold;}
-.page .colum .colum_content .classs .kuang table tr.double td{background:#ddd;}
+.page .colum .colum_content .classs .kuang table tr.double td,.page .colum .colum_content .score_table2 tr.double td{background:#ddd;}
 .page .colum .colum_content .classs .kuang table .status_red{font-size:13px;color:#e00;}
 .page .colum .colum_content .classs .kuang table .status_blue{font-size:13px;color:#298DA7;}
 .page .colum .colum_content .classs .kuang table .status_green{font-size:13px;color:#0036ff;}
