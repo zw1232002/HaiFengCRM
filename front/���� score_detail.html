@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海风教育-我的课程</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/inner.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/tinybox.css" type="text/css" />
+<script type="text/javascript" src="js/tinybox.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dialog.js"></script>
+<script type="text/javascript" src="js/receipt.js"></script>
+<script type="text/javascript" src="js/score.js"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+		//tab切换js
+		$(".page .tab_btn_ul").each(function (){
+			var contents=$(this).parent().find(".tab_content_wrap ").eq(0);
+			$(this).find("li a").each(function (i){
+				$(this).click(function (e){
+					e.preventDefault();
+					$(this).addClass("select").parents("li").siblings().children("a").removeClass("select");
+					contents.find(">.tab_content").removeClass("show");
+					contents.find(">.tab_content").eq(i).addClass("show");
+				});
+			});
+		});
+		
+		//通知付款
+		$("#pay_now").bind("click",function (e){
+			e.preventDefault();
+			if($(this).attr("shenhe")!=="false"){
+				if(window.confirm("确认通知付款吗？")){
+					$(this).html("审核进行中...").attr("shenhe","false");
+				}
+			}
+		});
+		
+		//设置右边的高度和左边的相同,其中49是上端标题的高度，20是左边的margin-bottom,2是上下边框的高度
+		$(".page .colum .colum_content .content_inner .content_right ul.nav_list").height($(".page .colum .colum_content .content_inner .content_left").height()-49-20-2);
+		
+		
+	});
+
+</script>
+<!--[if IE 6]>
+<script type="text/javascript"  src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" >
+DD_belatedPNG.fix('.common_bg,.debte_png,#slide_img_wrap .btn ul li,#slide_img_wrap .btn ul li:hover');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="inner_top clearfix">
+				<div class="fl inner_left">
+					嗨，欢迎来到海风教育学员中心！请<a href="login.html" class="font_bold">登录</a>或<a href="registration.html" class="font_bold">免费注册</a>
+				</div>
+				<ul class="fr clearfix inner_right" >
+					<li class="fl "><a href="my_course.html" class=" debte_png">我的课程</a></li>
+					<li class="fl"><a href="#" class=" debte_png">我的收藏</a></li>
+					<li class="fl last"><a href="#" class="debte_png ">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix ">
+			<div class="logo fl ">
+				<h1><a href="index.html" class="out_text">海风教育</a></h1>
+				<p>学员热线：<strong>（021）5588-5955</strong>    （09:00~22:00）</p>
+			</div>
+			<div class="search fr">
+					<form action="" method="post">
+						<input type="text" class="text common_bg" name="" value="尝试在此键入你感兴趣的课程直接搜索...."/>
+						<input type="submit" class="btn common_bg out_text" name="" value=""/>
+					</form>
+					<div class="fl clearfix hot_search">
+						<strong class="fl">热门搜索：</strong>
+						<ul class="fl clearfix">
+							<li class="fl "><a href="#" class="">自主招生</a></li>
+							<li class="fl"><a href="#" class="hot">复旦千分考</a></li>
+							<li class="fl "><a href="#" class=" ">交大自招</a></li>
+							<li class="fl "><a href="#" class=" ">杨浦教学点</a></li>
+							<li class="fl "><a href="#" class=" ">更多…</a></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="colum">
+			<div class="clearfix colum_btn_wrap">
+				<ul class="clearfix colum_btn fl">
+					<li class="fl"><a href="index.html" class=""></a></li><!--首页-->
+					<li class="fl select"><a href="my_course.html" class="my_course "></a></li><!--学员中心-->
+					<li class="fl"><a href="course_center.html" class="clss_center"></a></li><!--课程中心-->
+					<li class="fl"><a href="answer.html" class="why_system"></a></li><!--答疑系统-->
+					<li class="fl "><a href="news.html" class="news"></a></li><!--最新活动-->
+					<li class="fl"><a href="about_us.html" class="about"></a></li><!--关于海风-->
+					<li class="fl"><a href="contact_us.html" class="contact"></a></li><!--联系我们-->
+				</ul>
+				<ul class="know fr clearfix">
+					<li class="fl "><strong>关注海风：</strong></li>
+					<li class="fl"><a href="#" class="sina common_bg">新浪微博</a></li>
+					<li class="fl"><a href="#" class="renren common_bg">人人主页</a></li>
+				</ul>
+			</div>
+			<div class="colum_content">
+				<div class="content_inner registration clearfix">
+					<h2 class="mt38 ">我的成绩</h2>
+					<form class="select" action="" method="post">
+						<h6><span class="high_light large">刘昊炎</span>同学，你好，最近一次海风模考（模考iv）的成绩结果和分析如下：</h6>
+						<dl class="choose_teacher clearfix">
+							<dd class=" detail score">
+								<div class="score_wrap">
+									<p class="cyan">一些基础的信息：与你参加同一场考试的同学共有<span class="high_light">83</span>名，各部分平均分为：</p>
+									<table width="948" cellspacing="0" cellpadding="0" border="0" class="sore_table">
+										  <tbody>
+										  	<tr>
+											    <th height="25" scope="col">总分</th>
+											    <th scope="col">语文 </th>
+											    <th scope="col">英语</th>
+											    <th scope="col">政治</th>
+											    <th scope="col">历史</th>
+											    <th scope="col">地理</th>
+											    <th scope="col">数学</th>
+											    <th scope="col">物理</th>
+											    <th scope="col">化学</th>
+											    <th scope="col">生物</th>
+											    <th scope="col">计算机</th>
+										  </tr>
+										  <tr class="">
+										    <td height="25">361.45 </td>
+										    <td>46.51</td>
+										    <td>55.12</td>
+										    <td>33.69</td>
+										    <td>29.3</td>
+										    <td>54.29</td>
+										    <td>25.46</td>
+										    <td>36.95</td>
+										    <td>38.16</td>
+										    <td>22.66</td>
+										    <td>19.31</td>
+										  </tr>
+										</tbody>
+									</table>
+									<p class="score_detail">平均错题数：<span class="high_light">44.337</span></p>
+									<p class="score_detail">平均空题数：<span class="high_light">65.639</span></p>
+									<p class="score_detail">（做的题目中）平均正确率：<span class="high_light">66.9%</span></p>
+									<p class="score_detail">前五名高分：<span class="high_light">585		556		549		521		518</span></p>
+								</div>
+								<div class="score_wrap">
+									<p class="cyan">你的总分为<span class="high_light">139</span>，排名为<span class="high_light">83</span>，各科分数（排名）如下</p>
+									<table width="948" cellspacing="0" cellpadding="0" border="0" class="sore_table">
+										  <tbody>
+										  	<tr>
+											    <th scope="col" height="25">语文 </th>
+											    <th scope="col">英语</th>
+											    <th scope="col">政治</th>
+											    <th scope="col">历史</th>
+											    <th scope="col">地理</th>
+											    <th scope="col">数学</th>
+											    <th scope="col">物理</th>
+											    <th scope="col">化学</th>
+											    <th scope="col">生物</th>
+											    <th scope="col">计算机</th>
+										  </tr>
+										  <tr class="">
+										    <td height="25">3(83)</td>
+										    <td>0(80)</td>
+										    <td>-7(83)</td>
+										    <td>15(69)</td>
+										    <td>32(79)</td>
+										    <td>-6(81)</td>
+										    <td>32(51)</td>
+										    <td>31(51)</td>
+										    <td>16(56)</td>
+										    <td>23(29)</td>
+										  </tr>
+										</tbody>
+									</table>
+									<p class="score_detail">你的错题数：<span class="high_light">63</span></p>
+									<p class="score_detail">你的空题数：<span class="high_light mr15">84</span>有保守选题的意识是一件好事，但是如果你空的题目略多，同时正确率尚可的话，不妨可以考虑多选一些相对有把握的题目，扩大得分的可能。</p>
+									<p class="score_detail">你的正确率：<span class="high_light">47%</span></p>
+									<p class="score_detail">正确率排名：<span class="high_light">84</span></p>
+								</div>
+								<div class="score_wrap">
+									<p class="cyan">1~100题做错情况（#代表没做，下同）</p>
+									<p class="score_detail">2.#5.D6.B7.B8.A9.B10.B12.#13.D14.#15.C18.#19.B20.B21.D22.#23.C24.D26.#27.#28.B29.A30.#31.#32.C33.#34.C35.#36.#37.#38.#39.#41.#43.#44.C45.#46.#47.#48.C49.#50.B51.C52.#53.C54.C55.#56.#57.B59.D61.D62.B63.A64.B65.#66.#67.#68.#69.#70.#71.#72.#73.#74.#75.#76.#77.#78.#79.#80.#81.#82.#83.#84.#85.#86.#87.#88.#89.#90.#91.#92.#93.#94.#95.#96.#100.D</p>
+									<p class="cyan">101～200题做错情况</p>
+									<p class="score_detail">2.#5.D6.B7.B8.A9.B10.B12.#13.D14.#15.C18.#19.B20.B21.D22.#23.C24.D26.#27.#28.B29.A30.#31.#32.C33.#34.C35.#36.#37.#38.#39.#41.#43.#44.C45.#46.#47.#48.C49.#50.B51.C52.#53.C54.C55.#56.#57.B59.D61.D62.B63.A64.B65.#66.#67.#68.#69.#70.#71.#72.#73.#74.#75.#76.#77.#78.#79.#80.#81.#82.#83.#84.#85.#86.#87.#88.#89.#90.#91.#92.#93.#94.#95.#96.#100.D</p>
+								</div>
+								<div class="score_wrap">
+									<p class="cyan">以下为各题正确答案和全班的正确率</p>
+									<table width="948" cellspacing="0" cellpadding="0" border="0" class="score_table2">
+										  <tbody>
+										  	<tr>
+											    <th scope="col" height="25">序号</th>
+											    <th scope="col">答案</th>
+											    <th scope="col">分值</th>
+											    <th scope="col">正确率</th>
+											    <th scope="col">A</th>
+											    <th scope="col">B</th>
+											    <th scope="col">C</th>
+											    <th scope="col" class="no_border">D</th>
+										  </tr>
+										  <tr class="">
+										    <td height="25">1</td>
+										    <td>A</td>
+										    <td>5</td>
+										    <td>83.1</td>
+										    <td>69</td>
+										    <td>9</td>
+										    <td>1</td>
+										    <td class="no_border">0</td>
+										  </tr>
+										  <tr class="double">
+										    <td height="25">1</td>
+										    <td>A</td>
+										    <td>5</td>
+										    <td>83.1</td>
+										    <td>69</td>
+										    <td>9</td>
+										    <td>1</td>
+										    <td class="no_border">0</td>
+										  </tr>
+										  <tr class="">
+										    <td height="25">2</td>
+										    <td>A</td>
+										    <td>5</td>
+										    <td>83.1</td>
+										    <td>69</td>
+										    <td>9</td>
+										    <td>1</td>
+										    <td class="no_border">0</td>
+										  </tr>
+										  <tr class="double">
+										    <td height="25">3</td>
+										    <td>A</td>
+										    <td>5</td>
+										    <td>83.1</td>
+										    <td>69</td>
+										    <td>9</td>
+										    <td>1</td>
+										    <td class="no_border">0</td>
+										  </tr>
+										  <tr class="">
+										    <td height="25">4</td>
+										    <td>A</td>
+										    <td>5</td>
+										    <td>83.1</td>
+										    <td>69</td>
+										    <td>9</td>
+										    <td>1</td>
+										    <td class="no_border">0</td>
+										  </tr>
+										  <tr class="double">
+										    <td height="25">5</td>
+										    <td>A</td>
+										    <td>5</td>
+										    <td>83.1</td>
+										    <td>69</td>
+										    <td>9</td>
+										    <td>1</td>
+										    <td class="no_border">0</td>
+										  </tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+						<p class="back_p"><a href="#" class="back common_bg">返回</a></p>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btm_nav clearfix">
+				<ul class="fl">
+					<li class=""><strong>关于海风教育</strong></li>
+					<li class=""><a href="#">关于我们</a></li>
+					<li class=""><a href="#">联系我们</a></li>
+					<li class=""><a href="#">隐私声明</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>新手指南</strong></li>
+					<li class=""><a href="#">注册登录</a></li>
+					<li class=""><a href="#">身份验证</a></li>
+					<li class=""><a href="#">在线购买</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>帮助中心</strong></li>
+					<li class=""><a href="#">常见问题</a></li>
+					<li class=""><a href="#">找回密码</a></li>
+					<li class=""><a href="#">其他问题</a></li>
+				</ul>
+				<ul class="fl">
+					<li class=""><strong>支付方式</strong></li>
+					<li class=""><a href="#">支付方式</a></li>
+					<li class=""><a href="#">关于发票</a></li>
+					<li class=""><a href="#">支付常见问题</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="fl">
+					<p>京ICP备12014130号 © 2005-2012 版权所有，并保留所有权利</p>
+					<p>服务提供商: 某某网络 CERNET</p>
+				</div>
+				<h3 class="fr"><a href="#"></a></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
